@@ -1,4 +1,4 @@
-# Life & Career Skills — Teacher Resources
+# Life & Career Skills - Teacher Resources
 
 Instructional resources for Grade 11 Life and Career Skills, developed with reference to the DepEd Strengthened Senior High School Curriculum for Life and Career Skills (2025).
 
