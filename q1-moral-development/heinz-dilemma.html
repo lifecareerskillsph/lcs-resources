@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Heinz Dilemma: Moral Reasoning Activity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#14213D;
+    --navy-soft:#2A3B63;
+    --gold:#B8860B;
+    --gold-soft:#D8AE4E;
+    --paper:#F6F4EF;
+    --ink:#1F2124;
+    --ink-mute:#5B5F66;
+    --line:#D8D4C8;
+    --pre:#64748B;
+    --con:#14213D;
+    --post:#B8860B;
+    --pre-bg:#EEF0F3;
+    --con-bg:#E7EAF1;
+    --post-bg:#FBF1DE;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3,.headline{
+    font-family:'Poppins', Arial, sans-serif;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 20px 80px;
+  }
+  header.top{
+    background:var(--navy);
+    color:#fff;
+    padding:34px 20px 30px;
+    margin-bottom:0;
+  }
+  header.top .wrap{padding-bottom:0;}
+  .eyebrow-line{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:18px;
+  }
+  .brand{
+    font-size:13px;
+    letter-spacing:0.02em;
+    color:var(--gold-soft);
+    font-weight:600;
+  }
+  .mode-toggle{
+    display:inline-flex;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:999px;
+    padding:3px;
+    font-size:13px;
+  }
+  .mode-toggle button{
+    border:none;
+    background:transparent;
+    color:#fff;
+    padding:7px 16px;
+    border-radius:999px;
+    cursor:pointer;
+    font-family:Arial, sans-serif;
+    font-size:13px;
+    transition:background .15s ease, color .15s ease;
+  }
+  .mode-toggle button.active{
+    background:var(--gold);
+    color:var(--navy);
+    font-weight:700;
+  }
+  h1.title{
+    font-size:30px;
+    line-height:1.2;
+    margin:0 0 10px;
+    font-weight:700;
+  }
+  .subtitle{
+    color:#C9CEDC;
+    font-size:15px;
+    max-width:560px;
+    margin:0;
+  }
+  section.card{
+    background:#fff;
+    border:1px solid var(--line);
+    padding:26px 26px 28px;
+    margin-top:22px;
+  }
+  .story h2{
+    color:var(--navy);
+    font-size:19px;
+    margin:0 0 14px;
+    border-bottom:2px solid var(--gold);
+    padding-bottom:8px;
+    display:inline-block;
+  }
+  .story p{
+    font-size:15.5px;
+    color:var(--ink);
+    text-align:justify;
+  }
+  .prompt-line{
+    font-weight:700;
+    color:var(--navy);
+    font-size:16px;
+    margin-top:16px;
+  }
+  .id-fields{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:18px;
+  }
+  .id-fields label{
+    font-size:12.5px;
+    color:var(--ink-mute);
+    display:block;
+    margin-bottom:4px;
+  }
+  .id-fields input, .id-fields select{
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    padding:9px 10px;
+    border:1px solid var(--line);
+    background:var(--paper);
+    min-width:160px;
+  }
+  .instructions{
+    font-size:14px;
+    color:var(--ink-mute);
+    margin-top:4px;
+  }
+  .facilitated-note{
+    display:none;
+    background:var(--con-bg);
+    border-left:4px solid var(--navy);
+    padding:10px 14px;
+    font-size:13.5px;
+    color:var(--navy);
+    margin-top:14px;
+  }
+  body.mode-facilitated .facilitated-note{display:block;}
+  .statement{
+    border:1px solid var(--line);
+    border-left:4px solid var(--line);
+    padding:14px 16px;
+    margin-top:12px;
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    cursor:pointer;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .statement:hover{
+    border-left-color:var(--gold);
+    background:#FCFBF8;
+  }
+  .statement.selected{
+    border-left-color:var(--gold);
+    background:var(--post-bg);
+  }
+  .statement input[type=radio]{
+    margin-top:3px;
+    accent-color:var(--gold);
+    width:17px;
+    height:17px;
+    flex-shrink:0;
+  }
+  .statement .num{
+    font-weight:700;
+    color:var(--navy);
+    min-width:20px;
+  }
+  .statement p{
+    margin:0;
+    font-size:14.5px;
+  }
+  .submit-row{
+    margin-top:24px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  button.primary{
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    font-family:'Poppins', Arial, sans-serif;
+    font-weight:600;
+    font-size:15px;
+    padding:13px 28px;
+    cursor:pointer;
+  }
+  button.primary:disabled{
+    background:#9AA1B0;
+    cursor:not-allowed;
+  }
+  button.primary:hover:not(:disabled){
+    background:var(--navy-soft);
+  }
+  .req-note{
+    font-size:13px;
+    color:var(--ink-mute);
+  }
+  .results{
+    display:none;
+    margin-top:22px;
+  }
+  .results.show{display:block;}
+  .result-band{
+    padding:22px 24px;
+    border:2px solid var(--line);
+  }
+  .result-band.pre{background:var(--pre-bg); border-color:var(--pre);}
+  .result-band.con{background:var(--con-bg); border-color:var(--con);}
+  .result-band.post{background:var(--post-bg); border-color:var(--post);}
+  .level-tag{
+    display:inline-block;
+    font-family:'Poppins', Arial, sans-serif;
+    font-weight:700;
+    font-size:12.5px;
+    letter-spacing:.02em;
+    padding:4px 12px;
+    color:#fff;
+    margin-bottom:10px;
+  }
+  .level-tag.pre{background:var(--pre);}
+  .level-tag.con{background:var(--con);}
+  .level-tag.post{background:var(--post);}
+  .result-band h3{
+    margin:0 0 6px;
+    font-size:20px;
+    color:var(--ink);
+  }
+  .result-band .stage-def{
+    font-size:14.5px;
+    color:var(--ink);
+    margin:0 0 14px;
+  }
+  .result-band .your-line{
+    font-size:13.5px;
+    color:var(--ink-mute);
+    font-style:italic;
+    border-top:1px solid rgba(0,0,0,0.1);
+    padding-top:12px;
+  }
+  .discuss{
+    margin-top:18px;
+    background:#fff;
+    border:1px solid var(--line);
+    padding:18px 20px;
+  }
+  .discuss h4{
+    margin:0 0 10px;
+    color:var(--navy);
+    font-size:15px;
+  }
+  .discuss ol{
+    margin:0;
+    padding-left:20px;
+    font-size:14.5px;
+  }
+  .discuss ol li{margin-bottom:8px;}
+  details.ref{
+    margin-top:18px;
+    border:1px solid var(--line);
+    background:#fff;
+  }
+  details.ref summary{
+    padding:14px 18px;
+    cursor:pointer;
+    font-family:'Poppins', Arial, sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+    color:var(--navy);
+  }
+  .ref-table{
+    padding:0 18px 18px;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13.5px;
+    margin-top:6px;
+  }
+  table th{
+    background:var(--navy);
+    color:#fff;
+    text-align:left;
+    padding:8px 10px;
+    font-weight:600;
+  }
+  table td{
+    padding:8px 10px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  table tr.pre-row td:first-child{border-left:4px solid var(--pre);}
+  table tr.con-row td:first-child{border-left:4px solid var(--con);}
+  table tr.post-row td:first-child{border-left:4px solid var(--post);}
+  .did-you-know{
+    margin-top:18px;
+    background:var(--con-bg);
+    border-left:4px solid var(--gold);
+    padding:14px 18px;
+    font-size:13.5px;
+    color:var(--navy);
+  }
+  .did-you-know strong{display:block; margin-bottom:4px; font-family:'Poppins', Arial, sans-serif; font-size:13px;}
+  footer{
+    text-align:center;
+    font-size:12px;
+    color:var(--ink-mute);
+    margin-top:36px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+  }
+  @media (max-width:600px){
+    h1.title{font-size:24px;}
+    section.card{padding:20px 16px;}
+  }
+
+
+/* ===== Life and Career Skills visual system — 2026 =====
+   Anchor Cyan #24B5C8 | Lime Olive #A6B91A | Golden Yellow #FFD633
+   Supporting Lilac #9086B8 | Charcoal #4B4B4B | White #FFFFFF
+*/
+:root{
+  --navy:#176F7B;
+  --navy-soft:#1E8795;
+  --gold:#FFD633;
+  --gold-soft:#FFF0A0;
+  --paper:#F4FAFB;
+  --ink:#34383A;
+  --ink-mute:#667176;
+  --line:#D5E6E9;
+  --lcs-cyan:#24B5C8;
+  --lcs-cyan-dark:#167C89;
+  --lcs-green:#A6B91A;
+  --lcs-yellow:#FFD633;
+  --lcs-lilac:#9086B8;
+  --lcs-orange:#F28C28;
+  --lcs-violet:#A64CA6;
+  --lcs-magenta:#E83F79;
+  --lcs-charcoal:#4B4B4B;
+  --care:#A6B91A;
+  --justice:#24B5C8;
+  --integrative:#9086B8;
+  --care-bg:#F6F9E8;
+  --justice-bg:#EAF8FA;
+  --integrative-bg:#F2F0F8;
+  --pre:#9086B8;
+  --con:#24B5C8;
+  --post:#A6B91A;
+  --pre-bg:#F2F0F8;
+  --con-bg:#EAF8FA;
+  --post-bg:#F6F9E8;
+}
+html{scroll-behavior:smooth;}
+body{
+  background:
+    radial-gradient(circle at 10% 0%, rgba(36,181,200,.08), transparent 28rem),
+    linear-gradient(180deg,#F7FCFD 0%,#F4FAFB 100%);
+  color:var(--ink);
+}
+.wrap{max-width:880px; padding-left:24px; padding-right:24px;}
+header.top{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#167C89 0%,#24B5C8 72%,#4EC8D6 100%);
+  padding:42px 20px 38px;
+  box-shadow:0 8px 28px rgba(23,111,123,.16);
+}
+header.top::after{
+  content:"";
+  position:absolute;
+  width:240px; height:240px; border-radius:50%;
+  right:-72px; top:-105px;
+  background:rgba(255,214,51,.20);
+  border:34px solid rgba(255,255,255,.08);
+  pointer-events:none;
+}
+header.top .wrap{position:relative; z-index:1;}
+.brand{
+  display:inline-flex; align-items:center; gap:8px;
+  color:#fff; font-size:12.5px; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.brand::before{content:""; width:9px; height:9px; border-radius:50%; background:var(--lcs-yellow); box-shadow:0 0 0 4px rgba(255,214,51,.20);}
+.mode-toggle{background:rgba(255,255,255,.15); border-color:rgba(255,255,255,.45); backdrop-filter:blur(5px);}
+.mode-toggle button{font-weight:600;}
+.mode-toggle button.active{background:var(--lcs-yellow); color:#384044; box-shadow:0 2px 8px rgba(0,0,0,.10);}
+h1.title{font-size:clamp(28px,4.5vw,38px); letter-spacing:-.025em; max-width:720px;}
+.subtitle{color:rgba(255,255,255,.92); font-size:15.5px; line-height:1.6; max-width:680px;}
+section.card{
+  border:1px solid rgba(36,181,200,.20);
+  border-radius:16px;
+  padding:30px 30px 32px;
+  margin-top:24px;
+  box-shadow:0 10px 28px rgba(40,72,78,.07);
+}
+.story h2, section.card > h2{
+  color:var(--lcs-cyan-dark) !important;
+  border-bottom:3px solid var(--lcs-yellow) !important;
+  padding-bottom:7px !important;
+  letter-spacing:-.01em;
+}
+.story p{line-height:1.72;}
+.story p.line{color:#3E747B; background:#F2FAFB; border-left:3px solid var(--lcs-cyan); padding:8px 12px; text-align:left;}
+.prompt-line{color:#365B60; background:#FFF9D9; border-left:4px solid var(--lcs-yellow); padding:12px 14px; border-radius:0 8px 8px 0;}
+.id-fields{display:grid; grid-template-columns:repeat(auto-fit,minmax(165px,1fr)); gap:14px; padding-top:4px;}
+.id-fields > div{min-width:0;}
+.id-fields input,.id-fields select{
+  width:100%; min-width:0; border:1px solid #C8DDE0; border-radius:9px; background:#FBFEFE; padding:10px 11px;
+  transition:border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.id-fields input:focus,.id-fields select:focus,.q-block textarea:focus{
+  outline:none; border-color:var(--lcs-cyan); box-shadow:0 0 0 3px rgba(36,181,200,.15); background:#fff;
+}
+.facilitated-note{background:#EAF8FA; border-left-color:var(--lcs-cyan); color:#315E64; border-radius:0 8px 8px 0;}
+.q-block{padding-top:4px;}
+.q-block label.q-label{color:#365B60; font-size:15.5px;}
+.q-block textarea{border:1px solid #C8DDE0; border-radius:10px; background:#FBFEFE; min-height:96px; line-height:1.55;}
+.statement,.orientation-option{
+  border:1px solid #D6E5E7; border-left:5px solid #D6E5E7; border-radius:10px; background:#fff;
+  padding:15px 17px; transition:transform .12s ease,border-color .15s ease,background .15s ease,box-shadow .15s ease;
+}
+.statement:hover,.orientation-option:hover{border-left-color:var(--lcs-cyan); background:#F5FCFD; box-shadow:0 5px 16px rgba(36,181,200,.08); transform:translateY(-1px);}
+.statement.selected,.orientation-option.selected{border-color:rgba(166,185,26,.45); border-left-color:var(--lcs-green); background:#F7FAE9; box-shadow:0 5px 18px rgba(166,185,26,.10);}
+.statement input[type=radio],.orientation-option input[type=radio]{accent-color:var(--lcs-green);}
+.statement .num,.orientation-option .o-title{color:#27656D;}
+button.primary{background:var(--lcs-cyan-dark); border-radius:10px; padding:13px 24px; box-shadow:0 5px 14px rgba(22,124,137,.18); transition:transform .12s ease,background .15s ease,box-shadow .15s ease;}
+button.primary:hover:not(:disabled){background:#116B76; transform:translateY(-1px); box-shadow:0 7px 18px rgba(22,124,137,.23);}
+button.primary:focus-visible,.mode-toggle button:focus-visible,summary:focus-visible{outline:3px solid var(--lcs-yellow); outline-offset:3px;}
+button.primary:disabled{background:#AAB8BB; box-shadow:none;}
+.result-band{border-radius:14px; box-shadow:0 8px 22px rgba(40,72,78,.06);}
+.result-band.care,.result-band.post{border-color:var(--lcs-green); background:#F6F9E8;}
+.result-band.justice,.result-band.con{border-color:var(--lcs-cyan); background:#EAF8FA;}
+.result-band.integrative,.result-band.pre{border-color:var(--lcs-lilac); background:#F2F0F8;}
+.level-tag{border-radius:999px; padding:5px 12px;}
+.level-tag.care,.level-tag.post{background:var(--lcs-green); color:#2E3500;}
+.level-tag.justice,.level-tag.con{background:var(--lcs-cyan); color:#103D43;}
+.level-tag.integrative,.level-tag.pre{background:var(--lcs-lilac);}
+.discuss{border:1px solid #D8E7E9; border-radius:12px; box-shadow:0 6px 18px rgba(40,72,78,.05);}
+.discuss h4{color:var(--lcs-cyan-dark);}
+.did-you-know{background:#FFF9D9; border-left-color:var(--lcs-yellow); color:#4E5558; border-radius:0 10px 10px 0;}
+details.ref{border-color:#D8E7E9; border-radius:12px; overflow:hidden; box-shadow:0 5px 16px rgba(40,72,78,.04);}
+details.ref summary{color:var(--lcs-cyan-dark); background:#FBFEFE;}
+table th{background:var(--lcs-cyan-dark);}
+table tbody tr:nth-child(even){background:#FAFCFC;}
+table tr.care-row td:first-child,table tr.post-row td:first-child{border-left-color:var(--lcs-green);}
+table tr.justice-row td:first-child,table tr.con-row td:first-child{border-left-color:var(--lcs-cyan);}
+table tr.integrative-row td:first-child,table tr.pre-row td:first-child{border-left-color:var(--lcs-lilac);}
+footer{color:#68767A; line-height:1.55;}
+@media (max-width:600px){
+  .wrap{padding-left:16px; padding-right:16px;}
+  header.top{padding:30px 8px 28px;}
+  .eyebrow-line{align-items:flex-start;}
+  .mode-toggle{width:100%;}
+  .mode-toggle button{flex:1;}
+  section.card{padding:22px 18px 24px; border-radius:13px;}
+  .id-fields{grid-template-columns:1fr;}
+  .submit-row{align-items:stretch;}
+  button.primary{width:100%;}
+  .statement,.orientation-option{padding:14px 13px;}
+  table{font-size:12.5px;}
+  table th,table td{padding:8px 7px;}
+}
+
+</style>
+</head>
+<body class="mode-selfpaced">
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow-line">
+      <span class="brand">Life and Career Skills, Grade 11</span>
+      <div class="mode-toggle" role="tablist" aria-label="Delivery mode">
+        <button type="button" id="btn-facilitated" onclick="setMode('facilitated')">Facilitated</button>
+        <button type="button" id="btn-selfpaced" class="active" onclick="setMode('selfpaced')">Self-Paced</button>
+      </div>
+    </div>
+    <h1 class="title">The Heinz Dilemma</h1>
+    <p class="subtitle">A classic instrument in moral development research. Read the story, choose the reasoning that comes closest to your own, and see what it reveals about how you think through right and wrong.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="card story">
+    <h2>The Situation</h2>
+    <p>In Europe, a woman was near death from a rare form of cancer. There was one drug doctors believed might save her: a form of radium a druggist in the same town had recently discovered. The druggist was charging $2,000 for a small dose, ten times what the drug cost him to make.</p>
+    <p>Heinz, the woman's husband, went to everyone he knew to borrow money, but could only raise $1,000, half of what he needed. He explained to the druggist that his wife was dying and asked him to sell it cheaper, or let him pay the rest later. The druggist refused: "No, I discovered the drug and I'm going to make money from it."</p>
+    <p>Desperate, Heinz broke into the man's store that night and stole the drug.</p>
+    <p class="prompt-line">Should Heinz have done this? Read the twelve statements below. Choose the ONE that most closely matches how you would reason about it, not necessarily the one you agree with completely, but the one closest to your own thinking.</p>
+
+    <div class="facilitated-note">
+      <strong>Facilitator note:</strong> in this mode, walk the class through the story aloud before revealing the statement list. Once statements are visible, give 3–4 minutes of silent reading before students select. Hold the group discussion prompts until after every student has submitted.
+    </div>
+
+    <div class="id-fields">
+      <div>
+        <label for="fld-name">Name (optional)</label>
+        <input type="text" id="fld-name" placeholder="Juan Dela Cruz">
+      </div>
+      <div>
+        <label for="fld-section">Section</label>
+        <input type="text" id="fld-section" placeholder="e.g. HUMSS 11-1">
+      </div>
+      <div>
+        <label for="fld-teacher">Teacher</label>
+        <select id="fld-teacher">
+          <option value="">Select</option>
+          <option value="FCD">F.C. Diaz</option>
+          <option value="JEV">J.E. Viloria</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 style="color:var(--navy); font-size:19px; margin:0 0 6px; border-bottom:2px solid var(--gold); padding-bottom:8px; display:inline-block;">Choose Your Reasoning</h2>
+    <p class="instructions">Select one statement. There is no wrong answer; this measures how you reason, not whether you're "right."</p>
+
+    <div id="statement-list"></div>
+
+    <div class="submit-row">
+      <button type="button" class="primary" id="submit-btn" disabled onclick="revealResult()">Reveal My Result</button>
+      <span class="req-note" id="req-note">Select a statement to continue.</span>
+    </div>
+  </section>
+
+  <div class="results" id="results">
+    <section class="card" style="border:none; padding:0; background:transparent;">
+      <div class="result-band" id="result-band">
+        <span class="level-tag" id="level-tag"></span>
+        <h3 id="stage-name"></h3>
+        <p class="stage-def" id="stage-def"></p>
+        <p class="your-line" id="your-line"></p>
+      </div>
+
+      <div class="discuss">
+        <h4>Think Further</h4>
+        <ol>
+          <li>Would your answer change if Heinz and his wife were strangers rather than married? Why or why not?</li>
+          <li>Is there a difference between what is <em>legal</em> and what is <em>moral</em> in this situation? Where do you draw that line?</li>
+          <li>Look at the level above yours in the reference table below. What would have to change in how you think for your reasoning to shift there?</li>
+        </ol>
+      </div>
+
+      <div class="did-you-know">
+        <strong>Did you know?</strong>
+        Kohlberg's postconventional stages (5 and 6) are the least commonly reached in longitudinal studies of adults, and reaching them isn't automatic with age, and most adult reasoning clusters in the conventional level. Landing in Level 1 or 2 here reflects how you reasoned about <em>this one dilemma</em>, not a fixed trait.
+      </div>
+
+      <details class="ref">
+        <summary>See all six stages and three levels</summary>
+        <div class="ref-table">
+          <table>
+            <thead>
+              <tr><th>Level</th><th>Stage</th><th>Core Idea</th></tr>
+            </thead>
+            <tbody>
+              <tr class="pre-row"><td>I, Preconventional</td><td>1. Punishment &amp; Obedience</td><td>Right and wrong are decided by what leads to punishment or reward.</td></tr>
+              <tr class="pre-row"><td>I, Preconventional</td><td>2. Instrumental Exchange</td><td>Right is whatever satisfies one's own needs and involves fair exchange with others.</td></tr>
+              <tr class="con-row"><td>II, Conventional</td><td>3. Interpersonal Accord</td><td>Right is living up to what people close to you expect; being "good" matters.</td></tr>
+              <tr class="con-row"><td>II, Conventional</td><td>4. Law and Order</td><td>Right is doing one's duty and maintaining the social order for its own sake.</td></tr>
+              <tr class="post-row"><td>III, Postconventional</td><td>5. Social Contract</td><td>Laws are social agreements that can be examined and changed; individual rights matter.</td></tr>
+              <tr class="post-row"><td>III, Postconventional</td><td>6. Universal Ethical Principle</td><td>Right is decided by self-chosen, universal principles like justice and the value of life, even against the law.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+  </div>
+
+  <footer>
+    © F.C. Diaz, lifecareerskillsph. Licensed CC BY-NC-ND 4.0. Not for commercial redistribution or derivative works without attribution.
+  </footer>
+</div>
+
+<script>
+// ---- Configuration -------------------------------------------------
+// To enable class-wide aggregation (bar chart of Preconventional /
+// Conventional / Postconventional counts), deploy a Google Apps Script
+// Web App bound to a Sheet and paste its /exec URL below. Leave blank
+// to run this worksheet standalone with no data collection.
+const SCRIPT_URL = "";
+// ---------------------------------------------------------------------
+
+const statements = [
+  { n:1,  text:"He shouldn't steal the drug. It's a big crime. He did a lot of damage, stealing a very expensive drug and breaking up the store too. He'll be caught and sent to jail.", stage:1 },
+  { n:2,  text:"He should steal the drug. He was only doing something that was natural for a good husband to do. You can't blame him for doing something out of love for his wife; you'd blame him if he didn't love her enough to save her.", stage:3 },
+  { n:3,  text:"You can't completely blame someone for stealing, but extreme circumstances don't really justify taking the law into your own hands. You can't have everybody stealing whenever they get desperate. The end may be good but the ends don't justify the means.", stage:4 },
+  { n:4,  text:"He should steal the drug. It isn't like he didn't try to pay for it first. The drug he takes is only worth $200; he's not really taking a $2,000 drug.", stage:2 },
+  { n:5,  text:"It's a natural thing for Heinz to want to save his wife, but it's still always wrong to steal. He still knows he's stealing and taking a valuable drug from the man who made it.", stage:1 },
+  { n:6,  text:"You should steal it. If you did nothing, you'd be letting your wife die, and it's your responsibility if she dies. You have to take it with the idea of paying the druggist back.", stage:4 },
+  { n:7,  text:"He shouldn't steal it. The druggist isn't wrong or bad; he just wants to make a profit. And if Heinz goes to jail, his wife will probably die before he gets out anyway, so it wouldn't do him any good.", stage:2 },
+  { n:8,  text:"The law wasn't set up for these circumstances. Taking the drug in this situation isn't really right, but it's justified.", stage:5 },
+  { n:9,  text:"Heinz is faced with the decision of whether to consider the other people who need the drug just as badly as his wife. He ought to act not just according to his particular feelings toward his wife, but considering the value of all the lives involved.", stage:6 },
+  { n:10, text:"It's all right to steal the drug because she needs it and he wants her to live; he'll be very lonely without her. It isn't that he wants to steal, but it's the way he has to use to save her.", stage:2 },
+  { n:11, text:"He shouldn't steal. If his wife dies, he can't be blamed; it isn't because he's heartless or doesn't love her enough. The druggist is the selfish, heartless one.", stage:3 },
+  { n:12, text:"This situation forces him to choose between stealing and letting his wife die. Where that choice must be made, it is morally right to steal. It doesn't make sense to respect property more than life.", stage:6 }
+];
+
+const stageInfo = {
+  1: { name:"Stage 1: Punishment & Obedience Orientation", level:"pre",
+       def:"You reasoned mainly in terms of avoiding punishment or breaking a rule outright, without weighing the circumstances behind the act." },
+  2: { name:"Stage 2: Instrumental Exchange Orientation", level:"pre",
+       def:"You reasoned in terms of what serves Heinz's own interests or needs, and fair exchange, meaning what he's owed or what's a reasonable trade." },
+  3: { name:"Stage 3: Interpersonal Accord Orientation", level:"con",
+       def:"You reasoned in terms of living up to the expectations of people close to you, being seen as a good husband, a good person." },
+  4: { name:"Stage 4: Law and Order Orientation", level:"con",
+       def:"You reasoned in terms of maintaining rules and social order for their own sake, regardless of the specific people involved." },
+  5: { name:"Stage 5: Social Contract Orientation", level:"post",
+       def:"You reasoned in terms of the law's limits, recognizing that laws are agreements that can fail specific situations, and that individual rights matter." },
+  6: { name:"Stage 6: Universal Ethical Principle Orientation", level:"post",
+       def:"You reasoned from a self-chosen, universal principle (here, that the value of life outweighs the value of property), even where it conflicts with the law." }
+};
+
+const levelLabel = { pre:"Level I, Preconventional", con:"Level II, Conventional", post:"Level III, Postconventional" };
+
+let selectedStage = null;
+
+function buildStatements(){
+  const list = document.getElementById('statement-list');
+  statements.forEach(s => {
+    const row = document.createElement('label');
+    row.className = 'statement';
+    row.id = 'row-' + s.n;
+    row.innerHTML = `
+      <input type="radio" name="statement" value="${s.n}" onchange="selectStatement(${s.n}, ${s.stage})">
+      <span class="num">${s.n}.</span>
+      <p>${s.text}</p>
+    `;
+    list.appendChild(row);
+  });
+}
+
+function selectStatement(n, stage){
+  document.querySelectorAll('.statement').forEach(el => el.classList.remove('selected'));
+  document.getElementById('row-' + n).classList.add('selected');
+  selectedStage = stage;
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = false;
+  document.getElementById('req-note').textContent = 'Ready. Click "Reveal My Result."';
+}
+
+function revealResult(){
+  if(!selectedStage) return;
+  const info = stageInfo[selectedStage];
+  const band = document.getElementById('result-band');
+  band.className = 'result-band ' + info.level;
+
+  const tag = document.getElementById('level-tag');
+  tag.className = 'level-tag ' + info.level;
+  tag.textContent = levelLabel[info.level];
+
+  document.getElementById('stage-name').textContent = info.name;
+  document.getElementById('stage-def').textContent = info.def;
+
+  const name = document.getElementById('fld-name').value.trim();
+  document.getElementById('your-line').textContent = name
+    ? `${name}, this reflects how you reasoned about this dilemma today, not a permanent score.`
+    : `This reflects how you reasoned about this dilemma today, not a permanent score.`;
+
+  document.getElementById('results').classList.add('show');
+  document.getElementById('submit-btn').disabled = true;
+  document.getElementById('req-note').textContent = 'Submitted.';
+  document.getElementById('results').scrollIntoView({behavior:'smooth', block:'start'});
+
+  submitToSheet(info.level);
+}
+
+function submitToSheet(level){
+  if(!SCRIPT_URL) return;
+  const payload = {
+    activity: "heinz",
+    teacher: document.getElementById('fld-teacher').value,
+    section: document.getElementById('fld-section').value,
+    level: level,
+    stage: selectedStage,
+    timestamp: new Date().toISOString()
+  };
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {'Content-Type':'text/plain;charset=utf-8'},
+    body: JSON.stringify(payload)
+  }).catch(() => { /* fail silently; student experience is unaffected */ });
+}
+
+function setMode(mode){
+  document.body.className = 'mode-' + mode;
+  document.getElementById('btn-facilitated').classList.toggle('active', mode === 'facilitated');
+  document.getElementById('btn-selfpaced').classList.toggle('active', mode === 'selfpaced');
+}
+
+buildStatements();
+</script>
+
+</body>
+</html>
