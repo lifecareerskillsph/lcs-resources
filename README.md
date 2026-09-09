@@ -12,12 +12,12 @@ This version includes refinements to grading, student data-entry fields, and ref
 
 ### Resources
 
-[**Teacher Guide**](https://docs.google.com/presentation/d/1BWAbnwxL93oBKbyG6ylG0WfwjFJVecHIdfnjU1mME-M/edit?usp=sharing)  
-Setup, distribution, monitoring, and detailed grading workflow for the Q1 PeTa.  
+[**Teacher Guide**](https://docs.google.com/presentation/d/1BWAbnwxL93oBKbyG6ylG0WfwjFJVecHIdfnjU1mME-M/edit?usp=sharing)
+Setup, distribution, monitoring, and detailed grading workflow for the Q1 PeTa.
 *For co-teachers.*
 
-[**Student Tutorial**](https://docs.google.com/presentation/d/1xiw96MyYBaa_6q1Hetk32811ecU7qHt8qaEEzgxC7go/edit?usp=sharing)  
-Student-facing guide for opening, navigating, completing, and submitting the Wellness Tracker.  
+[**Student Tutorial**](https://docs.google.com/presentation/d/1xiw96MyYBaa_6q1Hetk32811ecU7qHt8qaEEzgxC7go/edit?usp=sharing)
+Student-facing guide for opening, navigating, completing, and submitting the Wellness Tracker.
 *For student use and classroom orientation.*
 
 ## What Changed in This Version
@@ -31,6 +31,22 @@ The August 2026 version includes:
 - removal of redundant response options
 - review and revision of reflection questions for better alignment with the Quarter 1 learning competencies
 
+## Quarter 1 Instructional Activities
+
+### Moral Development: Heinz Dilemma and The Porcupine and the Moles
+
+Current version: **September 2026**
+
+Two interactive worksheets covering moral reasoning frameworks (Kohlberg's stages, Gilligan's care and justice orientations). Each activity includes a facilitated-mode toggle for teacher-led delivery and a self-paced mode for asynchronous ICLEX use. Formative, not scored, unless later adapted with an explicit rubric.
+
+### Resources
+
+[**The Heinz Dilemma**](https://lifecareerskillsph.github.io/lcs-resources/q1-moral-development/heinz-dilemma.html)
+Single-select instrument mapped to Kohlberg's six stages and three levels of moral reasoning, with immediate feedback on selection.
+
+[**The Porcupine and the Moles**](https://lifecareerskillsph.github.io/lcs-resources/q1-moral-development/porcupine-moles.html)
+Open-response judge scenario with guided self-classification into justice, care, or integrative reasoning orientations, connected to strand-relevant career fields.
+
 ## Use and Attribution
 
-© 2026 Fritzie Cristina B. Diaz · CC BY-NC-SA 4.0
+© 2026 Fritzie Cristina B. Diaz. CC BY-NC-ND 4.0.
