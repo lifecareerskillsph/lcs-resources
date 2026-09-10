@@ -1,0 +1,147 @@
+/* ============================================================
+   Life and Career Skills: ICLEX weekly module stylesheet
+   Shared across all lesson pages. One file, one place to update.
+   © F.C. Diaz. Built for lifecareerskillsph.
+   ============================================================ */
+
+:root{
+  --navy:#14213D;
+  --gold:#B8860B;
+  --ink:#2b2b2b;
+  --muted:#6b6b6b;
+  --card-border:#e2ddd0;
+  --bg:#FAF8F0;
+  --green:#E5F1D0;
+  --green-line:#8CAB3C;
+  --cyan:#DDF3F5;
+  --cyan-line:#1BA9B5;
+  --purple:#EAE4F5;
+  --purple-line:#8C7AC2;
+  --orange:#FCE8D8;
+  --orange-line:#E07B22;
+  --yellow:#FCF3C8;
+  --yellow-line:#D8B93A;
+  --protective-bg:#EAF3E1;
+  --protective-line:#7CA65A;
+  --risk-bg:#FBEAE6;
+  --risk-line:#D08370;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.55;
+}
+
+h1,h2{font-family:'Poppins',Arial,sans-serif;}
+
+/* ---------- Progress rail ---------- */
+.rail{
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  background:var(--navy); color:#fff;
+  padding:10px 20px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+.rail-inner{max-width:900px;margin:0 auto;}
+.rail-label{font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:#c9d2e5;}
+.rail-track{display:flex; gap:6px; margin-top:6px;}
+.rail-dot{flex:1; height:5px; border-radius:3px; background:rgba(255,255,255,0.18); transition:background 0.2s;}
+.rail-dot.active{background:var(--gold);}
+
+/* ---------- Page shell ---------- */
+.wrap{max-width:900px; margin:0 auto; padding:96px 20px 40px;}
+.header{margin-bottom:28px;}
+.eyebrow{
+  font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--gold); font-weight:bold; margin:0 0 8px;
+}
+h1{font-size:1.7rem; color:var(--navy); margin:0 0 10px; line-height:1.25;}
+.header p{color:var(--muted); max-width:70ch;}
+code{background:#eee; padding:1px 5px; border-radius:3px; font-size:0.9em;}
+
+/* ---------- Section blocks ---------- */
+.block{
+  background:#fff; border:1px solid var(--card-border); border-left:5px solid var(--navy);
+  border-radius:10px; padding:22px 24px; margin-bottom:20px;
+}
+.block.practice{border-left-color:var(--gold);}
+.block-kind{
+  font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:bold;
+  color:var(--navy); margin:0 0 6px;
+}
+.block.practice .block-kind{color:var(--gold);}
+h2{font-size:1.2rem; color:var(--navy); margin:0 0 10px;}
+
+.keybox{
+  background:var(--yellow); border:1px solid var(--yellow-line); border-radius:8px;
+  padding:12px 16px; margin:14px 0; font-size:0.95rem;
+}
+.scenario{
+  background:#f6f4ec; border:1px solid var(--card-border); border-radius:8px;
+  padding:14px 16px; margin:14px 0;
+}
+.case{
+  background:var(--cyan); border:1px solid var(--cyan-line); border-radius:8px;
+  padding:14px 16px; margin:14px 0;
+}
+.embed-box{
+  background:#f6f4ec; border:2px dashed var(--card-border); border-radius:8px;
+  padding:16px; margin:14px 0; font-size:0.9rem; color:var(--muted);
+}
+
+.steps{padding-left:20px;}
+.steps li{margin-bottom:6px;}
+
+details{
+  margin:12px 0; border:1px solid var(--card-border); border-radius:8px; padding:10px 14px; background:#fdfcf8;
+}
+details summary{cursor:pointer; font-weight:bold; color:var(--navy);}
+details[open] summary{margin-bottom:8px;}
+
+.reflect, textarea.reflect{
+  width:100%; min-height:70px; border:1px solid var(--card-border); border-radius:6px;
+  padding:10px; font-family:Arial; font-size:0.94rem; resize:vertical; background:#fdfcf8;
+}
+input.reflect{min-height:auto; padding:8px;}
+
+/* ---------- Rating rows and dropdowns ---------- */
+.rating-row{display:flex; justify-content:space-between; align-items:center; gap:12px; border-bottom:1px solid var(--card-border); padding:8px 0; flex-wrap:wrap;}
+.rating-row span{flex:1; min-width:220px;}
+select.rating{padding:6px; border-radius:6px; border:1px solid var(--card-border); font-family:Arial;}
+
+.tally{margin-top:10px; font-size:0.9rem; font-weight:bold; color:var(--navy);}
+
+/* ---------- Matrix tables ---------- */
+table.matrix{width:100%; border-collapse:collapse; margin:14px 0; font-size:0.88rem;}
+table.matrix th, table.matrix td{border:1px solid var(--card-border); padding:8px; vertical-align:top; text-align:left;}
+table.matrix th{background:var(--navy); color:#fff;}
+table.matrix td.protective{background:var(--protective-bg);}
+table.matrix td.risk{background:var(--risk-bg);}
+table.matrix.fill input[type="text"]{
+  width:100%; border:1px solid var(--card-border); border-radius:4px;
+  padding:6px 8px; font-family:Arial; font-size:0.88rem; background:#fff;
+}
+
+/* ---------- Checklist ---------- */
+.checklist-row{display:flex; align-items:flex-start; gap:10px; padding:8px 0; border-bottom:1px solid var(--card-border);}
+.checklist-row input[type="checkbox"]{margin-top:4px; width:16px; height:16px; accent-color:var(--gold);}
+.checklist-row label{font-size:0.94rem;}
+
+/* ---------- Emotional intelligence sliders ---------- */
+.ei-row{margin:16px 0;}
+.ei-row label{display:block; font-size:0.94rem; margin-bottom:6px;}
+.ei-row input[type="range"]{width:100%; accent-color:var(--gold);}
+.ei-scale-labels{display:flex; justify-content:space-between; font-size:0.78rem; color:var(--muted); margin-top:2px;}
+.ei-average{margin-top:10px; font-size:0.95rem; font-weight:bold; color:var(--navy);}
+
+.char-note{font-size:0.82rem; color:var(--muted); font-style:italic;}
+
+footer{
+  text-align:center; font-size:0.8rem; color:var(--muted);
+  padding:24px 20px; border-top:1px solid var(--card-border); margin-top:10px;
+}
+ul{padding-left:20px;}
