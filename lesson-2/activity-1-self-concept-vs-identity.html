@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity 1: Self-Concept vs. Identity</title>
+<style>
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 8.5in; margin: 0 auto; padding: 0.5in; background: #fff; }
+.header { text-align: center; border-bottom: 3px solid #2c3e50; padding-bottom: 15px; margin-bottom: 25px; }
+.header h1 { color: #2c3e50; margin: 8px 0; font-size: 20pt; }
+.header h2 { color: #34495e; margin: 4px 0; font-size: 12pt; font-weight: normal; }
+.info-box { background: #ecf0f1; border-left: 4px solid #3498db; padding: 15px; margin: 20px 0; }
+.info-box h3 { margin-top: 0; color: #2c3e50; }
+.section h2 { background: #34495e; color: #fff; padding: 8px 12px; font-size: 13pt; margin: 25px 0 12px 0; }
+.question { border: 1px solid #bdc3c7; padding: 12px 15px; margin: 12px 0; background: #fafafa; }
+.question.right { border-color: #4caf50; background: #eef8ef; }
+.question.wrong { border-color: #e74c3c; background: #fdecea; }
+.qtext { margin: 0 0 8px 0; }
+select { padding: 5px; font-size: 10.5pt; }
+label.opt { display: block; margin: 4px 0; cursor: pointer; }
+.feedback { display: none; margin-top: 8px; padding: 8px 10px; font-size: 10pt; border-radius: 3px; }
+.question.right .feedback { display: block; background: #d7f0d9; color: #256029; }
+.question.wrong .feedback { display: block; background: #fadbd8; color: #922b21; }
+.btn { background: #3498db; color: #fff; border: none; padding: 12px 24px; font-size: 12pt; cursor: pointer; border-radius: 4px; margin-right: 10px; }
+.btn:hover { background: #2980b9; }
+.btn.reset { background: #7f8c8d; }
+.btn.reset:hover { background: #636e72; }
+#score { display: none; text-align: center; font-size: 14pt; font-weight: bold; padding: 12px; margin: 20px 0; background: #34495e; color: #fff; border-radius: 4px; }
+.controls { text-align: center; margin: 25px 0; }
+.note { font-style: italic; color: #7f8c8d; font-size: 9.5pt; }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Application Activity 1: Self-Concept vs. Identity</h1>
+    <h2>Grade 11 Life and Career Skills - Quarter 1, Lesson 2</h2>
+</div>
+
+<div class="info-box">
+    <h3>Scenario</h3>
+    <p>Jasmine, 17, is filling out a getting-to-know-you form for her new volleyball team. Here is what she wrote:</p>
+    <ol>
+        <li>"I'm 5'6", I have curly hair, and I'm pretty good at spiking."</li>
+        <li>"I want to become a nurse someday because I think healing people matters more than almost anything else."</li>
+        <li>"I'm usually the quiet one in a new group until I get comfortable."</li>
+        <li>"Being part of my barangay's youth council is a big part of who I am. I take that role seriously."</li>
+        <li>"I like painting and I'm interested in true crime podcasts."</li>
+        <li>"I believe that people deserve a second chance, and that shapes how I treat others."</li>
+    </ol>
+</div>
+
+<div class="section">
+<h2>Part A: Sort Jasmine's Statements</h2>
+
+<div class="question" data-type="select" data-correct="Self-Concept" data-explain="This is a trait/ability/appearance statement, which is self-concept: what she knows about herself.">
+    <p class="qtext"><strong>1.</strong> "I'm 5'6", I have curly hair, and I'm pretty good at spiking."</p>
+    <select><option value="">-- Choose --</option><option>Self-Concept</option><option>Identity</option></select>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="select" data-correct="Identity" data-explain="This combines a goal with a value (why healing matters to her), which is identity: how she gives meaning to who she is.">
+    <p class="qtext"><strong>2.</strong> "I want to become a nurse someday because I think healing people matters more than almost anything else."</p>
+    <select><option value="">-- Choose --</option><option>Self-Concept</option><option>Identity</option></select>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="select" data-correct="Self-Concept" data-explain="This describes a behavioral trait/pattern, which falls under self-concept.">
+    <p class="qtext"><strong>3.</strong> "I'm usually the quiet one in a new group until I get comfortable."</p>
+    <select><option value="">-- Choose --</option><option>Self-Concept</option><option>Identity</option></select>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="select" data-correct="Identity" data-explain="A role that she attaches meaning to ('who I am') is identity, not just a trait.">
+    <p class="qtext"><strong>4.</strong> "Being part of my barangay's youth council is a big part of who I am. I take that role seriously."</p>
+    <select><option value="">-- Choose --</option><option>Self-Concept</option><option>Identity</option></select>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="select" data-correct="Self-Concept" data-explain="Interests are part of self-concept: information about herself.">
+    <p class="qtext"><strong>5.</strong> "I like painting and I'm interested in true crime podcasts."</p>
+    <select><option value="">-- Choose --</option><option>Self-Concept</option><option>Identity</option></select>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="select" data-correct="Identity" data-explain="A belief that guides how she acts toward others is a value, which belongs to identity.">
+    <p class="qtext"><strong>6.</strong> "I believe that people deserve a second chance, and that shapes how I treat others."</p>
+    <select><option value="">-- Choose --</option><option>Self-Concept</option><option>Identity</option></select>
+    <div class="feedback"></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Part B: Quick Check</h2>
+
+<div class="question" data-type="radio" data-correct="b" data-explain="Identity is about defining and giving meaning to who you are.">
+    <p class="qtext"><strong>1.</strong> "How I define and give meaning to who I am" describes:</p>
+    <label class="opt"><input type="radio" name="q1" value="a"> Self-Concept</label>
+    <label class="opt"><input type="radio" name="q1" value="b"> Identity</label>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="radio" data-correct="a" data-explain="Self-concept is what you know and think about yourself.">
+    <p class="qtext"><strong>2.</strong> "What I know and think about myself" describes:</p>
+    <label class="opt"><input type="radio" name="q2" value="a"> Self-Concept</label>
+    <label class="opt"><input type="radio" name="q2" value="b"> Identity</label>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="radio" data-correct="b" data-explain="Valuing honesty is a value, which is part of identity, not a trait or ability.">
+    <p class="qtext"><strong>3.</strong> Which of these is an example of identity rather than self-concept?</p>
+    <label class="opt"><input type="radio" name="q3" value="a"> "I'm tall and I have brown eyes."</label>
+    <label class="opt"><input type="radio" name="q3" value="b"> "I value honesty above almost everything."</label>
+    <label class="opt"><input type="radio" name="q3" value="c"> "I'm good at math."</label>
+    <label class="opt"><input type="radio" name="q3" value="d"> "I enjoy hiking."</label>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="radio" data-correct="b" data-explain="Identity develops through exploration, choices, and personal experiences; self-concept develops through experiences, feedback, and interactions.">
+    <p class="qtext"><strong>4.</strong> Which one develops primarily "through exploration, choices, and personal experiences"?</p>
+    <label class="opt"><input type="radio" name="q4" value="a"> Self-Concept</label>
+    <label class="opt"><input type="radio" name="q4" value="b"> Identity</label>
+    <div class="feedback"></div>
+</div>
+</div>
+
+<div class="controls">
+    <button class="btn" onclick="checkAnswers()">Check My Answers</button>
+    <button class="btn reset" onclick="resetActivity()">Reset</button>
+</div>
+
+<div id="score"></div>
+
+<p class="note">This is a self-review activity. It is not graded. Use it to check your own understanding before moving to the next slide.</p>
+
+<script>
+function checkAnswers() {
+    let total = 0, correct = 0;
+    document.querySelectorAll('.question').forEach(q => {
+        total++;
+        const type = q.getAttribute('data-type');
+        const correctVal = q.getAttribute('data-correct');
+        const explain = q.getAttribute('data-explain');
+        let userVal = '';
+        if (type === 'select') {
+            userVal = q.querySelector('select').value;
+        } else {
+            const checked = q.querySelector('input[type=radio]:checked');
+            userVal = checked ? checked.value : '';
+        }
+        const fb = q.querySelector('.feedback');
+        if (userVal !== '' && userVal === correctVal) {
+            correct++;
+            q.classList.remove('wrong'); q.classList.add('right');
+            fb.innerHTML = '<strong>Correct.</strong> ' + explain;
+        } else {
+            q.classList.remove('right'); q.classList.add('wrong');
+            let correctLabel = correctVal;
+            if (type === 'radio') {
+                const opt = q.querySelector('input[value="' + correctVal + '"]');
+                correctLabel = opt ? opt.parentElement.textContent.trim() : correctVal;
+            }
+            fb.innerHTML = '<strong>Not quite. Correct answer: ' + correctLabel + '.</strong> ' + explain;
+        }
+    });
+    const scoreBox = document.getElementById('score');
+    scoreBox.style.display = 'block';
+    scoreBox.innerText = 'Score: ' + correct + ' / ' + total;
+}
+function resetActivity() {
+    document.querySelectorAll('select').forEach(s => s.value = '');
+    document.querySelectorAll('input[type=radio]').forEach(r => r.checked = false);
+    document.querySelectorAll('.question').forEach(q => { q.classList.remove('right','wrong'); q.querySelector('.feedback').innerHTML=''; });
+    document.getElementById('score').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
