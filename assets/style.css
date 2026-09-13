@@ -145,3 +145,40 @@ footer{
   padding:24px 20px; border-top:1px solid var(--card-border); margin-top:10px;
 }
 ul{padding-left:20px;}
+
+/* ============================================================
+   Print stylesheet
+   Screen view keeps full color; printing strips backgrounds and
+   colored fills down to plain black text on white, and forces
+   every reveal open, since a printed page has no click to expand.
+   ============================================================ */
+@media print{
+  .rail{display:none;}
+  .wrap{padding-top:20px;}
+
+  body, .block, .keybox, .scenario, .case, .embed-box, header.top, footer,
+  table.matrix td.protective, table.matrix td.risk, table.matrix th,
+  .level-tag, .result-band, details{
+    background:#fff !important;
+    color:#000 !important;
+    box-shadow:none !important;
+  }
+
+  .block, .keybox, .scenario, .case, .embed-box, details, table.matrix, table.matrix th, table.matrix td{
+    border:1px solid #999 !important;
+  }
+  .block{border-left:3px solid #000 !important;}
+
+  h1, h2, .eyebrow, .block-kind, .tally, .ei-average, code{
+    color:#000 !important;
+  }
+
+  details > *:not(summary){display:block !important;}
+  summary{cursor:default; font-weight:bold; list-style:none;}
+  summary::-webkit-details-marker{display:none;}
+  summary::before{content:"Answer: "; font-style:italic; font-weight:normal;}
+
+  a{color:#000 !important; text-decoration:underline;}
+
+  .char-note, .rail-label{color:#333 !important;}
+}
