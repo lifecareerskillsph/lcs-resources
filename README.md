@@ -82,29 +82,6 @@ Five self-scoring practice activities, each gives instant feedback per question 
 EOF
 Output
 
-### Lesson 2: Self-Concept, Identity, and Emotional Regulation
-
-Current version: **September 2026**
-
-[**Lesson 2 Slides**](https://docs.google.com/presentation/d/1FHzK7O9Eu4BDkWSLsnG6CwO02dUebfBlcKAfo4-MjbA/edit?usp=sharing)
-Introductory presentation for Weeks 4 and 5, ahead of the study guides and application activities below.
-
-[**Week 4 Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/lesson-2a.html)
-Developmental tasks and physiological development, including Havighurst's eight adolescent tasks and a five-level protective/risk factor lens.
-
-[**Week 5 Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/lesson-2b.html)
-Psychosocial and emotional development, including a Filipino case analysis, a developmental tasks checklist, and an emotional intelligence self-evaluation.
-
-### Application Activities
-
-Five self-scoring practice activities, each gives instant feedback per question and a final score. Self-review only, not graded.
-
-- [**Activity 1: Self-Concept vs. Identity**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/activity-1-self-concept-vs-identity.html)
-- [**Activity 2: Dimensions of Self-Concept**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/activity-2-dimensions-of-self-concept.html)
-- [**Activity 3: Self-Concept vs. Self-Esteem**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/activity-3-self-concept-vs-self-esteem.html)
-- [**Activity 4: Emotional Intelligence Components**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/activity-4-emotional-intelligence-components.html)
-- [**Activity 5: Passive, Aggressive, or Assertive?**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/activity-5-passive-aggressive-assertive.html)
-
 ## Use and Attribution
 
 © 2026 Fritzie Cristina B. Diaz. CC BY-NC-ND 4.0.
