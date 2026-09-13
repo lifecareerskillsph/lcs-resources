@@ -64,10 +64,10 @@ Current version: **September 2026**
 [**Lesson 2 Slides**](https://docs.google.com/presentation/d/1FHzK7O9Eu4BDkWSLsnG6CwO02dUebfBlcKAfo4-MjbA/edit?usp=sharing)
 Introductory presentation for Weeks 4 and 5, ahead of the study guides and application activities below.
 
-[**Week 4 Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/lesson-2a.html)
+[**Lesson 2a Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/lesson-2a.html)
 Developmental tasks and physiological development, including Havighurst's eight adolescent tasks and a five-level protective/risk factor lens.
 
-[**Week 5 Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/lesson-2b.html)
+[**Lesson 2b Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/lesson-2b.html)
 Psychosocial and emotional development, including a Filipino case analysis, a developmental tasks checklist, and an emotional intelligence self-evaluation.
 
 ### Application Activities
