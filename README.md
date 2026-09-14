@@ -79,8 +79,6 @@ Five self-scoring practice activities, each gives instant feedback per question 
 - [**Activity 3: Self-Concept vs. Self-Esteem**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/activity-3-self-concept-vs-self-esteem.html)
 - [**Activity 4: Emotional Intelligence Components**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/activity-4-emotional-intelligence-components.html)
 - [**Activity 5: Passive, Aggressive, or Assertive?**](https://lifecareerskillsph.github.io/lcs-resources/lesson-2/activity-5-passive-aggressive-assertive.html)
-EOF
-Output
 
 ## Use and Attribution
 
