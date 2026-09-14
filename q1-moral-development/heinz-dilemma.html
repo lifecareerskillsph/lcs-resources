@@ -255,6 +255,14 @@
     color:var(--ink);
     margin:0 0 14px;
   }
+  .result-band .why-line{
+    font-size:13.5px;
+    color:var(--ink);
+    background:rgba(255,255,255,0.55);
+    border-left:3px solid rgba(0,0,0,0.15);
+    padding:10px 12px;
+    margin:0 0 14px;
+  }
   .result-band .your-line{
     font-size:13.5px;
     color:var(--ink-mute);
@@ -539,6 +547,7 @@ footer{color:#68767A; line-height:1.55;}
         <span class="level-tag" id="level-tag"></span>
         <h3 id="stage-name"></h3>
         <p class="stage-def" id="stage-def"></p>
+        <p class="why-line" id="why-line"></p>
         <p class="your-line" id="your-line"></p>
       </div>
 
@@ -554,6 +563,11 @@ footer{color:#68767A; line-height:1.55;}
       <div class="did-you-know">
         <strong>Did you know?</strong>
         Kohlberg's postconventional stages (5 and 6) are the least commonly reached in longitudinal studies of adults, and reaching them isn't automatic with age, and most adult reasoning clusters in the conventional level. Landing in Level 1 or 2 here reflects how you reasoned about <em>this one dilemma</em>, not a fixed trait.
+      </div>
+
+      <div class="did-you-know">
+        <strong>Trivia</strong>
+        Kohlberg's own scoring manual requires trained raters working from full interview transcripts, not a single sentence. Even then, inter-rater agreement on borderline responses is a documented weak point of the method, worth remembering before treating any one-sentence answer, including the ones in this activity, as a precise, uncontestable measurement.
       </div>
 
       <details class="ref">
@@ -592,18 +606,30 @@ const SCRIPT_URL = "";
 // ---------------------------------------------------------------------
 
 const statements = [
-  { n:1,  text:"He shouldn't steal the drug. It's a big crime. He did a lot of damage, stealing a very expensive drug and breaking up the store too. He'll be caught and sent to jail.", stage:1 },
-  { n:2,  text:"He should steal the drug. He was only doing something that was natural for a good husband to do. You can't blame him for doing something out of love for his wife; you'd blame him if he didn't love her enough to save her.", stage:3 },
-  { n:3,  text:"You can't completely blame someone for stealing, but extreme circumstances don't really justify taking the law into your own hands. You can't have everybody stealing whenever they get desperate. The end may be good but the ends don't justify the means.", stage:4 },
-  { n:4,  text:"He should steal the drug. It isn't like he didn't try to pay for it first. The drug he takes is only worth $200; he's not really taking a $2,000 drug.", stage:2 },
-  { n:5,  text:"It's a natural thing for Heinz to want to save his wife, but it's still always wrong to steal. He still knows he's stealing and taking a valuable drug from the man who made it.", stage:1 },
-  { n:6,  text:"You should steal it. If you did nothing, you'd be letting your wife die, and it's your responsibility if she dies. You have to take it with the idea of paying the druggist back.", stage:4 },
-  { n:7,  text:"He shouldn't steal it. The druggist isn't wrong or bad; he just wants to make a profit. And if Heinz goes to jail, his wife will probably die before he gets out anyway, so it wouldn't do him any good.", stage:2 },
-  { n:8,  text:"The law wasn't set up for these circumstances. Taking the drug in this situation isn't really right, but it's justified.", stage:5 },
-  { n:9,  text:"Heinz is faced with the decision of whether to consider the other people who need the drug just as badly as his wife. He ought to act not just according to his particular feelings toward his wife, but considering the value of all the lives involved.", stage:6 },
-  { n:10, text:"It's all right to steal the drug because she needs it and he wants her to live; he'll be very lonely without her. It isn't that he wants to steal, but it's the way he has to use to save her.", stage:2 },
-  { n:11, text:"He shouldn't steal. If his wife dies, he can't be blamed; it isn't because he's heartless or doesn't love her enough. The druggist is the selfish, heartless one.", stage:3 },
-  { n:12, text:"This situation forces him to choose between stealing and letting his wife die. Where that choice must be made, it is morally right to steal. It doesn't make sense to respect property more than life.", stage:6 }
+  { n:1,  text:"He shouldn't steal the drug. It's a big crime. He did a lot of damage, stealing a very expensive drug and breaking up the store too. He'll be caught and sent to jail.", stage:1,
+    rationale:"The reasoning stops at the direct consequence to Heinz personally, getting caught and going to jail, with no reference to the wrongness of the act itself or its effect on anyone else." },
+  { n:2,  text:"He should steal the drug. He was only doing something that was natural for a good husband to do. You can't blame him for doing something out of love for his wife; you'd blame him if he didn't love her enough to save her.", stage:3,
+    rationale:"The justification rests entirely on fulfilling the role of a good husband and avoiding the disapproval that would come from not loving his wife enough, reasoning anchored to social roles and others' approval, not to a rule or a principle." },
+  { n:3,  text:"You can't completely blame someone for stealing, but extreme circumstances don't really justify taking the law into your own hands. You can't have everybody stealing whenever they get desperate. The end may be good but the ends don't justify the means.", stage:4,
+    rationale:"This explicitly generalizes beyond Heinz to a rule that must hold for everyone, 'you can't have everybody stealing,' and treats maintaining that rule as more important than the specific circumstances, the hallmark of upholding social order for its own sake." },
+  { n:4,  text:"He should steal the drug. It isn't like he didn't try to pay for it first. The drug he takes is only worth $200; he's not really taking a $2,000 drug.", stage:2,
+    rationale:"This minimizes the 'cost' of the act through a self-interested calculation, it's only really worth $200, he tried to pay, treating the theft as a fair exchange gone wrong rather than a moral question, which is instrumental exchange reasoning." },
+  { n:5,  text:"It's a natural thing for Heinz to want to save his wife, but it's still always wrong to steal. He still knows he's stealing and taking a valuable drug from the man who made it.", stage:1,
+    rationale:"Stage 1 isn't only punishment-avoidance. Its other hallmark is exactly this kind of rigid, all-or-nothing rule application, with no capacity to reason about circumstances." },
+  { n:6,  text:"You should steal it. If you did nothing, you'd be letting your wife die, and it's your responsibility if she dies. You have to take it with the idea of paying the druggist back.", stage:4,
+    rationale:"This frames the act in terms of duty and obligation, 'it's your responsibility,' rather than personal cost-benefit or relationship-preservation, and the intent to repay signals residual respect for the property norm even while overriding it, a specifically Stage 4 pattern: upholding the rule's legitimacy while making a duty-based exception, not rejecting the rule's validity outright." },
+  { n:7,  text:"He shouldn't steal it. The druggist isn't wrong or bad; he just wants to make a profit. And if Heinz goes to jail, his wife will probably die before he gets out anyway, so it wouldn't do him any good.", stage:2,
+    rationale:"The druggist's profit motive is treated as ordinary self-interest rather than something to condemn, and the final justification for not stealing is purely pragmatic, it 'wouldn't do him any good,' a cost-benefit calculation about what serves Heinz, not a principle about the wrongness of stealing itself." },
+  { n:8,  text:"The law wasn't set up for these circumstances. Taking the drug in this situation isn't really right, but it's justified.", stage:5,
+    rationale:"This explicitly recognizes the law's limits in this specific situation while still respecting law in general, the Stage 5 move of treating rules as social agreements that can fail particular cases rather than absolutes." },
+  { n:9,  text:"Heinz is faced with the decision of whether to consider the other people who need the drug just as badly as his wife. He ought to act not just according to his particular feelings toward his wife, but considering the value of all the lives involved.", stage:6,
+    rationale:"This reasons from an impartial, universal principle, the equal value of every life involved, rather than Heinz's particular relationship to his wife, the self-chosen ethical principle Stage 6 is built on." },
+  { n:10, text:"It's all right to steal the drug because she needs it and he wants her to live; he'll be very lonely without her. It isn't that he wants to steal, but it's the way he has to use to save her.", stage:2,
+    rationale:"The justification centers on Heinz's own emotional need, avoiding loneliness, rather than a principle, a relationship, or a rule, self-interested reasoning even though the self-interest here is emotional rather than material." },
+  { n:11, text:"He shouldn't steal. If his wife dies, he can't be blamed; it isn't because he's heartless or doesn't love her enough. The druggist is the selfish, heartless one.", stage:3,
+    rationale:"The concern here is with not being blamed and with how Heinz would be judged by others, plus redirecting blame onto the druggist's character, both anchored to social approval and relationships rather than a rule or a principle." },
+  { n:12, text:"This situation forces him to choose between stealing and letting his wife die. Where that choice must be made, it is morally right to steal. It doesn't make sense to respect property more than life.", stage:6,
+    rationale:"This states an explicit, generalizable hierarchy of values, life over property, that would apply to any similar situation, exactly the self-chosen universal principle Stage 6 reasoning is built on." }
 ];
 
 const stageInfo = {
@@ -624,6 +650,7 @@ const stageInfo = {
 const levelLabel = { pre:"Level I, Preconventional", con:"Level II, Conventional", post:"Level III, Postconventional" };
 
 let selectedStage = null;
+let selectedStatementNum = null;
 
 function buildStatements(){
   const list = document.getElementById('statement-list');
@@ -644,6 +671,7 @@ function selectStatement(n, stage){
   document.querySelectorAll('.statement').forEach(el => el.classList.remove('selected'));
   document.getElementById('row-' + n).classList.add('selected');
   selectedStage = stage;
+  selectedStatementNum = n;
   const btn = document.getElementById('submit-btn');
   btn.disabled = false;
   document.getElementById('req-note').textContent = 'Ready. Click "Reveal My Result."';
@@ -661,6 +689,9 @@ function revealResult(){
 
   document.getElementById('stage-name').textContent = info.name;
   document.getElementById('stage-def').textContent = info.def;
+
+  const chosenStatement = statements.find(s => s.n === selectedStatementNum);
+  document.getElementById('why-line').textContent = chosenStatement ? chosenStatement.rationale : '';
 
   const name = document.getElementById('fld-name').value.trim();
   document.getElementById('your-line').textContent = name
