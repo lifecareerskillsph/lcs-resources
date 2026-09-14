@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application 2.2: Dimensions of Self-Concept</title>
+<style>
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 8.5in; margin: 0 auto; padding: 0.5in; background: #fff; }
+.header { text-align: center; border-bottom: 3px solid #2c3e50; padding-bottom: 15px; margin-bottom: 25px; }
+.header h1 { color: #2c3e50; margin: 8px 0; font-size: 20pt; }
+.header h2 { color: #34495e; margin: 4px 0; font-size: 12pt; font-weight: normal; }
+.info-box { background: #ecf0f1; border-left: 4px solid #3498db; padding: 15px; margin: 20px 0; }
+.info-box h3 { margin-top: 0; color: #2c3e50; }
+.section h2 { background: #34495e; color: #fff; padding: 8px 12px; font-size: 13pt; margin: 25px 0 12px 0; }
+.question { border: 1px solid #bdc3c7; padding: 12px 15px; margin: 12px 0; background: #fafafa; }
+.question.right { border-color: #4caf50; background: #eef8ef; }
+.question.wrong { border-color: #e74c3c; background: #fdecea; }
+.qtext { margin: 0 0 8px 0; }
+select { padding: 5px; font-size: 10.5pt; }
+label.opt { display: block; margin: 4px 0; cursor: pointer; }
+.feedback { display: none; margin-top: 8px; padding: 8px 10px; font-size: 10pt; border-radius: 3px; }
+.question.right .feedback { display: block; background: #d7f0d9; color: #256029; }
+.question.wrong .feedback { display: block; background: #fadbd8; color: #922b21; }
+.btn { background: #3498db; color: #fff; border: none; padding: 12px 24px; font-size: 12pt; cursor: pointer; border-radius: 4px; margin-right: 10px; }
+.btn:hover { background: #2980b9; }
+.btn.reset { background: #7f8c8d; }
+.btn.reset:hover { background: #636e72; }
+#score { display: none; text-align: center; font-size: 14pt; font-weight: bold; padding: 12px; margin: 20px 0; background: #34495e; color: #fff; border-radius: 4px; }
+.controls { text-align: center; margin: 25px 0; }
+.note { font-style: italic; color: #7f8c8d; font-size: 9.5pt; }
+.refbox { background: #fff8e1; border: 1px solid #ffe082; padding: 10px 15px; margin: 15px 0; font-size: 10pt; }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Application 2.2: Dimensions of Self-Concept</h1>
+    <h2>Grade 11 Life and Career Skills - Quarter 1, Lesson 2</h2>
+</div>
+
+<div class="refbox">
+    <strong>Reminder of the 4 quadrants:</strong> Private-Actual ("How do I actually see myself?"), Private-Ideal ("How would I like to see myself?"), Social-Actual ("How do others actually see me?"), Social-Ideal ("How do I want others to see me?")
+</div>
+
+<div class="info-box">
+    <h3>Scenario</h3>
+    <p>Carlo is a Grade 11 student who plays guitar in a small band.</p>
+    <p><strong>A:</strong> "Honestly, I'm not that confident performing live. I get nervous and I know my timing slips when I'm anxious."</p>
+    <p><strong>B:</strong> "I want to get to a point where I can play a full set without checking the chord sheet, and where nerves don't throw me off."</p>
+    <p><strong>C:</strong> "My bandmates probably think I'm the most reliable one in the group since I always show up early and know my parts."</p>
+    <p><strong>D:</strong> "I want people at school to see me as someone who takes music seriously, not just a hobbyist who jams around."</p>
+</div>
+
+<div class="section">
+<h2>Part A: Place Each Statement</h2>
+
+<div class="question" data-type="select" data-correct="Private-Actual" data-explain="Carlo is privately describing how he actually sees himself right now, not how others see him or how he wishes to be.">
+    <p class="qtext"><strong>Statement A</strong> belongs to:</p>
+    <select><option value="">-- Choose --</option><option>Private-Actual</option><option>Private-Ideal</option><option>Social-Actual</option><option>Social-Ideal</option></select>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="select" data-correct="Private-Ideal" data-explain="This is what Carlo privately wishes he could become, not his current state and not about how others see him.">
+    <p class="qtext"><strong>Statement B</strong> belongs to:</p>
+    <select><option value="">-- Choose --</option><option>Private-Actual</option><option>Private-Ideal</option><option>Social-Actual</option><option>Social-Ideal</option></select>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="select" data-correct="Social-Actual" data-explain="Carlo is estimating how his bandmates currently, actually see him, based on his behavior.">
+    <p class="qtext"><strong>Statement C</strong> belongs to:</p>
+    <select><option value="">-- Choose --</option><option>Private-Actual</option><option>Private-Ideal</option><option>Social-Actual</option><option>Social-Ideal</option></select>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="select" data-correct="Social-Ideal" data-explain="Carlo is describing how he wants other people at school to perceive him, which is the ideal version of the social self.">
+    <p class="qtext"><strong>Statement D</strong> belongs to:</p>
+    <select><option value="">-- Choose --</option><option>Private-Actual</option><option>Private-Ideal</option><option>Social-Actual</option><option>Social-Ideal</option></select>
+    <div class="feedback"></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Part B: Quick Check</h2>
+
+<div class="question" data-type="radio" data-correct="a" data-explain="'How do I actually see myself?' is the definition of the Private-Actual quadrant.">
+    <p class="qtext"><strong>1.</strong> Which quadrant does the question "How do I actually see myself?" belong to?</p>
+    <label class="opt"><input type="radio" name="q1" value="a"> Private-Actual</label>
+    <label class="opt"><input type="radio" name="q1" value="b"> Private-Ideal</label>
+    <label class="opt"><input type="radio" name="q1" value="c"> Social-Actual</label>
+    <label class="opt"><input type="radio" name="q1" value="d"> Social-Ideal</label>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="radio" data-correct="c" data-explain="'How do others actually see me?' is the Social-Actual quadrant.">
+    <p class="qtext"><strong>2.</strong> "How do others actually see me?" belongs to:</p>
+    <label class="opt"><input type="radio" name="q2" value="a"> Private-Actual</label>
+    <label class="opt"><input type="radio" name="q2" value="b"> Private-Ideal</label>
+    <label class="opt"><input type="radio" name="q2" value="c"> Social-Actual</label>
+    <label class="opt"><input type="radio" name="q2" value="d"> Social-Ideal</label>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="radio" data-correct="b" data-explain="Wishing to be perceived a certain way by classmates, differently from how she currently comes across, is the Ideal Social-Concept quadrant.">
+    <p class="qtext"><strong>3.</strong> A student thinks, "I wish my classmates saw me as more confident than I actually come across." This best reflects:</p>
+    <label class="opt"><input type="radio" name="q3" value="a"> Actual self</label>
+    <label class="opt"><input type="radio" name="q3" value="b"> Ideal social self</label>
+    <label class="opt"><input type="radio" name="q3" value="c"> Private ideal self</label>
+    <label class="opt"><input type="radio" name="q3" value="d"> Social actual self</label>
+    <div class="feedback"></div>
+</div>
+
+<div class="question" data-type="radio" data-correct="b" data-explain="This is a private, internal aspiration (hoping to become more patient), which is the Private-Ideal quadrant.">
+    <p class="qtext"><strong>4.</strong> Which statement best reflects the Private-Ideal Self?</p>
+    <label class="opt"><input type="radio" name="q4" value="a"> "I am shy in new situations."</label>
+    <label class="opt"><input type="radio" name="q4" value="b"> "I hope to become more patient with my siblings."</label>
+    <label class="opt"><input type="radio" name="q4" value="c"> "My classmates think I'm funny."</label>
+    <label class="opt"><input type="radio" name="q4" value="d"> "I want people to see me as hardworking."</label>
+    <div class="feedback"></div>
+</div>
+</div>
+
+<div class="controls">
+    <button class="btn" onclick="checkAnswers()">Check My Answers</button>
+    <button class="btn reset" onclick="resetActivity()">Reset</button>
+</div>
+
+<div id="score"></div>
+
+<p class="note">This is a self-review activity. It is not graded. Use it to check your own understanding before moving to the next slide.</p>
+
+<script>
+function checkAnswers() {
+    let total = 0, correct = 0;
+    document.querySelectorAll('.question').forEach(q => {
+        total++;
+        const type = q.getAttribute('data-type');
+        const correctVal = q.getAttribute('data-correct');
+        const explain = q.getAttribute('data-explain');
+        let userVal = '';
+        if (type === 'select') {
+            userVal = q.querySelector('select').value;
+        } else {
+            const checked = q.querySelector('input[type=radio]:checked');
+            userVal = checked ? checked.value : '';
+        }
+        const fb = q.querySelector('.feedback');
+        if (userVal !== '' && userVal === correctVal) {
+            correct++;
+            q.classList.remove('wrong'); q.classList.add('right');
+            fb.innerHTML = '<strong>Correct.</strong> ' + explain;
+        } else {
+            q.classList.remove('right'); q.classList.add('wrong');
+            let correctLabel = correctVal;
+            if (type === 'radio') {
+                const opt = q.querySelector('input[value="' + correctVal + '"]');
+                correctLabel = opt ? opt.parentElement.textContent.trim() : correctVal;
+            }
+            fb.innerHTML = '<strong>Not quite. Correct answer: ' + correctLabel + '.</strong> ' + explain;
+        }
+    });
+    const scoreBox = document.getElementById('score');
+    scoreBox.style.display = 'block';
+    scoreBox.innerText = 'Score: ' + correct + ' / ' + total;
+}
+function resetActivity() {
+    document.querySelectorAll('select').forEach(s => s.value = '');
+    document.querySelectorAll('input[type=radio]').forEach(r => r.checked = false);
+    document.querySelectorAll('.question').forEach(q => { q.classList.remove('right','wrong'); q.querySelector('.feedback').innerHTML=''; });
+    document.getElementById('score').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
