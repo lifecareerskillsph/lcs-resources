@@ -107,8 +107,3 @@ The nine essential life skills applied across personal and social, academic, car
 ## Use and Attribution
 
 © 2026 Fritzie Cristina B. Diaz. CC BY-NC-ND 4.0.
-
-
-## Use and Attribution
-
-© 2026 Fritzie Cristina B. Diaz. CC BY-NC-ND 4.0.
