@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 4, Life and Career Skills</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.mode-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:10px;}
+.mode-toggle{display:inline-flex; background:#EAF8FA; border:1px solid #B7DEE3; border-radius:999px; padding:3px;}
+.mode-toggle button{border:none; background:transparent; color:#167C89; padding:6px 14px; border-radius:999px; cursor:pointer; font-family:Arial, sans-serif; font-weight:600; font-size:0.82rem;}
+.mode-toggle button.active{background:#167C89; color:#fff;}
+.mode-toggle button:focus-visible{outline:2px solid #167C89; outline-offset:2px;}
+.facilitated-note{display:none; background:#FFF9D9; border-left:4px solid #FFD633; padding:12px 16px; font-size:0.88rem; margin:14px 0; border-radius:0 8px 8px 0;}
+body.mode-facilitated .facilitated-note{display:block;}
+.facilitated-note strong{display:block; margin-bottom:3px;}
+</style>
+</head>
+<body class="mode-selfpaced">
+
+<div class="rail">
+  <div class="rail-inner">
+    <span class="rail-label">Lesson 4, 11 sections</span>
+    <div class="rail-track">
+      <div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div>
+      <div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div>
+      <div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div>
+      <div class="rail-dot"></div><div class="rail-dot"></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="header">
+    <div class="mode-row">
+      <p class="eyebrow">Life and Career Skills, Grade 11, Q1, Lesson 4</p>
+      <div class="mode-toggle" role="tablist" aria-label="Delivery mode">
+        <button type="button" id="btn-facilitated" onclick="setMode('facilitated')">Facilitated</button>
+        <button type="button" id="btn-selfpaced" class="active" onclick="setMode('selfpaced')">Self-Paced</button>
+      </div>
+    </div>
+    <h1>Applying Life Skills to Different Domains</h1>
+    <p>Self-paced work for the last content lesson before the Performance Task is submitted. This is not graded. In Facilitated mode, notes appear before group activities with pacing guidance; in Self-Paced mode, work through independently.</p>
+  </div>
+
+  <!-- 1 -->
+  <section class="block" id="s1">
+    <p class="block-kind">Learn</p>
+    <h2>Why this lesson is different</h2>
+    <p>Lessons 1 through 3 examined development, analyzed supports and risks, and practiced wellness routines. This lesson names the life skills you have already been using and asks you to apply them across different life domains: personal and social, academic, career and vocational, and digital. Same skills, different settings, that is the work here.</p>
+    <p><strong>LC3:</strong> Reflect on your own personal experiences that support self-awareness, self-acceptance, and self-regulation.</p>
+    <div class="keybox">The process: name the skill in your own words. Locate the domain, personal/social, academic, career/vocational, or digital. Explain why the skill mattered in that specific situation.</div>
+    <p>Nine skills organize this lesson: <strong>self-awareness</strong> (noticing thoughts, emotions, values, and behavior), <strong>self-acceptance</strong> (a realistic view of your strengths and limits without making worth depend on approval), <strong>self-regulation</strong> (monitoring and adjusting your own behavior toward a goal), <strong>problem-solving</strong> (generating possible responses to a difficulty), <strong>decision-making</strong> (weighing alternatives, values, and consequences), <strong>optimism</strong> (expecting good outcomes are possible), <strong>goal setting</strong> (defining specific, attainable targets), <strong>grit</strong> (sustained passion and perseverance across setbacks), and <strong>self-determination</strong> (acting from choice rather than external pressure).</p>
+    <p class="char-note">Sources: Bandura (1991); Rogers (1961); D'Zurilla &amp; Goldfried (1971); Janis &amp; Mann (1977); Scheier &amp; Carver (1985); Locke &amp; Latham (2002); Duckworth et al. (2007); Deci &amp; Ryan (2000).</p>
+  </section>
+
+  <!-- 2 -->
+  <section class="block practice" id="s2">
+    <p class="block-kind">Practice</p>
+    <h2>Practice Test 4.1: identify the life skill</h2>
+    <p>Read each situation and choose the life skill it shows.</p>
+
+    <div class="rating-row"><span>1. A student notices that their mood shifts depending on how much time they spend on a certain app, and starts paying attention to the pattern.</span>
+      <select class="rating" data-rating>
+        <option value="">Choose</option>
+        <option value="a">A. Self-awareness</option>
+        <option value="b">B. Self-acceptance</option>
+        <option value="c">C. Self-regulation</option>
+        <option value="d">D. Problem-solving</option>
+      </select></div>
+    <div class="rating-row"><span>2. A student who struggles with public speaking accepts this as a real limitation without deciding it makes them a failure overall.</span>
+      <select class="rating" data-rating>
+        <option value="">Choose</option>
+        <option value="a">A. Self-awareness</option>
+        <option value="b">B. Self-acceptance</option>
+        <option value="c">C. Self-regulation</option>
+        <option value="d">D. Problem-solving</option>
+      </select></div>
+    <div class="rating-row"><span>3. Feeling overwhelmed before an exam, a student uses a breathing technique and a study checklist instead of just telling themselves to calm down.</span>
+      <select class="rating" data-rating>
+        <option value="">Choose</option>
+        <option value="a">A. Self-awareness</option>
+        <option value="b">B. Self-acceptance</option>
+        <option value="c">C. Self-regulation</option>
+        <option value="d">D. Problem-solving</option>
+      </select></div>
+    <div class="rating-row"><span>4. Before choosing how to handle a conflict with a friend, a student lists several possible ways to respond before picking one.</span>
+      <select class="rating" data-rating>
+        <option value="">Choose</option>
+        <option value="a">A. Self-awareness</option>
+        <option value="b">B. Self-acceptance</option>
+        <option value="c">C. Self-regulation</option>
+        <option value="d">D. Problem-solving</option>
+      </select></div>
+
+    <details>
+      <summary>See the answer key</summary>
+      <p><strong>1. A:</strong> the student notices the mood pattern behind app use.</p>
+      <p><strong>2. B:</strong> the student recognizes a weakness without making it a verdict on worth.</p>
+      <p><strong>3. C:</strong> the student uses a concrete strategy rather than willpower alone.</p>
+      <p><strong>4. D:</strong> the student generates possible responses before choosing one.</p>
+    </details>
+  </section>
+
+  <!-- 3 -->
+  <section class="block practice" id="s3">
+    <p class="block-kind">Learn and practice</p>
+    <h2>Domain A: Personal and Social</h2>
+    <p>Identity, family, friendships, and close relationships. In this domain, skills often affect trust, conflict, boundaries, and belonging: self-awareness means noticing which situations trigger strong reactions; self-acceptance means holding a realistic view of a weakness without letting it define your worth; self-regulation means pausing before responding in a disagreement instead of reacting immediately.</p>
+    <div class="scenario"><strong>Scenario: Mika.</strong> Mika's parents want her to take up a strand she is not interested in. She feels torn between her own goals and her family's expectations.</div>
+    <ol class="steps">
+      <li>Which life skill would help Mika the most in this moment, and why?</li>
+      <li>What would self-acceptance look like if her parents do not change their minds right away?</li>
+    </ol>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <details>
+      <summary>See a possible response</summary>
+      <p>More than one skill can fit if the reasoning is clear. <strong>Self-awareness</strong> helps Mika clarify what she actually wants and where her reaction is coming from. <strong>Decision-making</strong> helps her weigh her interests, family concerns, and likely consequences. <strong>Self-acceptance</strong> lets her continue to value her own goals as legitimate even while the disagreement is unresolved, without turning it into a verdict on her judgment.</p>
+    </details>
+  </section>
+
+  <!-- 4 -->
+  <section class="block practice" id="s4">
+    <p class="block-kind">Learn and practice</p>
+    <h2>Domain B: Academic</h2>
+    <p>Study habits, feedback, effort, and school performance. Self-regulated learning, planning, monitoring, and adjusting, was once treated as a fixed trait some students simply had. Research reframed it as a skill that can be taught and improved at any age (Zimmerman, 2000). In academics, effort matters, but unexamined effort can repeat the wrong method.</p>
+    <div class="scenario"><strong>Scenario: Arvin.</strong> Arvin studies for hours before every exam but his scores do not improve. He is starting to believe he is simply "not good" at the subject.</div>
+    <ol class="steps">
+      <li>Is Arvin missing effort, or something else?</li>
+      <li>Rewrite Arvin's self-talk using self-acceptance rather than self-judgment.</li>
+    </ol>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <details>
+      <summary>See a possible response</summary>
+      <p><strong>Likely missing skill:</strong> self-regulation. He may be working hard but not monitoring whether his method is actually working.</p>
+      <p><strong>Self-accepting self-talk:</strong> "My current method is not working. That does not mean I cannot learn this. I need to adjust the strategy," rather than concluding he is simply bad at the subject.</p>
+    </details>
+  </section>
+
+  <!-- 5 -->
+  <section class="block practice" id="s5">
+    <p class="block-kind">Learn and practice</p>
+    <h2>Domain C: Career and Vocational</h2>
+    <p>Tentative interests, values, and future direction. At Grade 11, career thinking is exploratory, not final: self-awareness means naming which subjects or activities genuinely hold your attention; optimism and grit mean staying engaged with a long-term interest even when an early attempt does not go well; self-determination means choosing a track or activity because it reflects your own interest. Naming an interest is not the same as locking yourself into one career forever.</p>
+    <div class="scenario"><strong>Scenario: Paolo.</strong> Paolo enjoys building things but has never considered it a real career path. His family expects him to take a business-related track.</div>
+    <ol class="steps">
+      <li>Which life skill would help Paolo explore this interest without dismissing his family's concerns outright?</li>
+      <li>What is one small, low-risk way Paolo could test whether this interest could become a career direction?</li>
+    </ol>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <details>
+      <summary>See a possible response</summary>
+      <p><strong>Useful skill:</strong> self-determination helps Paolo treat his own interest seriously without dismissing family realities.</p>
+      <p><strong>Low-risk test:</strong> join a related school project, interview someone in the field, try a beginner build, or attend a related workshop. A small test gives Paolo more evidence before making a bigger decision.</p>
+    </details>
+  </section>
+
+  <!-- 6 -->
+  <section class="block practice" id="s6">
+    <p class="block-kind">Learn and practice</p>
+    <h2>Domain D: Digital</h2>
+    <p>Attention, boundaries, platforms, and intentional use. The issue is not only screen time, it is whether use supports or disrupts your goals. A 2026 developmental framework argues adolescents' capacity for digital self-regulation is still maturing alongside executive function, and that digital literacy, recognizing how platforms are designed to hold attention, is what makes self-directed regulation possible in the first place, restriction alone is not enough (Wang, 2026). Willpower is weakest when the environment is designed to keep pulling you back.</p>
+    <div class="scenario"><strong>Scenario: Sam.</strong> Sam knows scrolling late at night affects their sleep and next-day focus, but still does it most nights.</div>
+    <ol class="steps">
+      <li>Is Sam's difficulty best explained by a lack of knowledge, a lack of strategy, or something else?</li>
+      <li>Name one regulatory strategy Sam could try that does not depend on willpower alone.</li>
+    </ol>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <details>
+      <summary>See a possible response</summary>
+      <p><strong>Likely issue:</strong> a lack of strategy and environmental support. Sam already knows the consequence but repeats the pattern anyway, knowing the problem does not automatically produce regulation.</p>
+      <p><strong>Possible strategy:</strong> charge the phone outside the bedroom, turn off notifications, set app limits, or build a fixed offline routine before sleep. Digital self-regulation works better when the environment supports the decision.</p>
+    </details>
+  </section>
+
+  <!-- 7 -->
+  <section class="block practice" id="s7">
+    <p class="block-kind">Practice</p>
+    <h2>Cross-domain synthesis</h2>
+    <p>The same skill does not look identical in every setting. Fill in one example per cell before checking the reference table.</p>
+    <table class="matrix fill">
+      <thead><tr><th>Skill</th><th>Personal &amp; Social</th><th>Academic</th><th>Career &amp; Vocational</th><th>Digital</th></tr></thead>
+      <tbody>
+        <tr><td>Self-awareness</td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td></tr>
+        <tr><td>Self-regulation</td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td></tr>
+        <tr><td>Self-determination</td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td></tr>
+      </tbody>
+    </table>
+    <p class="tally" data-fill-counter>0 of 12 cells completed</p>
+
+    <details>
+      <summary>Compare with the reference matrix</summary>
+      <table class="matrix">
+        <thead><tr><th>Skill</th><th>Personal &amp; Social</th><th>Academic</th><th>Career &amp; Vocational</th><th>Digital</th></tr></thead>
+        <tbody>
+          <tr><td>Self-awareness</td><td>Noticing emotional triggers</td><td>Recognizing learning patterns</td><td>Naming genuine interests</td><td>Noticing mood-driven app use</td></tr>
+          <tr><td>Self-regulation</td><td>Pausing before conflict</td><td>Adjusting a study method</td><td>Managing a career setback</td><td>Using a strategy, not willpower</td></tr>
+          <tr><td>Self-determination</td><td>Setting a boundary</td><td>Choosing meaningful study</td><td>Pursuing interest despite pressure</td><td>Disengaging on your own terms</td></tr>
+        </tbody>
+      </table>
+    </details>
+  </section>
+
+  <!-- 8 -->
+  <section class="block practice" id="s8">
+    <p class="block-kind">Practice: group activity</p>
+    <h2>Activity 4.2: domain walk</h2>
+    <div class="facilitated-note"><strong>Facilitator note</strong>Assign one domain per group. Each group picks the three skills most visible in that domain and gives one concrete example each, then reports back using the sentence stem below. Build the synthesis table together rather than presenting it pre-filled.</div>
+    <div class="scenario"><strong>Group report:</strong> "In our domain, ___ looks like ___ because ___."</div>
+    <textarea class="reflect" placeholder="Type your group's report here..."></textarea>
+  </section>
+
+  <!-- 9 -->
+  <section class="block" id="s9">
+    <p class="block-kind">Recap</p>
+    <h2>Connection to the Performance Task</h2>
+    <p>This lesson does not add a new field to your Wellness Tracker. Physical activity, mindfulness, sleep, and integration already came from Lessons 2 and 3. Its contribution is the reflection itself, when you write your tracker's final integration entry, name which of the nine life skills helped you keep it going, or which one you noticed you were missing. The tracker records behavior, the final reflection explains the skill behind the behavior.</p>
+  </section>
+
+  <!-- 10 -->
+  <section class="block practice" id="s10">
+    <p class="block-kind">Practice</p>
+    <h2>Comprehensive review</h2>
+
+    <div class="rating-row"><span>1. Which skill is defined as an unconditional, realistic regard for yourself?</span>
+      <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Self-awareness</option><option value="b">B. Self-acceptance</option><option value="c">C. Self-determination</option></select></div>
+    <div class="rating-row"><span>2. Adjusting a study method after noticing it is not working is an example of which skill?</span>
+      <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Grit</option><option value="b">B. Self-regulation</option><option value="c">C. Decision-making</option></select></div>
+    <div class="rating-row"><span>3. According to Wang (2026), what makes self-directed digital regulation possible, beyond restriction alone?</span>
+      <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Parental surveillance</option><option value="b">B. Digital literacy</option><option value="c">C. Longer screen time</option></select></div>
+    <div class="rating-row"><span>4. Sustained passion and perseverance for long-term goals, even across setbacks, defines which skill?</span>
+      <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Grit</option><option value="b">B. Self-acceptance</option><option value="c">C. Problem-solving</option></select></div>
+    <div class="rating-row"><span>5. Self-determination theory is built on autonomy, competence, and which third need?</span>
+      <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Achievement</option><option value="b">B. Relatedness</option><option value="c">C. Power</option></select></div>
+    <div class="rating-row"><span>6. In the Academic domain, treating a failed quiz as information rather than a verdict on ability reflects which skill?</span>
+      <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Self-acceptance</option><option value="b">B. Grit</option><option value="c">C. Decision-making</option></select></div>
+    <div class="rating-row"><span>7. Which domain is explicitly described in this lesson as tentative rather than final at this stage?</span>
+      <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Personal and Social</option><option value="b">B. Academic</option><option value="c">C. Career and Vocational</option></select></div>
+
+    <details>
+      <summary>See the answer key</summary>
+      <p><strong>1. B:</strong> self-acceptance is a realistic regard for yourself, including strengths and limits, without requiring external approval.</p>
+      <p><strong>2. B:</strong> monitoring and adjusting your own behavior toward a goal is self-regulation.</p>
+      <p><strong>3. B:</strong> digital literacy, recognizing how platforms are designed to hold attention, is what makes a regulation strategy actually work.</p>
+      <p><strong>4. A:</strong> this is the definition of grit (Duckworth et al., 2007).</p>
+      <p><strong>5. B:</strong> the three basic psychological needs are autonomy, competence, and relatedness (Deci &amp; Ryan, 2000).</p>
+      <p><strong>6. A:</strong> this is self-acceptance applied to academic feedback.</p>
+      <p><strong>7. C:</strong> career and vocational exploration in Grade 11 is exploratory, not a final decision.</p>
+    </details>
+  </section>
+
+  <!-- 11 -->
+  <section class="block" id="s11">
+    <p class="block-kind">Recap</p>
+    <h2>Lesson 4: what to remember</h2>
+    <ul>
+      <li>The nine skills are the same set all quarter, Lessons 1 through 3 already used them, this lesson just names them directly.</li>
+      <li>A skill's shape depends on its domain, self-regulation in a family conflict looks different from self-regulation with a phone.</li>
+      <li>Career exploration is tentative, naming an interest is not the same as committing to it.</li>
+      <li>Digital regulation depends on literacy, not only willpower.</li>
+      <li>The tracker's final entry is a reflection, not a new log category.</li>
+    </ul>
+    <p>Choose one life skill. In four to six sentences, trace how it shows up across all four domains in your own life this quarter, using specific examples. End with one domain where you want to apply it more deliberately next quarter. Use this as a draft for your Wellness Tracker reflection.</p>
+    <textarea class="reflect" placeholder="Write your synthesis here..."></textarea>
+  </section>
+
+</div>
+
+<footer>
+  Based on the DepEd Strengthened Senior High School Curriculum for Life and Career Skills (2025)<br>
+  Prepared by Fritzie Cristina B. Diaz, RPsy, DAAETS<br>
+  For instructional use only. &copy; 2026 F.C. Diaz. CC BY-NC-ND 4.0.
+</footer>
+
+<script>
+function setMode(mode){
+  document.body.className = 'mode-' + mode;
+  document.getElementById('btn-facilitated').classList.toggle('active', mode === 'facilitated');
+  document.getElementById('btn-selfpaced').classList.toggle('active', mode === 'selfpaced');
+}
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
