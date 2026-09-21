@@ -78,31 +78,36 @@ Five self-scoring practice activities, each gives instant feedback per question 
 
 ### Lesson 3: Fitness, Mindfulness, and Recreational Activities
 
-Current version: **[MONTH] 2026**
+Current version: **September 2026**
 
-[**Lesson 3 Slides**](GOOGLE SLIDES LINK NEEDED)
-Introductory presentation for Weeks 7 and 8, ahead of the study guides below.
+[**Lesson 3 Slides**](https://docs.google.com/presentation/d/11i0Q9Jen-So5iifjcG4jC1yUgSh0HL_fp4C3uNmEERo/edit?usp=drivesdk)
+Introductory presentation for Weeks 7 and 8, covering fitness activities, mindfulness activities, and recreational activities ahead of the interactive study guides below.
 
 [**Lesson 3a Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-3/lesson-3a.html)
-Fitness and mindfulness routines: the dynamic warm-up, three breathing techniques, and their connection to the Wellness Tracker.
+Fitness and mindfulness routines, including the dynamic warm-up, three breathing techniques, and their connection to the Wellness Tracker.
 
 [**Lesson 3b Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-3/lesson-3b.html)
-Recreational activities, the fitness-versus-recreation distinction, active and passive recreation, and larong lahi.
+Recreational activities, the distinction between fitness and recreation, active and passive recreation, and larong lahi.
 
 #### Resources
 
-[**Fitness, Mindfulness & Recreation Resource Hub**](LINK NEEDED, see note below)
-Desk-posture relief for common student aches, free and paid breathing/mindfulness apps, and free movement resources, extending the lesson beyond the classroom.
+[**Fitness, Mindfulness & Recreation Resource Hub**](LINK NEEDED)
+Desk-posture relief for common student aches, free and paid breathing and mindfulness apps, and free movement resources that extend the lesson beyond the classroom.
 
 ### Lesson 4: Applying Life Skills to Different Domains
 
-Current version: **[MONTH] 2026**
+Current version: **September 2026**
 
-[**Lesson 4 Slides**](GOOGLE SLIDES LINK NEEDED)
-Introductory presentation for Week 9, ahead of the study guide below.
+[**Lesson 4 Slides**](https://docs.google.com/presentation/d/16G5iwzjnSThv0oTaJ5rzC_RRa63baZHNIZ1wxRugO30/edit?usp=drivesdk)
+Introductory presentation for Week 9, covering the nine essential life skills and their application across personal and social, academic, career and vocational, and digital domains.
 
 [**Lesson 4 Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-4/lesson4.html)
-The nine essential life skills applied across personal/social, academic, career/vocational, and digital domains.
+The nine essential life skills applied across personal and social, academic, career and vocational, and digital domains, with scenario-based applications and connections to the Quarter 1 Performance Task.
+
+## Use and Attribution
+
+© 2026 Fritzie Cristina B. Diaz. CC BY-NC-ND 4.0.
+
 
 ## Use and Attribution
 
