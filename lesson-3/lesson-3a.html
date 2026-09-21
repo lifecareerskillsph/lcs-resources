@@ -15,6 +15,74 @@
 .facilitated-note{display:none; background:#FFF9D9; border-left:4px solid #FFD633; padding:12px 16px; font-size:0.88rem; margin:14px 0; border-radius:0 8px 8px 0;}
 body.mode-facilitated .facilitated-note{display:block;}
 .facilitated-note strong{display:block; margin-bottom:3px;}
+
+/* New addition: animated stick-figure demos for the warm-up. Built as
+   looping SVG/CSS, not sourced media, so nothing to hotlink or break. */
+.wu-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(110px, 1fr)); gap:10px; margin:14px 0; background:#FBFEFE; border:1px solid #D8E7E9; border-radius:8px; padding:14px;}
+.wu-card{text-align:center; font-size:0.78rem; color:#4A5559;}
+.wu-fig{width:70px; height:98px;}
+.wu-fig line{stroke:#167C89; stroke-width:5; stroke-linecap:round;}
+.wu-fig circle.fig-head{fill:#167C89;}
+.wu-fig .fig-arm-l, .wu-fig .fig-arm-r, .wu-fig .fig-leg-l, .wu-fig .fig-leg-r, .wu-fig .fig-upper{transform-box:fill-box;}
+@keyframes wuMarchLeg{0%,100%{transform:rotate(0deg);} 50%{transform:rotate(-32deg);}}
+@keyframes wuMarchLegOpp{0%,100%{transform:rotate(0deg);} 50%{transform:rotate(32deg);}}
+.wu-march .fig-leg-l{transform-origin:50px 75px; animation:wuMarchLeg 1s ease-in-out infinite;}
+.wu-march .fig-leg-r{transform-origin:50px 75px; animation:wuMarchLegOpp 1s ease-in-out infinite;}
+.wu-march .fig-arm-l{transform-origin:50px 34px; animation:wuMarchLegOpp 1s ease-in-out infinite;}
+.wu-march .fig-arm-r{transform-origin:50px 34px; animation:wuMarchLeg 1s ease-in-out infinite;}
+@keyframes wuArmCircle{from{transform:rotate(0deg);} to{transform:rotate(360deg);}}
+.wu-armcircle .fig-arm-l, .wu-armcircle .fig-arm-r{transform-origin:50px 34px; animation:wuArmCircle 1.6s linear infinite;}
+@keyframes wuTwist{0%,100%{transform:rotate(-18deg);} 50%{transform:rotate(18deg);}}
+.wu-torsotwist .fig-upper{transform-origin:50px 75px; animation:wuTwist 1.4s ease-in-out infinite;}
+@keyframes wuSquat{0%,100%{transform:translateY(0) scaleY(1);} 50%{transform:translateY(12px) scaleY(0.88);}}
+.wu-squat .fig-body{transform-origin:50px 75px; animation:wuSquat 1.6s ease-in-out infinite;}
+@keyframes wuLungeL{0%,100%{transform:rotate(-22deg);} 50%{transform:rotate(18deg);}}
+@keyframes wuLungeR{0%,100%{transform:rotate(18deg);} 50%{transform:rotate(-22deg);}}
+.wu-lunge .fig-leg-l{transform-origin:50px 75px; animation:wuLungeL 1.4s ease-in-out infinite;}
+.wu-lunge .fig-leg-r{transform-origin:50px 75px; animation:wuLungeR 1.4s ease-in-out infinite;}
+@keyframes wuHighKnee{0%,100%{transform:rotate(0deg);} 50%{transform:rotate(-55deg);}}
+@keyframes wuHighKneeOpp{0%,100%{transform:rotate(0deg);} 50%{transform:rotate(20deg);}}
+.wu-highknee .fig-leg-l{transform-origin:50px 75px; animation:wuHighKnee 0.7s ease-in-out infinite;}
+.wu-highknee .fig-leg-r{transform-origin:50px 75px; animation:wuHighKneeOpp 0.7s ease-in-out infinite;}
+.wu-highknee .fig-arm-l{transform-origin:50px 34px; animation:wuHighKneeOpp 0.7s ease-in-out infinite;}
+.wu-highknee .fig-arm-r{transform-origin:50px 34px; animation:wuHighKnee 0.7s ease-in-out infinite;}
+@keyframes wuHip{0%,100%{transform:translate(0,0);} 25%{transform:translate(6px,-3px);} 50%{transform:translate(0,3px);} 75%{transform:translate(-6px,-3px);}}
+.wu-hipcircle .fig-body{animation:wuHip 1.8s ease-in-out infinite;}
+
+/* New addition: breathing demonstration widget, optional, click to play. */
+.breathe-demo{border:1px solid #D8E7E9; border-radius:10px; background:#FBFEFE; padding:18px; margin:14px 0; text-align:center;}
+.breathe-tech-row{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:12px;}
+.breathe-tech-row button{border:1px solid #B7DEE3; background:#fff; color:#167C89; padding:6px 14px; border-radius:999px; font-family:Arial, sans-serif; font-weight:600; font-size:0.8rem; cursor:pointer;}
+.breathe-tech-row button.active{background:#167C89; color:#fff;}
+.breathe-visual{display:flex; align-items:center; justify-content:center; height:150px;}
+.breathe-circle{width:70px; height:70px; border-radius:50%; background:#24B5C8; transition:transform 4s ease-in-out; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:1.4rem;}
+.breathe-box-wrap{position:relative; width:120px; height:120px;}
+.breathe-box-outline{position:absolute; inset:0; border:4px solid #D5E6E9; border-radius:6px;}
+.breathe-box-dot{position:absolute; width:16px; height:16px; border-radius:50%; background:#FFD633; top:-8px; left:-8px; transition:top 4s linear, left 4s linear;}
+.breathe-box-count{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-weight:700; color:#167C89; font-size:1.3rem;}
+.breathe-phase{font-family:'Poppins', Arial, sans-serif; font-weight:700; color:#176F7B; margin-top:10px; font-size:0.95rem;}
+.breathe-controls{margin-top:12px; display:flex; gap:8px; justify-content:center;}
+.breathe-controls button{border:none; font-family:'Poppins', Arial, sans-serif; font-weight:600; font-size:0.82rem; padding:8px 18px; border-radius:4px; cursor:pointer;}
+.breathe-controls .play{background:#167C89; color:#fff;}
+.breathe-controls .reset{background:#fff; color:#167C89; border:1px solid #167C89;}
+
+/* New addition: bonus tip box, visually distinct from tested content. */
+.bonus-tip{background:#F2F0F8; border-left:4px solid #9086B8; padding:12px 16px; font-size:0.88rem; margin:14px 0; border-radius:0 8px 8px 0;}
+.bonus-tip strong{display:block; margin-bottom:3px; color:#4B4470;}
+
+/* New addition: face and neck lymphatic massage demo, built as an
+   illustrated diagram, not sourced video. Bonus content, not tested. */
+.face-massage-demo{border:1px solid #D8E7E9; border-radius:10px; background:#FBFEFE; padding:18px; margin:14px 0; text-align:center;}
+.face-wrap{position:relative; width:200px; height:230px; margin:0 auto;}
+.massage-dot{position:absolute; width:14px; height:14px; border-radius:50%; background:#FFD633; border:2px solid #176F7B; box-shadow:0 0 0 4px rgba(255,214,51,.25);}
+.massage-timer{display:inline-flex; flex-direction:column; align-items:center; justify-content:center; width:66px; height:66px; border-radius:50%; border:4px solid #34383A; margin:10px auto 6px; background:#fff;}
+.massage-timer span{font-family:'Poppins', Arial, sans-serif; font-weight:700; font-size:1.3rem; color:#34383A; line-height:1;}
+.massage-timer small{font-size:0.6rem; color:#667176; letter-spacing:0.05em;}
+.massage-step-label{font-family:'Poppins', Arial, sans-serif; font-weight:600; color:#176F7B; font-size:0.9rem; margin-top:6px; min-height:20px;}
+.massage-controls{margin-top:12px; display:flex; gap:8px; justify-content:center;}
+.massage-controls button{border:none; font-family:'Poppins', Arial, sans-serif; font-weight:600; font-size:0.82rem; padding:8px 18px; border-radius:4px; cursor:pointer;}
+.massage-controls .play{background:#167C89; color:#fff;}
+.massage-controls .reset{background:#fff; color:#167C89; border:1px solid #167C89;}
 </style>
 </head>
 <body class="mode-selfpaced">
@@ -50,7 +118,7 @@ body.mode-facilitated .facilitated-note{display:block;}
     <p class="block-kind">Learn</p>
     <h2>What this lesson asks of you</h2>
     <p><strong>LC2:</strong> Exhibit understanding of routines that promote physiological development, health, personal development, and well-being. Unlike Lesson 2, this is not about identifying protective or risk factors, it is about practicing routines and explaining why they work.</p>
-    <div class="keybox"><strong>The process for this lesson:</strong> define the practice and what it is meant to do &mdash; explain, in plain terms, how it affects the body or nervous system &mdash; perform it using correct form or pacing &mdash; log it in your Wellness Tracker and connect it to a well-being outcome.</div>
+    <div class="keybox"><strong>The process for this lesson:</strong> define the practice and what it is meant to do. Explain, in plain terms, how it affects the body or nervous system. Perform it using correct form or pacing. Log it in your Wellness Tracker and connect it to a well-being outcome.</div>
     <div class="facilitated-note"><strong>Facilitator note</strong>This module covers what would otherwise be a full onsite period: the warm-up demonstration, the breathing techniques, and both checkpoints. Running it live, budget roughly 10 minutes for the warm-up, 10 for breathing, and the rest for discussion and the practice tests.</div>
   </section>
 
@@ -76,6 +144,18 @@ body.mode-facilitated .facilitated-note{display:block;}
     <p class="block-kind">Practice</p>
     <h2>The dynamic warm-up</h2>
     <p>A dynamic warm-up uses controlled, active movement to raise heart rate and muscle temperature before activity. Static stretching belongs after activity instead, once the body is already warm. Run each movement for about 30 to 40 seconds with a short transition.</p>
+
+    <div class="wu-grid">
+      <div class="wu-card"><svg class="wu-fig wu-march" viewBox="0 0 100 140"><g class="fig-body"><circle class="fig-head" cx="50" cy="18" r="9"/><line class="fig-torso" x1="50" y1="27" x2="50" y2="75"/><g class="fig-upper"><g class="fig-arm-l"><line x1="50" y1="34" x2="30" y2="55"/></g><g class="fig-arm-r"><line x1="50" y1="34" x2="70" y2="55"/></g></g><g class="fig-leg-l"><line x1="50" y1="75" x2="35" y2="115"/></g><g class="fig-leg-r"><line x1="50" y1="75" x2="65" y2="115"/></g></g></svg><p>1. March</p></div>
+      <div class="wu-card"><svg class="wu-fig wu-armcircle" viewBox="0 0 100 140"><g class="fig-body"><circle class="fig-head" cx="50" cy="18" r="9"/><line class="fig-torso" x1="50" y1="27" x2="50" y2="75"/><g class="fig-arm-l"><line x1="50" y1="34" x2="30" y2="55"/></g><g class="fig-arm-r"><line x1="50" y1="34" x2="70" y2="55"/></g><line class="fig-leg-l" x1="50" y1="75" x2="42" y2="115"/><line class="fig-leg-r" x1="50" y1="75" x2="58" y2="115"/></g></svg><p>2. Arm circles</p></div>
+      <div class="wu-card"><svg class="wu-fig wu-torsotwist" viewBox="0 0 100 140"><g class="fig-body"><circle class="fig-head" cx="50" cy="18" r="9"/><g class="fig-upper"><line class="fig-torso" x1="50" y1="27" x2="50" y2="75"/><g class="fig-arm-l"><line x1="50" y1="34" x2="30" y2="55"/></g><g class="fig-arm-r"><line x1="50" y1="34" x2="70" y2="55"/></g></g><line class="fig-leg-l" x1="50" y1="75" x2="42" y2="115"/><line class="fig-leg-r" x1="50" y1="75" x2="58" y2="115"/></g></svg><p>3. Torso twists</p></div>
+      <div class="wu-card"><svg class="wu-fig wu-squat" viewBox="0 0 100 140"><g class="fig-body"><circle class="fig-head" cx="50" cy="18" r="9"/><line class="fig-torso" x1="50" y1="27" x2="50" y2="75"/><line class="fig-arm-l" x1="50" y1="34" x2="32" y2="50"/><line class="fig-arm-r" x1="50" y1="34" x2="68" y2="50"/><line class="fig-leg-l" x1="50" y1="75" x2="35" y2="115"/><line class="fig-leg-r" x1="50" y1="75" x2="65" y2="115"/></g></svg><p>4. Squats</p></div>
+      <div class="wu-card"><svg class="wu-fig wu-lunge" viewBox="0 0 100 140"><g class="fig-body"><circle class="fig-head" cx="50" cy="18" r="9"/><line class="fig-torso" x1="50" y1="27" x2="50" y2="75"/><line class="fig-arm-l" x1="50" y1="34" x2="32" y2="50"/><line class="fig-arm-r" x1="50" y1="34" x2="68" y2="50"/><g class="fig-leg-l"><line x1="50" y1="75" x2="30" y2="112"/></g><g class="fig-leg-r"><line x1="50" y1="75" x2="70" y2="112"/></g></g></svg><p>5. Walking lunges</p></div>
+      <div class="wu-card"><svg class="wu-fig wu-highknee" viewBox="0 0 100 140"><g class="fig-body"><circle class="fig-head" cx="50" cy="18" r="9"/><line class="fig-torso" x1="50" y1="27" x2="50" y2="75"/><g class="fig-arm-l"><line x1="50" y1="34" x2="30" y2="55"/></g><g class="fig-arm-r"><line x1="50" y1="34" x2="70" y2="55"/></g><g class="fig-leg-l"><line x1="50" y1="75" x2="35" y2="115"/></g><g class="fig-leg-r"><line x1="50" y1="75" x2="65" y2="115"/></g></g></svg><p>6. High knees</p></div>
+      <div class="wu-card"><svg class="wu-fig wu-hipcircle" viewBox="0 0 100 140"><g class="fig-body"><circle class="fig-head" cx="50" cy="18" r="9"/><line class="fig-torso" x1="50" y1="27" x2="50" y2="75"/><line class="fig-arm-l" x1="50" y1="34" x2="30" y2="50" style="stroke-linecap:round;"/><line class="fig-arm-r" x1="50" y1="34" x2="70" y2="50"/><line class="fig-leg-l" x1="50" y1="75" x2="42" y2="115"/><line class="fig-leg-r" x1="50" y1="75" x2="58" y2="115"/></g></svg><p>7. Hip circles</p></div>
+    </div>
+    <p class="char-note">Looping visual demos, built for this guide, not recorded footage. Use them alongside the cues below, not instead of them.</p>
+
     <ol class="steps">
       <li><strong>March in place.</strong> Lift your knees comfortably, swing your arms naturally, keep your shoulders relaxed.</li>
       <li><strong>Arm circles.</strong> Small circles forward, then reverse, controlled, not fast.</li>
@@ -121,9 +201,9 @@ body.mode-facilitated .facilitated-note{display:block;}
 
     <details>
       <summary>See the answer key</summary>
-      <p><strong>1. B</strong> &mdash; Active movement raises heart rate and prepares muscles for exertion. Static stretching is more appropriate after activity, once the body is already warm.</p>
-      <p><strong>2. B</strong> &mdash; The warm-up improves readiness, mobility, and heart-rate response, but does not load muscles enough to build strength or endurance on its own.</p>
-      <p><strong>3. A</strong> &mdash; Emotional wellness is the clearest answer, since physical activity is associated with lower depressive symptoms in adolescents. Social wellness is also reasonable in a shared-activity context.</p>
+      <p><strong>1. B:</strong> Active movement raises heart rate and prepares muscles for exertion. Static stretching is more appropriate after activity, once the body is already warm.</p>
+      <p><strong>2. B:</strong> The warm-up improves readiness, mobility, and heart-rate response, but does not load muscles enough to build strength or endurance on its own.</p>
+      <p><strong>3. A:</strong> Emotional wellness is the clearest answer, since physical activity is associated with lower depressive symptoms in adolescents. Social wellness is also reasonable in a shared-activity context.</p>
     </details>
   </section>
 
@@ -157,6 +237,24 @@ body.mode-facilitated .facilitated-note{display:block;}
     <p><strong>Diaphragmatic breathing</strong> (1&ndash;2 minutes): sit comfortably, one hand on the chest and one on the belly. Inhale slowly through the nose for 4 counts, letting the belly rise. Exhale slowly for 6 counts, letting the belly fall. Repeat 6 to 8 times.</p>
     <p><strong>Box breathing</strong> (1&ndash;2 minutes): inhale for 4 counts, hold for 4, exhale for 4, hold for 4. That is one round. Repeat for about 4 rounds.</p>
     <p><strong>4-7-8 breathing</strong> (about 1 minute): inhale quietly through the nose for 4 counts, hold for 7, exhale completely through the mouth for 8. Repeat only 3 to 4 rounds, this technique is stronger than the other two.</p>
+
+    <div class="breathe-demo">
+      <p style="font-weight:600; color:#176F7B; margin:0 0 4px;">See it, don't just read it</p>
+      <p style="font-size:0.85rem; color:#4A5559; margin:0 0 10px;">Diaphragmatic breathing shows the belly rising, not the chest. Box breathing traces the four sides as you count. Pick a technique and press Play.</p>
+      <div class="breathe-tech-row">
+        <button type="button" class="active" onclick="breatheDemo.select('diaphragm', this)">Diaphragmatic</button>
+        <button type="button" onclick="breatheDemo.select('box', this)">Box</button>
+        <button type="button" onclick="breatheDemo.select('478', this)">4-7-8</button>
+      </div>
+      <div class="breathe-visual" id="breathe-visual">
+        <div class="breathe-circle" id="breathe-circle">4</div>
+      </div>
+      <div class="breathe-phase" id="breathe-phase">Press Play to begin</div>
+      <div class="breathe-controls">
+        <button class="play" onclick="breatheDemo.start()">Play</button>
+        <button class="reset" onclick="breatheDemo.reset()">Reset</button>
+      </div>
+    </div>
   </section>
 
   <!-- 9 -->
@@ -167,6 +265,33 @@ body.mode-facilitated .facilitated-note{display:block;}
     <p>Before a two-minute window like a quiz, box breathing or a few rounds of 4-7-8 give a clear count to follow. After something slower, like a stressful commute, diaphragmatic breathing works well without any breath holds at all.</p>
     <p>Try one technique now. Which one felt most natural, and in what situation would you actually use it?</p>
     <textarea class="reflect" placeholder="Write a few sentences..."></textarea>
+
+    <div class="bonus-tip"><strong>Bonus tip, not one of the three tested techniques</strong>A stress ball gives your hands something to actually squeeze and release, which mimics the clench-then-relax pattern used in progressive muscle relaxation, a technique related to but distinct from the breathing practices above. Squeeze for about 5 seconds, then release and notice the difference. This is worth knowing, not something you're accountable for on the Long Quiz.</div>
+
+    <div class="bonus-tip"><strong>Bonus: a lighter way to unwind</strong>Face and neck massage is a popular self-care break for the same reason breathing techniques work, it gives the nervous system a moment to settle. Press Play below to see a simple lymphatic drainage pattern, then try it yourself with clean hands or a tool like a gua sha stone or jade roller if you have one.</div>
+
+    <div class="face-massage-demo">
+      <div class="face-wrap">
+        <svg viewBox="0 0 200 230" style="width:100%; height:100%;">
+          <rect x="82" y="180" width="36" height="45" rx="6" fill="#FDEEE4" stroke="#D9B99B" stroke-width="2"/>
+          <path d="M70,225 Q100,214 130,225" stroke="#D9B99B" stroke-width="2" fill="none"/>
+          <ellipse cx="32" cy="105" rx="8" ry="15" fill="#FDEEE4" stroke="#D9B99B" stroke-width="2"/>
+          <ellipse cx="168" cy="105" rx="8" ry="15" fill="#FDEEE4" stroke="#D9B99B" stroke-width="2"/>
+          <ellipse cx="100" cy="112" rx="66" ry="86" fill="#FDEEE4" stroke="#D9B99B" stroke-width="2"/>
+          <ellipse cx="75" cy="95" rx="8" ry="4" fill="#4A3B32"/>
+          <ellipse cx="125" cy="95" rx="8" ry="4" fill="#4A3B32"/>
+          <line x1="100" y1="100" x2="100" y2="126" stroke="#D9B99B" stroke-width="2" stroke-linecap="round"/>
+          <path d="M85,145 Q100,152 115,145" stroke="#C97B63" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="massage-dot" id="massage-dot"></div>
+      </div>
+      <div class="massage-timer"><span id="massage-secs">--</span><small>SEC</small></div>
+      <div class="massage-step-label" id="massage-step-label">Press Play to begin</div>
+      <div class="massage-controls">
+        <button class="play" onclick="massageDemo.start()">Play</button>
+        <button class="reset" onclick="massageDemo.reset()">Reset</button>
+      </div>
+    </div>
   </section>
 
   <!-- 10 -->
@@ -199,9 +324,9 @@ body.mode-facilitated .facilitated-note{display:block;}
 
     <details>
       <summary>See the answer key</summary>
-      <p><strong>1. A</strong> &mdash; Box breathing or 4-7-8 breathing are both brief and structured. Diaphragmatic breathing can also work, but may take slightly longer to settle into.</p>
-      <p><strong>2. A</strong> &mdash; Keeping the eyes open and breathing quietly does not require closing the eyes for the technique to work.</p>
-      <p><strong>3. A</strong> &mdash; Slowing the exhale helps shift the nervous system away from high alert and toward greater regulation.</p>
+      <p><strong>1. A:</strong> Box breathing or 4-7-8 breathing are both brief and structured. Diaphragmatic breathing can also work, but may take slightly longer to settle into.</p>
+      <p><strong>2. A:</strong> Keeping the eyes open and breathing quietly does not require closing the eyes for the technique to work.</p>
+      <p><strong>3. A:</strong> Slowing the exhale helps shift the nervous system away from high alert and toward greater regulation.</p>
     </details>
   </section>
 
@@ -241,6 +366,187 @@ function setMode(mode){
   document.getElementById('btn-facilitated').classList.toggle('active', mode === 'facilitated');
   document.getElementById('btn-selfpaced').classList.toggle('active', mode === 'selfpaced');
 }
+
+/* New addition: optional breathing demonstration widget. Nothing
+   autoplays, the student must press Play. Visual only, not scored. */
+var breatheDemo = (function(){
+  var techniques = {
+    diaphragm: { phases: [
+        { label:'Breathe in', secs:4, scale:1.5 },
+        { label:'Breathe out', secs:6, scale:1 }
+      ], type:'circle' },
+    box: { phases: [
+        { label:'Breathe in (top)', secs:4 },
+        { label:'Hold (right)', secs:4 },
+        { label:'Breathe out (bottom)', secs:4 },
+        { label:'Hold (left)', secs:4 }
+      ], type:'box' },
+    '478': { phases: [
+        { label:'Breathe in', secs:4, scale:1.5 },
+        { label:'Hold', secs:7, scale:1.5 },
+        { label:'Breathe out', secs:8, scale:1 }
+      ], type:'circle' }
+  };
+  var corners = [[-8,-8],[-8,112],[112,112],[112,-8]];
+  var current = 'diaphragm', phaseIdx = 0, timeLeft = 0, timer = null, running = false;
+
+  function renderVisual(){
+    var visual = document.getElementById('breathe-visual');
+    if (!visual) return;
+    var tech = techniques[current];
+    if (tech.type === 'box'){
+      visual.innerHTML = '<div class="breathe-box-wrap"><div class="breathe-box-outline"></div>' +
+        '<div class="breathe-box-dot" id="breathe-dot" style="top:-8px; left:-8px;"></div>' +
+        '<div class="breathe-box-count" id="breathe-count">4</div></div>';
+    } else {
+      visual.innerHTML = '<div class="breathe-circle" id="breathe-circle">4</div>';
+    }
+  }
+
+  function showPhase(){
+    var tech = techniques[current];
+    if (phaseIdx >= tech.phases.length) phaseIdx = 0;
+    var phase = tech.phases[phaseIdx];
+    var phaseEl = document.getElementById('breathe-phase');
+    if (phaseEl) phaseEl.textContent = phase.label + ' (' + timeLeft + ')';
+    if (tech.type === 'circle'){
+      var circle = document.getElementById('breathe-circle');
+      if (circle){
+        circle.style.transition = 'transform ' + phase.secs + 's ease-in-out';
+        circle.style.transform = 'scale(' + phase.scale + ')';
+        circle.textContent = timeLeft;
+      }
+    } else {
+      var dot = document.getElementById('breathe-dot');
+      var countEl = document.getElementById('breathe-count');
+      if (dot){
+        dot.style.top = corners[phaseIdx][0] + 'px';
+        dot.style.left = corners[phaseIdx][1] + 'px';
+      }
+      if (countEl) countEl.textContent = timeLeft;
+    }
+  }
+
+  function tick(){
+    timeLeft--;
+    if (timeLeft <= 0){
+      phaseIdx++;
+      var tech = techniques[current];
+      if (phaseIdx >= tech.phases.length) phaseIdx = 0;
+      timeLeft = tech.phases[phaseIdx].secs;
+    }
+    showPhase();
+  }
+
+  function select(tech, btn){
+    if (running) return;
+    current = tech;
+    var buttons = document.querySelectorAll('.breathe-tech-row button');
+    for (var i = 0; i < buttons.length; i++){ buttons[i].classList.remove('active'); }
+    btn.classList.add('active');
+    reset();
+  }
+
+  function start(){
+    var tech = techniques[current];
+    if (!running){
+      running = true;
+      if (timeLeft <= 0) timeLeft = tech.phases[phaseIdx].secs;
+      renderVisual();
+      showPhase();
+    }
+    clearInterval(timer);
+    timer = setInterval(tick, 1000);
+  }
+
+  function reset(){
+    clearInterval(timer);
+    running = false;
+    phaseIdx = 0;
+    timeLeft = 0;
+    renderVisual();
+    var phaseEl = document.getElementById('breathe-phase');
+    if (phaseEl) phaseEl.textContent = 'Press Play to begin';
+  }
+
+  renderVisual();
+  return { select: select, start: start, reset: reset };
+})();
+
+/* New addition: face and neck lymphatic massage demo. Illustrated
+   diagram, not video, built for this guide. Nothing autoplays. */
+var massageDemo = (function(){
+  var steps = [
+    { label:'1 of 5: forehead center to temple', from:[100,50], to:[35,60], secs:8 },
+    { label:'2 of 5: under the eye toward the ear', from:[75,92], to:[32,95], secs:8 },
+    { label:'3 of 5: cheek toward the ear', from:[70,120], to:[32,108], secs:8 },
+    { label:'4 of 5: jawline up to the ear', from:[65,158], to:[32,120], secs:8 },
+    { label:'5 of 5: down the neck to the collarbone', from:[100,180], to:[100,222], secs:10 }
+  ];
+  var idx = -1, timeLeft = 0, timer = null;
+
+  function place(dot, pos){
+    dot.style.transition = 'none';
+    dot.style.left = (pos[0] - 7) + 'px';
+    dot.style.top = (pos[1] - 7) + 'px';
+    void dot.offsetWidth;
+  }
+
+  function glideTo(dot, pos, secs){
+    dot.style.transition = 'top ' + secs + 's linear, left ' + secs + 's linear';
+    dot.style.left = (pos[0] - 7) + 'px';
+    dot.style.top = (pos[1] - 7) + 'px';
+  }
+
+  function render(){
+    var labelEl = document.getElementById('massage-step-label');
+    var secsEl = document.getElementById('massage-secs');
+    if (!labelEl) return;
+    if (idx === -1 || idx >= steps.length){
+      labelEl.textContent = idx >= steps.length ? 'Routine complete' : 'Press Play to begin';
+      secsEl.textContent = '--';
+      return;
+    }
+    labelEl.textContent = steps[idx].label;
+    secsEl.textContent = timeLeft;
+  }
+
+  function advance(){
+    var dot = document.getElementById('massage-dot');
+    idx++;
+    if (idx >= steps.length){ render(); clearInterval(timer); return; }
+    place(dot, steps[idx].from);
+    timeLeft = steps[idx].secs;
+    setTimeout(function(){ glideTo(dot, steps[idx].to, steps[idx].secs); }, 30);
+    render();
+  }
+
+  function start(){
+    var dot = document.getElementById('massage-dot');
+    if (idx === -1){
+      advance();
+    } else {
+      render();
+    }
+    clearInterval(timer);
+    timer = setInterval(function(){
+      timeLeft--;
+      if (timeLeft <= 0){ advance(); }
+      else { render(); }
+    }, 1000);
+  }
+
+  function reset(){
+    clearInterval(timer);
+    idx = -1; timeLeft = 0;
+    var dot = document.getElementById('massage-dot');
+    if (dot) place(dot, [100, 50]);
+    render();
+  }
+
+  reset();
+  return { start: start, reset: reset };
+})();
 </script>
 <script src="../assets/app.js"></script>
 </body>
