@@ -80,7 +80,7 @@ Five self-scoring practice activities, each gives instant feedback per question 
 
 Current version: **September 2026**
 
-[**Lesson 3 Slides**](https://docs.google.com/presentation/d/11i0Q9Jen-So5iifjcG4jC1yUgSh0HL_fp4C3uNmEERo/edit?usp=drivesdk)
+[**Lesson 3 Slides**](https://docs.google.com/presentation/d/1dycT8WAnnJl1PokmHtXih4XsR3TS3M1W/edit?usp=sharing&ouid=114090834897432250942&rtpof=true&sd=true)
 Introductory presentation for Weeks 7 and 8, covering fitness activities, mindfulness activities, and recreational activities ahead of the interactive study guides below.
 
 [**Lesson 3a Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-3/lesson-3a.html)
