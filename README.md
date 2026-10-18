@@ -35,10 +35,10 @@ The August 2026 version includes:
 
 #### Resources
 
-[**Teacher Setup Guide**](https://docs.google.com/presentation/d/1HPxYhSFQJvEgPo2B83crBeXQyKZ7hxB0NJ3elw_1i0s/edit?usp=sharing)
+[**Teacher Guide**](https://docs.google.com/presentation/d/1HPxYhSFQJvEgPo2B83crBeXQyKZ7hxB0NJ3elw_1i0s/edit?usp=sharing)
 Setup, distribution, and monitoring guide for the Q2 PeTa. For co-teachers.
 
-[**Student Guide**](https://docs.google.com/presentation/d/1KrzIvaVc8eIcPrIeE8HWVqSLSXweCpj5/edit?usp=sharing&ouid=114090834897432250942&rtpof=true&sd=true)
+[**Student Tutorial**](https://docs.google.com/presentation/d/1KrzIvaVc8eIcPrIeE8HWVqSLSXweCpj5/edit?usp=sharing&ouid=114090834897432250942&rtpof=true&sd=true)
 Student-facing guide to the Social Collaborative Performance Task. For student use and classroom orientation.
 
 ## Quarter 1: Understanding and Strengthening the Self
