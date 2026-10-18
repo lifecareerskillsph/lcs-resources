@@ -29,6 +29,18 @@ The August 2026 version includes:
 - removal of redundant response options
 - review and revision of reflection questions for better alignment with the Quarter 1 learning competencies
 
+## Quarter 2 Performance Task
+
+### Social Collaborative Performance Task
+
+#### Resources
+
+[**Teacher Setup Guide**](https://docs.google.com/presentation/d/1HPxYhSFQJvEgPo2B83crBeXQyKZ7hxB0NJ3elw_1i0s/edit?usp=sharing)
+Setup, distribution, and monitoring guide for the Q2 PeTa. For co-teachers.
+
+[**Student Guide**](https://docs.google.com/presentation/d/1KrzIvaVc8eIcPrIeE8HWVqSLSXweCpj5/edit?usp=sharing&ouid=114090834897432250942&rtpof=true&sd=true)
+Student-facing guide to the Social Collaborative Performance Task. For student use and classroom orientation.
+
 ## Quarter 1: Understanding and Strengthening the Self
 
 ### Lesson 1: Key Developmental Stages
