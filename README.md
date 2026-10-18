@@ -104,6 +104,45 @@ Introductory presentation for Week 9, covering the nine essential life skills an
 [**Lesson 4 Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-4/lesson4.html)
 The nine essential life skills applied across personal and social, academic, career and vocational, and digital domains, with scenario-based applications and connections to the Quarter 1 Performance Task.
 
+## Quarter 2: Social Competence
+
+### Lesson 5: Understanding the Nature and Dynamics of Social Relationships
+
+Current version: **October 2026**
+
+Three interactive study guides, one per part of the lesson. Each has built-in practice with self-check answer keys, short scenario pauses with choose-a-reply feedback, and a facilitated-mode toggle for teacher-led delivery alongside a self-paced mode. Formative, not scored.
+
+[**Lesson 5a Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-5/lesson-5a.html)
+Healthy relationship traits and warning signs, social influence (conformity, compliance, obedience, normative and informational influence), social perception and attribution, and social interaction, including Enriquez's levels of interaction and Filipino concepts such as pakikisama and utang na loob.
+
+[**Lesson 5b Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-5/lesson-5b.html)
+Cooperation, competition, conflict, and accommodation, including the five elements of cooperation, the five conflict styles, the three meanings of accommodation, mediation and arbitration, and the difference between conflict and bullying.
+
+[**Lesson 5c Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-5/lesson-5c.html)
+Relationships across generations and groups, including intergenerational solidarity and ambivalence, social identity, the contact hypothesis, a lesson-wide retrieval check, and a synthesis task connected to the Social Collaboration Task.
+
+### Lesson 6: Establishing Healthy Relationships
+
+Current version: **October 2026**
+
+Three interactive study guides, one per part of the lesson, with the same practice, scenario, and toggle features as Lesson 5. Part B is educational only and is not a screening tool.
+
+[**Lesson 6a Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-6/lesson-6a.html)
+Personal growth and group productivity, including values and strengths, self-determination theory, goals and growth mindset, process loss, social loafing, groupthink, and psychological safety.
+
+[**Lesson 6b Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-6/lesson-6b.html)
+Mental health and well-being, including stress, burnout, how relationships protect or harm mental health, help-seeking in the Filipino context, and a self-care action plan. Includes where to get help.
+
+[**Lesson 6c Interactive Study Guide**](https://lifecareerskillsph.github.io/lcs-resources/lesson-6/lesson-6c.html)
+Conflict management, including the four patterns that predict trouble, active listening, I-messages, perspective-taking, interest-based problem solving, how to evaluate which skill fits, and when conflict management is the wrong tool.
+
+### Lesson 7: Applying Interpersonal Effectiveness at Home, School, and Community in the Philippine Context
+
+Current version: **October 2026**
+
+[**Lesson 7 Interactive Reviewer**](https://lifecareerskillsph.github.io/lcs-resources/lesson-7/lesson7-reviewer.html)
+A single-page reviewer covering all four parts: effective communication (verbal and nonverbal), empathy, pro-social behavior, other-centeredness and pakikipagkapwa, compassion, fairness and kindness, and collaboration. Includes flip cards for key terms, condensed review sections, ungraded practice with answer keys, scenario pauses, a cross-part synthesis table, and two mixed reviews. Includes the facilitated-mode toggle.
+
 ## Use and Attribution
 
 © 2026 Fritzie Cristina B. Diaz. CC BY-NC-ND 4.0.
