@@ -1,1 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 5b: Cooperation, Competition, Conflict, and Accommodation</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* Scoped additions, not in the shared stylesheet: delivery toggle and branching practice. */
+.mode-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:10px;}
+.mode-toggle{display:inline-flex; background:#EAF8FA; border:1px solid #B7DEE3; border-radius:999px; padding:3px;}
+.mode-toggle button{border:none; background:transparent; color:#167C89; padding:6px 14px; border-radius:999px; cursor:pointer; font-family:Arial, sans-serif; font-weight:600; font-size:0.82rem;}
+.mode-toggle button.active{background:#167C89; color:#fff;}
+.mode-toggle button:focus-visible{outline:2px solid #167C89; outline-offset:2px;}
+.facilitated-note{display:none; background:#FFF9D9; border-left:4px solid #FFD633; padding:12px 16px; font-size:0.88rem; margin:14px 0; border-radius:0 8px 8px 0;}
+body.mode-facilitated .facilitated-note{display:block;}
+.facilitated-note strong{display:block; margin-bottom:3px;}
+.branch{margin:14px 0;}
+.branch-btn{display:block; width:100%; text-align:left; margin:6px 0; padding:10px 14px; border:1px solid #B7DEE3; background:#fff; border-radius:10px; cursor:pointer; font:inherit; color:inherit;}
+.branch-btn:hover{background:#EAF8FA;}
+.branch-btn.on{background:#EAF8FA; border-color:#167C89;}
+.branch-btn:focus-visible{outline:2px solid #167C89; outline-offset:2px;}
+.branch-out p{background:#F6FBFC; border-left:4px solid #167C89; padding:10px 14px; border-radius:0 8px 8px 0; margin:8px 0;}
+.mini-check{display:block; margin:6px 0;}
+</style>
+</head>
+<body class="mode-selfpaced">
 
+<div class="rail">
+  <div class="rail-inner">
+    <span class="rail-label">Lesson 5b, 13 sections</span>
+    <div class="rail-track"><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="header">
+    <div class="mode-row">
+      <p class="eyebrow">Life and Career Skills, Grade 11, Q2, Lesson 5b</p>
+      <div class="mode-toggle" role="tablist" aria-label="Delivery mode">
+        <button type="button" id="btn-facilitated" onclick="setMode('facilitated')">Facilitated</button>
+        <button type="button" id="btn-selfpaced" class="active" onclick="setMode('selfpaced')">Self-Paced</button>
+      </div>
+    </div>
+    <h1>Cooperation, Competition, Conflict, and Accommodation</h1>
+    <p>Part B of Understanding the Nature and Dynamics of Social Relationships. This is not graded. In Facilitated mode, notes appear before group activities; in Self-Paced mode, work through independently.</p>
+  </div>
+
+  <section id="s1" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Four social processes</h2>
+
+    <p>Part B looks at four modes of relating (Park &amp; Burgess, 1921). They are not fixed stages that every relationship must pass through.</p>
+    <table class="matrix"><thead><tr><th>Process</th><th>Main pattern</th><th>Question to recognize it</th></tr></thead><tbody><tr><td>Cooperation</td><td>Working toward shared success.</td><td>How do we achieve this together?</td></tr><tr><td>Competition</td><td>Striving for a limited reward or position.</td><td>Who performs best under the rules?</td></tr><tr><td>Conflict</td><td>Clashing goals, needs, values, or actions.</td><td>What seems incompatible?</td></tr><tr><td>Accommodation</td><td>A workable arrangement reduces open conflict.</td><td>What can we live with for now?</td></tr></tbody></table>
+    <p class="char-note">Sources: Park &amp; Burgess (1921); Deutsch (1973).</p>
+  </section>
+
+  <section id="s2" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Five elements of cooperation</h2>
+
+    <p>Johnson and Johnson's model helps distinguish actual cooperation from simply dividing a document (Johnson &amp; Johnson, 2009).</p>
+    <table class="matrix"><thead><tr><th>Element</th><th>Evidence in a group task</th></tr></thead><tbody><tr><td>Positive interdependence</td><td>The work needs every member's contribution.</td></tr><tr><td>Individual accountability</td><td>Each person can explain their part and the whole project.</td></tr><tr><td>Promotive interaction</td><td>Members explain, encourage, and give useful feedback.</td></tr><tr><td>Social skills</td><td>Members listen, manage disagreement, and repair mistakes.</td></tr><tr><td>Group processing</td><td>The group checks what worked and what needs to change.</td></tr></tbody></table>
+    <h3>Social loafing and shared effort</h3>
+    <p>People may reduce effort when individual contributions disappear into a pooled group result. What helps: visible roles, clear individual deliverables, and brief check-ins. Before labeling someone, remember that a missing contribution does not prove laziness. Ask about obstacles and clarify expectations.</p>
+    <p><strong>Bayanihan</strong> highlights shared effort and responsibility. Ask whether every member has a way to contribute.</p>
+  </section>
+
+  <section id="s3" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Practice 5: elements of cooperation</h2>
+
+    <div class="rating-row"><span>A. A group output requires each member's different contribution. Which element does this demonstrate?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Social skills</option><option value="b">B. Individual accountability</option><option value="c">C. Group processing</option><option value="d">D. Positive interdependence</option></select></div>
+    <div class="rating-row"><span>B. Each member must explain their contribution and understand the whole project.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Promotive interaction</option><option value="b">B. Individual accountability</option><option value="c">C. Positive interdependence</option><option value="d">D. Group processing</option></select></div>
+    <div class="rating-row"><span>C. Members submit separate sections, but nobody discusses the quality of their teamwork. Which element could help them improve together?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Group processing</option><option value="b">B. Positive interdependence</option><option value="c">C. Individual accountability</option><option value="d">D. Competition</option></select></div>
+    <div class="rating-row"><span>D. Members stop to listen when two disagree, then repair a misunderstanding about who does what.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Positive interdependence</option><option value="b">B. Group processing</option><option value="c">C. Social skills</option><option value="d">D. Individual accountability</option></select></div>
+    <div class="rating-row"><span>E. Members explain their reasoning to each other and give feedback on drafts.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Individual accountability</option><option value="b">B. Promotive interaction</option><option value="c">C. Social loafing</option><option value="d">D. Accommodation</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>A. D:</strong> the task connects their outcomes: success needs everyone.</p><p><strong>B. B:</strong> each member takes responsibility for a contribution and can explain the work.</p><p><strong>C. A:</strong> members review how the group worked, what helped, and what needs to change. Simply combining sections does not establish effective cooperation.</p><p><strong>D. C:</strong> listening and repair are social skills.</p><p><strong>E. B:</strong> explaining and encouraging each other is promotive interaction.</p></details>
+  </section>
+
+  <section id="s4" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Competition can help or harm</h2>
+
+    <table class="matrix"><thead><tr><th>Area</th><th>Healthy pattern</th><th>Unhealthy pattern</th></tr></thead><tbody><tr><td>Focus</td><td>Improvement and doing your best.</td><td>Undermining others or tying worth to winning.</td></tr><tr><td>Relationships</td><td>Rivals retain respect.</td><td>Sabotage, withholding, or humiliation.</td></tr><tr><td>Rules</td><td>Clear and fair.</td><td>Rules change to favor a winner.</td></tr><tr><td>Afterward</td><td>Congratulate, learn, and move on.</td><td>Resentment and put-downs.</td></tr></tbody></table>
+    <div class="keybox">A limited prize creates competition. The way people pursue it determines its effect on the relationship.</div>
+  </section>
+
+  <section id="s5" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Practice 6: cooperation and competition</h2>
+
+    <div class="rating-row"><span>A. Two sections pool different skills to complete one community project. Which social process best fits?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Competition</option><option value="b">B. Cooperation</option><option value="c">C. Conflict</option><option value="d">D. Accommodation</option></select></div>
+    <div class="rating-row"><span>B. Two sections compete for one award under the same rules.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Competition</option><option value="b">B. Conflict</option><option value="c">C. Cooperation</option><option value="d">D. Accommodation</option></select></div>
+    <div class="rating-row"><span>C. After losing, a team spreads rumors about the winners. Which pattern is this?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Cooperation</option><option value="b">B. Mediation</option><option value="c">C. Healthy competition</option><option value="d">D. Unhealthy competition</option></select></div>
+    <div class="rating-row"><span>D. The organizers change a rule mid-event so that their favorite team wins.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Positive interdependence</option><option value="b">B. Truce</option><option value="c">C. Unhealthy competition: unfair rules</option><option value="d">D. Healthy competition: clear rules</option></select></div>
+    <p><strong>E.</strong> Name one behavior that would keep Situation B healthy and one that would make it harmful.</p>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <details><summary>See the answer key</summary><p><strong>A. B:</strong> the sections work toward shared success.</p><p><strong>B. A:</strong> they pursue a limited reward. Competition can support effort and improvement when people respect the rules.</p><p><strong>C. D:</strong> rumors after a loss are put-downs and resentment.</p><p><strong>D. C:</strong> healthy competition depends on clear and fair rules.</p><p><strong>E. Possible response:</strong> healthy, respect rivals and acknowledge their effort. Harmful, sabotage, humiliation, or withholding information to undermine others.</p></details>
+  </section>
+
+  <section id="s6" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Conflict and the way it unfolds</h2>
+
+    <p><strong>Conflict</strong> is a perceived incompatibility of goals, needs, values, or actions. A disagreement can reveal something that needs to change.</p>
+    <table class="matrix"><thead><tr><th>Type</th><th>What it looks like</th><th>Example</th></tr></thead><tbody><tr><td>Constructive conflict</td><td>People describe the issue, listen, keep respect, and look for a workable response.</td><td>Two people want to present. They compare strengths and share roles.</td></tr><tr><td>Destructive conflict</td><td>Personal attacks, threats, escalating blame, and humiliation make repair harder.</td><td>The same two people accuse each other of being selfish.</td></tr></tbody></table>
+    <h3>Five conflict styles (Thomas-Kilmann model)</h3>
+    <p>Fill in whether concern for your own and the other person's interests is high, moderate, or low for each style before checking the reference.</p>
+    <table class="matrix fill"><thead><tr><th>Style</th><th>Own interests</th><th>Others' interests</th></tr></thead><tbody><tr><td>Competing</td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Collaborating</td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Compromising</td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Avoiding</td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Accommodating</td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td></tr></tbody></table><p class="tally" data-fill-counter>0 of 10 cells completed</p>
+    <details><summary>Compare with the reference matrix</summary>
+      <table class="matrix"><thead><tr><th>Style</th><th>Own interests</th><th>Others' interests</th><th>When it may help</th></tr></thead><tbody><tr><td>Competing</td><td>High</td><td>Low</td><td>An urgent decision or firm safety boundary.</td></tr><tr><td>Collaborating</td><td>High</td><td>High</td><td>Important needs with time for discussion.</td></tr><tr><td>Compromising</td><td>Moderate</td><td>Moderate</td><td>A timely arrangement where each gives up something.</td></tr><tr><td>Avoiding</td><td>Low</td><td>Low</td><td>A cooling-off period or a minor issue.</td></tr><tr><td>Accommodating</td><td>Low</td><td>High</td><td>The issue matters more to the other person.</td></tr></tbody></table>
+    </details>
+    <p>No style is best for every situation. Repeated avoidance can leave problems unresolved. Repeated yielding can leave your needs unmet. (Thomas &amp; Kilmann, 1974.)</p>
+  </section>
+
+  <section id="s7" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Practice 7: conflict styles</h2>
+
+    <div class="rating-row"><span>A. Two officers discuss what each needs and develop a plan that addresses both sets of important concerns.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Accommodating</option><option value="b">B. Avoiding</option><option value="c">C. Compromising</option><option value="d">D. Collaborating</option></select></div>
+    <div class="rating-row"><span>B. Two officers each give up part of a demand to reach an agreement quickly.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Collaborating</option><option value="b">B. Competing</option><option value="c">C. Compromising</option><option value="d">D. Avoiding</option></select></div>
+    <div class="rating-row"><span>C. A student always gives in to avoid any argument, even when the issue matters to them.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Accommodating</option><option value="b">B. Competing</option><option value="c">C. Collaborating</option><option value="d">D. Compromising</option></select></div>
+    <div class="rating-row"><span>D. A group takes a short break because tempers are rising and the issue can wait.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Collaborating</option><option value="b">B. Avoiding used as a cooling-off period</option><option value="c">C. Competing</option><option value="d">D. Accommodating</option></select></div>
+    <p><strong>E.</strong> How do collaborating and compromising differ? Is one conflict style best for every situation?</p>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <details><summary>See the answer key</summary><p><strong>A. D:</strong> the officers seek a solution that addresses both sides' important interests. This usually requires discussion.</p><p><strong>B. C:</strong> both sides accept partial concessions.</p><p><strong>C. A:</strong> low concern for own interests, high for the other's. Repeated yielding can leave your needs unmet.</p><p><strong>D. B:</strong> avoiding can help during a cooling-off period.</p><p><strong>E.</strong> Collaboration seeks to address both sets of concerns. Compromise involves concessions. The appropriate style depends on the situation, time, and safety.</p></details>
+  </section>
+
+  <section id="s8" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Accommodation has three meanings</h2>
+
+    <div class="keybox">The same word appears in three places. Keep them apart.</div>
+    <table class="matrix"><thead><tr><th>Where</th><th>Meaning</th></tr></thead><tbody><tr><td>Social process in this lesson</td><td>Opposing parties reach an arrangement that reduces open conflict, even if the underlying disagreement remains. A temporary peace between groups is one example.</td></tr><tr><td>Thomas-Kilmann conflict style</td><td>One person yields to the other person. This is also called accommodating.</td></tr><tr><td>Piaget's concept from Lesson 1</td><td>A person changes a mental schema to fit new information.</td></tr></tbody></table>
+    <h3>Forms of social accommodation</h3>
+    <table class="matrix"><thead><tr><th>Form</th><th>Meaning</th><th>Example</th></tr></thead><tbody><tr><td>Compromise</td><td>Both sides give up part of a demand.</td><td>Meet online on weekdays and in person on Saturday.</td></tr><tr><td>Toleration</td><td>Coexist despite disagreement.</td><td>Classmates respect differing beliefs without arguing.</td></tr><tr><td>Truce</td><td>Temporarily stop hostilities.</td><td>Two cliques stop hostile posts during exams.</td></tr></tbody></table>
+    <h3>Third parties in accommodation</h3>
+    <table class="matrix"><thead><tr><th>Form</th><th>Third party's role</th><th>Who shapes the outcome?</th></tr></thead><tbody><tr><td>Conciliation</td><td>Encourages contact and communication.</td><td>The parties work toward agreement themselves.</td></tr><tr><td>Mediation</td><td>Facilitates a discussion.</td><td>The parties craft their agreement.</td></tr><tr><td>Arbitration</td><td>Hears both sides and decides.</td><td>The arbitrator makes the binding decision under the process.</td></tr></tbody></table>
+    <div class="keybox">A workable peace should preserve safety and voice. One side always giving in can leave unfairness in place.</div>
+    <p>In the Philippines, barangay conciliation under the Katarungang Pambarangay (RA 7160) is a community example of third-party settlement.</p>
+  </section>
+
+  <section id="s9" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Practice 8: forms of accommodation</h2>
+
+    <div class="rating-row"><span>A. A counselor helps two students discuss a disagreement. The students develop their own agreement.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Toleration</option><option value="b">B. Arbitration</option><option value="c">C. Mediation</option><option value="d">D. Truce</option></select></div>
+    <div class="rating-row"><span>B. A competition panel hears both sides and makes the decision under the event's rules.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Arbitration</option><option value="b">B. Truce</option><option value="c">C. Mediation</option><option value="d">D. Compromise</option></select></div>
+    <div class="rating-row"><span>C. Two groups agree to stop hostile posts during exams, although the disagreement remains.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Compromise</option><option value="b">B. Truce</option><option value="c">C. Arbitration</option><option value="d">D. Mediation</option></select></div>
+    <div class="rating-row"><span>D. Each side gives up part of its demand: meetings online on weekdays, in person on Saturday.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Mediation</option><option value="b">B. Truce</option><option value="c">C. Toleration</option><option value="d">D. Compromise</option></select></div>
+    <div class="rating-row"><span>E. Which statement about the word "accommodation" is correct?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. It is a stage every relationship must pass</option><option value="b">B. It means the same thing in Piaget and in conflict styles</option><option value="c">C. It can mean a social arrangement, a conflict style, or a change of schema</option><option value="d">D. It always means yielding to the other person</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>A. C:</strong> the counselor facilitates the conversation. The parties shape their agreement.</p><p><strong>B. A:</strong> the panel hears the sides and decides. The decision is binding under the agreed process.</p><p><strong>C. B:</strong> a temporary pause stops hostilities. It can reduce immediate harm while deeper issues still need attention.</p><p><strong>D. D:</strong> both sides give up part of a demand.</p><p><strong>E. C:</strong> the three meanings are distinct, as the table shows.</p></details>
+  </section>
+
+  <section id="s10" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Conflict, bullying, and safety</h2>
+
+    <table class="matrix"><thead><tr><th></th><th>What it looks like</th><th>Appropriate response</th></tr></thead><tbody><tr><td>Ordinary disagreement</td><td>Both parties can express their needs and have meaningful ability to respond.</td><td>Support can help them address the issue.</td></tr><tr><td>Bullying pattern</td><td>Repeated targeted harm and a power imbalance make it difficult for the target to stop what is happening. Peer negotiation alone is not enough.</td><td>Tell a trusted adult and use the school's reporting or referral system. Protection of the person experiencing harm matters.</td></tr></tbody></table>
+    <div class="keybox">Do not wait for a pattern to be proven. Threats, intimidation, or a serious incident deserve adult attention. Philippine law, the Anti-Bullying Act (RA 10627), requires schools to address bullying.</div>
+  </section>
+
+  <section id="s11" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Pause B: a project under pressure</h2>
+
+    <div class="facilitated-note"><strong>Facilitator note</strong>Assign roles in groups of three: the changer, the silent members, and an observer who names the styles. Rotate after two minutes.</div>
+    <div class="scenario"><strong>Scenario.</strong> One member keeps changing the plan. Two others stay silent to avoid a fight. Resentment grows as the deadline approaches.</div>
+    <ol class="steps"><li>Which conflict styles or cooperation problems can you see?</li><li>Write two sentences that name the problem and invite a workable next step.</li></ol>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <div class="branch"><p><strong>Try it: which message would you send to the group chat?</strong></p><button type="button" class="branch-btn" data-i="0">"Everyone is too passive and one person is controlling. Fix it."</button><button type="button" class="branch-btn" data-i="1">"The last-minute changes are making it difficult to finish our parts. Can we agree on the remaining changes today and confirm who will do each one?"</button><button type="button" class="branch-btn" data-i="2">(Say nothing and just finish your own part.)</button><div class="branch-out" aria-live="polite"><p data-out="0" hidden>This is a character attack. It turns the issue into blame and makes repair harder.</p><p data-out="1" hidden>This names a specific behavior and its effect, then asks for a concrete agreement. It keeps the issue from becoming a character attack.</p><p data-out="2" hidden>This is avoiding. It lowers tension for now but leaves the problem unresolved, and resentment can keep growing.</p></div></div>
+    <details><summary>See feedback</summary><p><strong>What you can identify:</strong> the silent members show avoidance. Pushing changes without discussion may show competing. A shared check-in could improve group processing and accountability.</p></details>
+  </section>
+
+  <section id="s12" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Retrieval check: Part B</h2>
+
+    <p>Answer without looking back, then open the key.</p>
+    <div class="rating-row"><span>1. Which statement distinguishes cooperation from competition?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. They are the same process</option><option value="b">B. Cooperation links people's success; competition involves a limited reward or position</option><option value="c">C. Competition always harms relationships</option><option value="d">D. Cooperation needs no individual accountability</option></select></div>
+    <div class="rating-row"><span>2. In arbitration, who decides the outcome?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Nobody; it is a temporary pause</option><option value="b">B. The majority of onlookers</option><option value="c">C. The parties themselves</option><option value="d">D. The arbitrator</option></select></div>
+    <div class="rating-row"><span>3. Why does a bullying pattern need a different response from an ordinary disagreement?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. It will pass if ignored</option><option value="b">B. It is simply a stronger argument</option><option value="c">C. A power imbalance and targeted harm require adult intervention and protection</option><option value="d">D. Both sides should negotiate alone</option></select></div>
+    <div class="rating-row"><span>4. Why is accommodation not always a healthy solution?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. It can preserve unfairness if one side always gives in or remains unsafe</option><option value="b">B. It always ends relationships</option><option value="c">C. It requires an arbitrator</option><option value="d">D. It never reduces conflict</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>1. B</strong>, <strong>2. D</strong>, <strong>3. C</strong>, <strong>4. A</strong></p><p>In mediation the parties craft the agreement. In arbitration, the arbitrator decides.</p></details>
+  </section>
+
+  <section id="s13" class="block">
+    <p class="block-kind">Recap</p>
+    <h2>Part B: what to remember</h2>
+
+    <ul>
+      <li>Cooperation, competition, conflict, and accommodation are modes of relating, not stages.</li>
+      <li>Real cooperation needs interdependence, accountability, promotive interaction, social skills, and group processing.</li>
+      <li>Conflict can be constructive or destructive. No conflict style is best for every situation.</li>
+      <li>Accommodation has three meanings. A workable peace should preserve safety and voice.</li>
+      <li>A bullying pattern needs adult intervention. It is not a conflict to resolve alone.</li>
+    </ul>
+    <p><strong>Looking ahead:</strong> Part C (lesson-5c) widens the lens to relationships across generations and across groups.</p>
+  </section>
+
+</div>
+
+<footer>
+  Based on the DepEd Strengthened Senior High School Curriculum for Life and Career Skills (2025)<br>
+  Prepared by Fritzie Cristina B. Diaz, RPsy, DAAETS<br>
+  For instructional use only. &copy; 2026 F.C. Diaz. CC BY-NC-ND 4.0.
+</footer>
+
+<script>
+function setMode(mode){
+  document.body.className = 'mode-' + mode;
+  document.getElementById('btn-facilitated').classList.toggle('active', mode === 'facilitated');
+  document.getElementById('btn-selfpaced').classList.toggle('active', mode === 'selfpaced');
+}
+document.querySelectorAll('.branch').forEach(function(b){
+  b.querySelectorAll('.branch-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var i = btn.getAttribute('data-i');
+      b.querySelectorAll('.branch-btn').forEach(function(x){x.classList.toggle('on', x===btn);});
+      b.querySelectorAll('[data-out]').forEach(function(p){p.hidden = p.getAttribute('data-out') !== i;});
+    });
+  });
+});
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
