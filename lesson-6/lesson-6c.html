@@ -1,1 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 6c: Conflict Management</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* Scoped additions, not in the shared stylesheet: delivery toggle and branching practice. */
+.mode-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:10px;}
+.mode-toggle{display:inline-flex; background:#EAF8FA; border:1px solid #B7DEE3; border-radius:999px; padding:3px;}
+.mode-toggle button{border:none; background:transparent; color:#167C89; padding:6px 14px; border-radius:999px; cursor:pointer; font-family:Arial, sans-serif; font-weight:600; font-size:0.82rem;}
+.mode-toggle button.active{background:#167C89; color:#fff;}
+.mode-toggle button:focus-visible{outline:2px solid #167C89; outline-offset:2px;}
+.facilitated-note{display:none; background:#FFF9D9; border-left:4px solid #FFD633; padding:12px 16px; font-size:0.88rem; margin:14px 0; border-radius:0 8px 8px 0;}
+body.mode-facilitated .facilitated-note{display:block;}
+.facilitated-note strong{display:block; margin-bottom:3px;}
+.branch{margin:14px 0;}
+.branch-btn{display:block; width:100%; text-align:left; margin:6px 0; padding:10px 14px; border:1px solid #B7DEE3; background:#fff; border-radius:10px; cursor:pointer; font:inherit; color:inherit;}
+.branch-btn:hover{background:#EAF8FA;}
+.branch-btn.on{background:#EAF8FA; border-color:#167C89;}
+.branch-btn:focus-visible{outline:2px solid #167C89; outline-offset:2px;}
+.branch-out p{background:#F6FBFC; border-left:4px solid #167C89; padding:10px 14px; border-radius:0 8px 8px 0; margin:8px 0;}
+.mini-check{display:block; margin:6px 0;}
+</style>
+</head>
+<body class="mode-selfpaced">
 
+<div class="rail">
+  <div class="rail-inner">
+    <span class="rail-label">Lesson 6c, 12 sections</span>
+    <div class="rail-track"><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="header">
+    <div class="mode-row">
+      <p class="eyebrow">Life and Career Skills, Grade 11, Q2, Lesson 6c</p>
+      <div class="mode-toggle" role="tablist" aria-label="Delivery mode">
+        <button type="button" id="btn-facilitated" onclick="setMode('facilitated')">Facilitated</button>
+        <button type="button" id="btn-selfpaced" class="active" onclick="setMode('selfpaced')">Self-Paced</button>
+      </div>
+    </div>
+    <h1>Conflict Management</h1>
+    <p>Part C of Establishing Healthy Relationships, with the lesson-wide synthesis. This is not graded. In Facilitated mode, notes appear before group activities; in Self-Paced mode, work through independently.</p>
+  </div>
+
+  <section id="s1" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Where conflict shows up, and what makes it worse</h2>
+
+    <p>In Lesson 5 you learned that conflict is normal and can be constructive or destructive. Part C teaches the skills. The curriculum names three: <strong>active listening, communication, and perspective-taking</strong>. This guide adds two that make them work: regulating your own emotion first, and problem-solving around interests.</p>
+    <p><strong>Learning outcome:</strong> evaluate appropriate conflict management skills to improve personal and social relationships.</p>
+    <table class="matrix"><thead><tr><th>Setting</th><th>Common triggers</th><th>Typical escalation</th></tr></thead><tbody><tr><td>Group work</td><td>Unequal effort, unclear roles, different standards.</td><td>Silent resentment, then a blow-up in the chat.</td></tr><tr><td>Group chats and social media</td><td>Misread tone, exclusion, public call-outs.</td><td>Screenshots, pile-ons.</td></tr><tr><td>Family</td><td>Expectations about courses, chores, curfew, money.</td><td>Arguments that repeat, or silence.</td></tr><tr><td>Friendships and romantic relationships</td><td>Jealousy, time, loyalty, secrets.</td><td>Ghosting, punishing by distance.</td></tr><tr><td>Future workplace</td><td>Credit, workload, feedback, authority.</td><td>Avoidance, gossip, formal complaints.</td></tr></tbody></table>
+    <h3>Four patterns that predict trouble</h3>
+    <p>Gottman's research on couples identified four patterns that predict relationship breakdown (Gottman, 1994). The research is on couples, so apply it to other relationships as a caution, not a proven law. The suggested antidotes are useful anywhere.</p>
+    <table class="matrix"><thead><tr><th>Pattern</th><th>Sounds like</th><th>Antidote</th></tr></thead><tbody><tr><td>Criticism</td><td>"You are so irresponsible."</td><td>Gentle start-up: describe the situation and your feeling, and make a request.</td></tr><tr><td>Contempt</td><td>Eye-rolling, "Whatever, genius."</td><td>Build a habit of appreciation and respect.</td></tr><tr><td>Defensiveness</td><td>"It's not my fault, you did it too."</td><td>Take responsibility for your part, even a small one.</td></tr><tr><td>Stonewalling</td><td>Silence, leaving the chat, walking out.</td><td>Take a break and say when you will come back.</td></tr></tbody></table>
+    <p class="char-note">Sources: Gottman (1994).</p>
+  </section>
+
+  <section id="s2" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Practice 1: name the pattern</h2>
+
+    <div class="rating-row"><span>A. "You are so irresponsible. You always do this."</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Defensiveness</option><option value="b">B. Stonewalling</option><option value="c">C. Gentle start-up</option><option value="d">D. Criticism</option></select></div>
+    <div class="rating-row"><span>B. "It's not my fault. You did it too, so don't blame me."</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Contempt</option><option value="b">B. Defensiveness</option><option value="c">C. Criticism</option><option value="d">D. Perspective-taking</option></select></div>
+    <div class="rating-row"><span>C. A student leaves the group chat and stops replying whenever someone disagrees.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Stonewalling</option><option value="b">B. Criticism</option><option value="c">C. Contempt</option><option value="d">D. Defensiveness</option></select></div>
+    <div class="rating-row"><span>D. A student rolls their eyes and says, "Whatever, genius."</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Gentle start-up</option><option value="b">B. Stonewalling</option><option value="c">C. Contempt</option><option value="d">D. Active listening</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>A. D:</strong> attacking character, not behavior, is criticism.</p><p><strong>B. B:</strong> counter-attacking to avoid responsibility is defensiveness.</p><p><strong>C. A:</strong> shutting down and withdrawing is stonewalling.</p><p><strong>D. C:</strong> mocking and disrespect is contempt.</p></details>
+  </section>
+
+  <section id="s3" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>The core skills</h2>
+
+    <h3>Skill 1: Regulate first</h3>
+    <p>People rarely listen or reason well when flooded with anger or fear. Emotion regulation strategies work best when used early (Gross, 1998). Notice the body cues, breathe slowly, name the emotion, and if needed take a break. A break is not avoidance if you say when you will return: "I need ten minutes. Let's talk at 4."</p>
+    <h3>Skill 2: Active listening</h3>
+    <p>Rogers and Farson (1957) described active listening as listening for the full meaning, both content and feeling, and showing that you have understood.</p>
+    <table class="matrix"><thead><tr><th>Move</th><th>What it is</th><th>Example</th></tr></thead><tbody><tr><td>Pay attention</td><td>Put the phone down. Face the person. Do not plan your rebuttal.</td><td>Eye contact and quiet.</td></tr><tr><td>Paraphrase</td><td>Say back what you heard in your own words.</td><td>"So you felt left out when the plan changed without you."</td></tr><tr><td>Reflect feeling</td><td>Name the likely feeling and check it.</td><td>"It sounds like you were frustrated. Is that right?"</td></tr><tr><td>Ask open questions</td><td>Invite more, without judging.</td><td>"What would have helped?"</td></tr><tr><td>Summarize</td><td>Check you have the whole picture before responding.</td><td>"Let me make sure I have this right..."</td></tr></tbody></table>
+    <p>Active listening does not mean agreeing. It means the other person feels understood, which often lowers the temperature enough for problem-solving to begin. Common blocks: interrupting, advising too soon, minimizing ("It's not a big deal"), and changing the subject.</p>
+    <h3>Skill 3: Say what you need clearly (I-messages)</h3>
+    <p>Gordon (1970) popularized the I-message, which describes your experience rather than attacking the other person. Structure: <strong>When [specific behavior], I feel [feeling], because [impact]. Could we [request]?</strong></p>
+    <table class="matrix"><thead><tr><th>You-message (attack)</th><th>I-message (assertive)</th></tr></thead><tbody><tr><td>"You never reply. You obviously don't care about this project."</td><td>"When I don't hear back by evening, I feel worried because the deadline is Friday. Could we agree to reply within a day?"</td></tr><tr><td>"You're so loud and selfish."</td><td>"When music is on while I study, I can't concentrate. Could we agree on quiet hours?"</td></tr></tbody></table>
+    <h3>Skill 4: Perspective-taking</h3>
+    <p>Perspective-taking is trying to understand the other person's situation, goals, and reasoning, without having to agree. In negotiation experiments, parties who took the other side's perspective were better at finding agreements that served both sides (Galinsky et al., 2008). Prompts: "What might be going on for them?", "What would I want in their position?" This links to Lesson 5: checking for situational explanations reduces the fundamental attribution error.</p>
+    <h3>Skill 5: Solve the problem, not the person</h3>
+    <p>Fisher and Ury (1981) suggest four principles: separate the people from the problem, focus on interests and not positions, generate options for mutual gain, and use objective criteria. A <strong>position</strong> is what you say you want. An <strong>interest</strong> is why you want it. Two students who both say "I need the room" may find one needs it in the morning and the other in the afternoon.</p>
+    <h3>Skill 6: Agree, repair, and follow up</h3>
+    <ul>
+      <li><strong>Summarize the agreement</strong> in specific terms: who does what, by when.</li>
+      <li><strong>Repair</strong> when harm was done: acknowledge what happened, take responsibility for your part, express regret, and say what you will do differently. Paghingi ng tawad and pakikipag-ayos are valued ways of restoring relationships.</li>
+      <li><strong>Follow up.</strong> Set a time to check whether the agreement is working.</li>
+      <li><strong>Bring in a third party</strong> when talking directly is not working: a peer mediator, adviser, counselor, or the barangay (Katarungang Pambarangay). A meta-analysis of school peer mediation found generally positive outcomes, including high rates of agreements and participant satisfaction (Burrell et al., 2003).</li>
+    </ul>
+    <p class="char-note">Sources: Gross (1998); Rogers &amp; Farson (1957); Gordon (1970); Galinsky et al. (2008); Fisher &amp; Ury (1981); Burrell et al. (2003).</p>
+  </section>
+
+  <section id="s4" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Practice 2: skills in action</h2>
+
+    <div class="rating-row"><span>A. Which is an I-message?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. "You never help with anything."</option><option value="b">B. "When tasks arrive late I feel stressed about the deadline. Could we agree on dates?"</option><option value="c">C. "Everyone knows you are lazy."</option><option value="d">D. "Whatever, do what you want."</option></select></div>
+    <div class="rating-row"><span>B. Which is a component of active listening?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Preparing your rebuttal while the other person talks</option><option value="b">B. Advising as quickly as possible</option><option value="c">C. Paraphrasing and asking clarifying questions</option><option value="d">D. Changing the subject to lighten the mood</option></select></div>
+    <div class="rating-row"><span>C. Two siblings both say "I need the laptop." One needs it in the morning, the other in the evening. What does this show?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. They must split the day 50-50</option><option value="b">B. The older one should decide</option><option value="c">C. The conflict cannot be solved</option><option value="d">D. Positions can differ from interests, and looking at interests can open options</option></select></div>
+    <div class="rating-row"><span>D. "I need ten minutes. Let's talk at 4." Why is this not stonewalling?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. It names a return time, so the break is a way to regulate, not to avoid</option><option value="b">B. It ends the conversation</option><option value="c">C. It punishes the other person</option><option value="d">D. It avoids the topic permanently</option></select></div>
+    <div class="rating-row"><span>E. Perspective-taking means:</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Guessing how to win</option><option value="b">B. Trying to understand their situation and reasoning without necessarily agreeing</option><option value="c">C. Agreeing with the other person's position</option><option value="d">D. Feeling exactly what they feel</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>A. B:</strong> it names a behavior, a feeling, an impact, and a request.</p><p><strong>B. C:</strong> paraphrasing and clarifying show you understood.</p><p><strong>C. D:</strong> interests (why) can be met in more ways than positions (what).</p><p><strong>D. A:</strong> a break with a return time is regulation, not avoidance.</p><p><strong>E. B:</strong> understanding does not require agreement.</p></details>
+  </section>
+
+  <section id="s5" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Build an I-message</h2>
+
+    <div class="facilitated-note"><strong>Facilitator note</strong>In groups of three, Person A and Person B act out a realistic, non-sensitive disagreement (a group project, a borrowed item, a chat misunderstanding). Person C observes with the checklist below. Run it twice: once with a poor approach, once applying the skills. Rotate roles.</div>
+    <p>Rewrite one you-message from your own experience (or a fictional one) into an I-message. Fill each part.</p>
+    <table class="matrix fill"><thead><tr><th>Part</th><th>My version</th></tr></thead><tbody><tr><td>When (specific behavior)</td><td><input type="text" placeholder="Type here"></td></tr><tr><td>I feel (feeling)</td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Because (impact)</td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Could we (specific request)</td><td><input type="text" placeholder="Type here"></td></tr></tbody></table><p class="tally" data-fill-counter>0 of 4 cells completed</p>
+    <details><summary>Observer checklist for the role-play</summary>
+      <table class="matrix"><thead><tr><th>Look for</th><th>Seen?</th></tr></thead><tbody><tr><td>Took a break or lowered the temperature</td><td></td></tr><tr><td>Paraphrased before responding</td><td></td></tr><tr><td>Used an I-message</td><td></td></tr><tr><td>Asked about the other's perspective or needs</td><td></td></tr><tr><td>Moved from positions to interests</td><td></td></tr><tr><td>Ended with a specific agreement and follow-up</td><td></td></tr></tbody></table>
+    </details>
+  </section>
+
+  <section id="s6" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Evaluating which skill fits</h2>
+
+    <p>The outcome asks you to <strong>evaluate</strong>: ask whether a skill is appropriate, not only whether it is available.</p>
+    <table class="matrix"><thead><tr><th>Criterion</th><th>Question to ask</th></tr></thead><tbody><tr><td>Effectiveness</td><td>Did it address the issue, not just calm the moment?</td></tr><tr><td>Relationship</td><td>Is the relationship intact or stronger afterward?</td></tr><tr><td>Fairness</td><td>Were both sides heard, and is the outcome acceptable to both?</td></tr><tr><td>Safety</td><td>Did anyone feel unsafe, humiliated, or coerced?</td></tr><tr><td>Sustainability</td><td>Will the agreement hold, and can we repeat the process next time?</td></tr></tbody></table>
+    <table class="matrix"><thead><tr><th>Situation</th><th>Likely good fit</th><th>Watch out for</th></tr></thead><tbody><tr><td>Important group decision, time available</td><td>Collaborating, interest-based problem solving.</td><td>Takes time.</td></tr><tr><td>Small matter, little at stake</td><td>Avoiding or accommodating for now.</td><td>Resentment if it recurs.</td></tr><tr><td>Deadline tomorrow, goals are moderate</td><td>Compromising.</td><td>Neither side fully satisfied.</td></tr><tr><td>Emotions running high</td><td>Take a break, then listen.</td><td>Break becoming permanent silence.</td></tr><tr><td>Safety or urgent harm</td><td>Protective action, adult involvement.</td><td>Using force or shaming.</td></tr><tr><td>Repeated harm with power imbalance</td><td>Not conflict management. Report to an adult.</td><td>Telling the target to "work it out" (see RA 10627).</td></tr></tbody></table>
+    <div class="keybox"><strong>When conflict management is the wrong tool.</strong> These skills assume two people with roughly equal power who are both safe. They are not appropriate when one person is threatening, controlling, stalking, abusing, or repeatedly humiliating another. Safety comes first: leave, tell a trusted adult, use the school's reporting system, and seek professional help. A person experiencing abuse is never responsible for "managing" it.</div>
+  </section>
+
+  <section id="s7" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Practice 3: scenario sort</h2>
+
+    <p>Choose the skill, pattern, or concept each scenario best illustrates.</p>
+    <div class="rating-row"><span>1. Mica says, "I need ten minutes. Let's talk at 4," and takes slow breaths during a heated argument.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Contempt</option><option value="b">B. Burnout signs</option><option value="c">C. Stonewalling</option><option value="d">D. Regulate first</option></select></div>
+    <div class="rating-row"><span>2. A groupmate says, "So you're worried the slides won't be ready by Thursday, is that right?"</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Defensiveness</option><option value="b">B. Compromising</option><option value="c">C. Active listening</option><option value="d">D. Criticism</option></select></div>
+    <div class="rating-row"><span>3. Lara tells a teammate, "You're useless and always have been."</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Criticism and contempt</option><option value="b">B. Active listening</option><option value="c">C. Regulate first</option><option value="d">D. Interest-based problem solving</option></select></div>
+    <div class="rating-row"><span>4. A student is repeatedly humiliated by a stronger classmate who also threatens to post an embarrassing photo.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. A conflict to solve with an I-message</option><option value="b">B. A matter for adult intervention and the school's reporting system</option><option value="c">C. Compromising</option><option value="d">D. A situation for avoiding</option></select></div>
+    <div class="rating-row"><span>5. A student is exhausted, cynical about school, and cannot feel proud even of good results.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Groupthink</option><option value="b">B. Healthy competition</option><option value="c">C. Burnout signs</option><option value="d">D. Perspective-taking</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>1. D</strong>: a break with a return time is regulating first.</p><p><strong>2. C</strong>: paraphrase and check is active listening.</p><p><strong>3. A</strong>: attacking character and mocking is criticism and contempt.</p><p><strong>4. B</strong>: repeated humiliation, a threat, and a power imbalance are not a conflict to manage alone (RA 10627).</p><p><strong>5. C</strong>: exhaustion, cynicism, and reduced efficacy.</p></details>
+  </section>
+
+  <section id="s8" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Pause C2: a joke in the group chat</h2>
+
+    <div class="scenario"><strong>Scenario.</strong> A classmate posts a joke about your presentation in a group chat. Others react with laughing emojis. You feel embarrassed and angry.</div>
+    <ol class="steps"><li>Which Gottman pattern are you tempted to use? Which skill would you use first?</li><li>Write a short, private message to the classmate using an I-message.</li><li>Is this conflict or bullying? What would change your answer?</li></ol>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <div class="branch"><p><strong>Try it: what would you do first?</strong></p><button type="button" class="branch-btn" data-i="0">Reply in the chat with a sarcastic joke about the classmate.</button><button type="button" class="branch-btn" data-i="1">Take a break to settle down, then send a private I-message: "When the joke about my presentation was posted, I felt embarrassed. Could you delete it?"</button><button type="button" class="branch-btn" data-i="2">Leave the chat and never speak to the classmate again.</button><div class="branch-out" aria-live="polite"><p data-out="0" hidden>This is contempt or defensiveness. It escalates in front of an audience and makes repair harder.</p><p data-out="1" hidden>This regulates first, takes the issue out of the audience, and makes a specific request.</p><p data-out="2" hidden>This is stonewalling. It protects you now but leaves the problem unresolved, and you lose the chance to repair.</p></div></div>
+    <details><summary>See a possible response</summary><p><strong>Pattern and first skill:</strong> contempt or defensiveness are the temptations. Regulate first: breathe and take a break.</p><p><strong>Possible message:</strong> "When the joke about my presentation was posted in the chat, I felt embarrassed and angry. Could you please delete it, and let me know if you have feedback about my slides?"</p><p><strong>Conflict or bullying:</strong> one joke may be a conflict. Repeated targeting, a power imbalance, threats, or inability to make it stop point to bullying and call for an adult.</p></details>
+  </section>
+
+  <section id="s9" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Pause C3: two leaders, one project</h2>
+
+    <div class="scenario"><strong>Scenario.</strong> Two members of your org want to lead the same project. Last week one told the other, "You always take over." They have not talked since. Both come to you for advice.</div>
+    <ol class="steps"><li>Which Gottman patterns have already appeared?</li><li>Describe how you would help them use at least three skills from this part.</li><li>Use the five evaluation criteria: how would you know the outcome was good?</li></ol>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <details><summary>See a possible response</summary><p><strong>Patterns:</strong> "You always take over" is criticism. The silence since then is stonewalling.</p><p><strong>Three skills:</strong> let each take a break and agree on a time to talk (regulate first), have each paraphrase the other (active listening), then ask what each needs from the project (interests, not positions) and look for options such as co-leads or dividing phases.</p><p><strong>Evaluation:</strong> effectiveness (project assigned), relationship (they can still work together), fairness (both heard), safety (no humiliation), sustainability (a check-in date is set).</p></details>
+  </section>
+
+  <section id="s10" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Across the three parts of Lesson 6</h2>
+
+    <table class="matrix"><thead><tr><th>Question</th><th>Part A</th><th>Part B</th><th>Part C</th></tr></thead><tbody><tr><td>What does a healthy relationship provide?</td><td>Autonomy, competence, relatedness; honest feedback.</td><td>Support that buffers stress; a safe place to ask for help.</td><td>A way to disagree without losing the relationship.</td></tr><tr><td>What goes wrong?</td><td>Pressure, control, loafing, groupthink.</td><td>Chronic demands, isolation, stigma, harmful relationships.</td><td>Criticism, contempt, defensiveness, stonewalling.</td></tr><tr><td>Key skill</td><td>Ask for feedback; build psychological safety; clear roles.</td><td>Name demands and resources; plan self-care; ask for help.</td><td>Regulate, listen, I-messages, perspective-taking, interests.</td></tr><tr><td>Filipino lens</td><td>Pakikipagkapwa, utang na loob, family expectations.</td><td>Hiya and help-seeking; kapamilya as support.</td><td>Pakikipag-ayos, paghingi ng tawad, barangay mediation.</td></tr><tr><td>When to get help</td><td>When a group or relationship blocks safe participation.</td><td>Persistent distress, unsafe thoughts or behavior.</td><td>Bullying, abuse, threats, power imbalance.</td></tr></tbody></table>
+    <h3>Connection to your Social Collaboration Task</h3>
+    <table class="matrix"><thead><tr><th>During the task</th><th>Use from Lesson 6</th><th>Evidence you could reflect on</th></tr></thead><tbody><tr><td>Planning and dividing work</td><td>Clear roles; if-then plans; meeting habits.</td><td>How you assigned roles and communicated deadlines.</td></tr><tr><td>Working with others</td><td>Psychological safety; listening.</td><td>A moment when someone felt heard or unheard.</td></tr><tr><td>A disagreement arises</td><td>Regulate, listen, I-message, interests.</td><td>What you said, what happened, what you would change.</td></tr><tr><td>Pressure builds near the deadline</td><td>Demands and resources; self-care plan.</td><td>How you protected rest and asked for help.</td></tr><tr><td>Writing the reflection</td><td>Healthy relationship traits and conflict criteria.</td><td>Which traits you showed and which you missed.</td></tr></tbody></table>
+    <div class="keybox">Check your teacher's current task sheet for the exact reflection prompts and requirements, including the off-campus waiver.</div>
+  </section>
+
+  <section id="s11" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Retrieval check and synthesis</h2>
+
+    <div class="rating-row"><span>1. In Fisher and Ury's approach, "focus on interests, not positions" means:</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Split everything 50-50 immediately</option><option value="b">B. Let the stronger side decide</option><option value="c">C. Ask why each side wants what it wants and look for options that serve those needs</option><option value="d">D. Hold firmly to your original demand</option></select></div>
+    <div class="rating-row"><span>2. In which situation are standard peer conflict management skills NOT the appropriate first response?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Two siblings disagree about chores</option><option value="b">B. Two groupmates disagree about dividing tasks</option><option value="c">C. Two friends argue over a seat</option><option value="d">D. A student is repeatedly threatened and humiliated by a stronger classmate</option></select></div>
+    <div class="rating-row"><span>3. Which criterion asks whether anyone felt humiliated or coerced?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Safety</option><option value="b">B. Sustainability</option><option value="c">C. Effectiveness</option><option value="d">D. Fairness</option></select></div>
+    <div class="rating-row"><span>4. A deadline is tomorrow and goals are moderate on both sides. Which style is a likely good fit?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Accommodating always</option><option value="b">B. Compromising</option><option value="c">C. Avoiding</option><option value="d">D. Competing</option></select></div>
+    <div class="rating-row"><span>5. Perspective-taking links back to Lesson 5 because it helps reduce:</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Social loafing</option><option value="b">B. The fundamental attribution error</option><option value="c">C. Groupthink</option><option value="d">D. The halo effect only</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>1. C</strong>: interests are the why; positions are the what.</p><p><strong>2. D</strong>: repeated threat and humiliation with a power imbalance calls for adult intervention.</p><p><strong>3. A</strong>: safety.</p><p><strong>4. B</strong>: speed matters and goals are moderate.</p><p><strong>5. B</strong>: checking situational explanations reduces the fundamental attribution error.</p></details>
+    <h3>Synthesis</h3>
+    <p>In one paragraph, articulate why healthy relationships matter for personal growth, group productivity, and mental health. Use at least three concepts from Lesson 6, include one conflict management skill, and give one example from adolescent life.</p>
+    <textarea class="reflect" placeholder="Write your paragraph here..."></textarea>
+    <details><summary>See what a strong paragraph includes</summary><p><strong>What to check:</strong> at least three concepts used correctly, one conflict skill applied, and a paragraph that explains why relationships matter, not only what the concepts are.</p></details>
+  </section>
+
+  <section id="s12" class="block">
+    <p class="block-kind">Recap</p>
+    <h2>Lesson 6: what to remember</h2>
+
+    <ul>
+      <li>Values say what matters; strengths say what you can use. Relationships supply feedback, models, and belonging.</li>
+      <li>Communication, respect, and collaboration reduce process loss. Psychological safety lets groups learn.</li>
+      <li>Think in demands and resources. Quality of support matters more than quantity.</li>
+      <li>Self-care has limits. Persistent or unsafe distress calls for a trusted adult or professional. NCMH 1553.</li>
+      <li>Conflict skills: regulate, listen, I-message, take perspective, solve for interests, agree and repair.</li>
+      <li>Evaluate skills by effectiveness, relationship, fairness, safety, and sustainability. Conflict management is not for bullying, abuse, or threats.</li>
+    </ul>
+    <h3>Selected references</h3>
+    <p class="char-note">Bakker &amp; Demerouti (2007); Burrell et al. (2003); Cohen &amp; Wills (1985); Dweck (2006); Edmondson (1999); Fisher &amp; Ury (1981); Frazier et al. (2017); Galinsky et al. (2008); Gollwitzer (1999); Gordon (1970); Gottman (1994); Gross (1998); Holt-Lunstad et al. (2010); Janis (1972); Karau &amp; Williams (1993); Keyes (2002); Kluger &amp; Itzchakov (2022); Kuyken et al. (2022); Lazarus &amp; Folkman (1984); Letkiewicz et al. (2023); Locke &amp; Latham (2002); Martinez et al. (2020); Maslach &amp; Leiter (2016); Narr et al. (2019); Peterson &amp; Seligman (2004); Rogers &amp; Farson (1957); Ryan &amp; Deci (2000); Sisk et al. (2018); Steiner (1972); Tuckman (1965); Tuckman &amp; Jensen (1977); WHO (2019, 2022); RA 7160, RA 10627, RA 11036. Full citations are in the Lesson 6 study guide.</p>
+  </section>
+
+</div>
+
+<footer>
+  Based on the DepEd Strengthened Senior High School Curriculum for Life and Career Skills (2025)<br>
+  Prepared by Fritzie Cristina B. Diaz, RPsy, DAAETS<br>
+  For instructional use only. &copy; 2026 F.C. Diaz. CC BY-NC-ND 4.0.
+</footer>
+
+<script>
+function setMode(mode){
+  document.body.className = 'mode-' + mode;
+  document.getElementById('btn-facilitated').classList.toggle('active', mode === 'facilitated');
+  document.getElementById('btn-selfpaced').classList.toggle('active', mode === 'selfpaced');
+}
+document.querySelectorAll('.branch').forEach(function(b){
+  b.querySelectorAll('.branch-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var i = btn.getAttribute('data-i');
+      b.querySelectorAll('.branch-btn').forEach(function(x){x.classList.toggle('on', x===btn);});
+      b.querySelectorAll('[data-out]').forEach(function(p){p.hidden = p.getAttribute('data-out') !== i;});
+    });
+  });
+});
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

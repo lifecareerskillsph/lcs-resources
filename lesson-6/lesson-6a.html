@@ -1,1 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 6a: Personal Growth and Group Productivity</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* Scoped additions, not in the shared stylesheet: delivery toggle and branching practice. */
+.mode-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:10px;}
+.mode-toggle{display:inline-flex; background:#EAF8FA; border:1px solid #B7DEE3; border-radius:999px; padding:3px;}
+.mode-toggle button{border:none; background:transparent; color:#167C89; padding:6px 14px; border-radius:999px; cursor:pointer; font-family:Arial, sans-serif; font-weight:600; font-size:0.82rem;}
+.mode-toggle button.active{background:#167C89; color:#fff;}
+.mode-toggle button:focus-visible{outline:2px solid #167C89; outline-offset:2px;}
+.facilitated-note{display:none; background:#FFF9D9; border-left:4px solid #FFD633; padding:12px 16px; font-size:0.88rem; margin:14px 0; border-radius:0 8px 8px 0;}
+body.mode-facilitated .facilitated-note{display:block;}
+.facilitated-note strong{display:block; margin-bottom:3px;}
+.branch{margin:14px 0;}
+.branch-btn{display:block; width:100%; text-align:left; margin:6px 0; padding:10px 14px; border:1px solid #B7DEE3; background:#fff; border-radius:10px; cursor:pointer; font:inherit; color:inherit;}
+.branch-btn:hover{background:#EAF8FA;}
+.branch-btn.on{background:#EAF8FA; border-color:#167C89;}
+.branch-btn:focus-visible{outline:2px solid #167C89; outline-offset:2px;}
+.branch-out p{background:#F6FBFC; border-left:4px solid #167C89; padding:10px 14px; border-radius:0 8px 8px 0; margin:8px 0;}
+.mini-check{display:block; margin:6px 0;}
+</style>
+</head>
+<body class="mode-selfpaced">
 
+<div class="rail">
+  <div class="rail-inner">
+    <span class="rail-label">Lesson 6a, 12 sections</span>
+    <div class="rail-track"><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="header">
+    <div class="mode-row">
+      <p class="eyebrow">Life and Career Skills, Grade 11, Q2, Lesson 6a</p>
+      <div class="mode-toggle" role="tablist" aria-label="Delivery mode">
+        <button type="button" id="btn-facilitated" onclick="setMode('facilitated')">Facilitated</button>
+        <button type="button" id="btn-selfpaced" class="active" onclick="setMode('selfpaced')">Self-Paced</button>
+      </div>
+    </div>
+    <h1>Personal Growth and Group Productivity</h1>
+    <p>Part A of Establishing Healthy Relationships. This is not graded. In Facilitated mode, notes appear before group activities; in Self-Paced mode, work through independently.</p>
+  </div>
+
+  <section id="s1" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Where this lesson fits</h2>
+
+    <p>Lesson 5 built the vocabulary: influence, perception, interaction, the four social processes, and the traits of a healthy relationship. Lesson 6 turns to skills: what you can actually do to build and protect healthy relationships. It has three parts.</p>
+    <table class="matrix"><thead><tr><th>Part</th><th>Focus</th></tr></thead><tbody><tr><td>A (this page)</td><td>Personal growth and group productivity</td></tr><tr><td>B (lesson-6b)</td><td>Mental health and well-being</td></tr><tr><td>C (lesson-6c)</td><td>Conflict management</td></tr></tbody></table>
+    <p><strong>Learning competencies:</strong> (1) Articulate the importance of having healthy relationships. (2) Recognize the importance of healthy relationships to one's mental health and well-being.</p>
+    <p><strong>Learning outcome for Part A:</strong> explain how healthy relationships support personal growth and enhance group productivity through effective communication, mutual respect, and collaboration.</p>
+    <div class="keybox">Content standard: learners demonstrate understanding of the value of interpersonal effectiveness in achieving social competence. Performance standard: learners engage in collaborative work that showcases interpersonal effectiveness.</div>
+  </section>
+
+  <section id="s2" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Values, strengths, and why relationships matter for growth</h2>
+
+    <p>Personal growth is not only something you do alone. People grow faster, and more safely, with others who give honest feedback, model skills, share resources, and believe in what you are becoming. Relationships that mock, control, or isolate can shrink what a person tries.</p>
+    <h3>Two different questions</h3>
+    <table class="matrix"><thead><tr><th></th><th>Values</th><th>Strengths</th></tr></thead><tbody><tr><td>The question</td><td>What matters to me?</td><td>What do I do well and enjoy using?</td></tr><tr><td>Examples</td><td>Honesty, family, service, fairness, excellence, faith.</td><td>Curiosity, perseverance, kindness, leadership, creativity, teamwork.</td></tr><tr><td>How they guide you</td><td>They tell you which direction to take and what to refuse.</td><td>They tell you which tools you can use on the way.</td></tr><tr><td>Common mistake</td><td>Treating other people's values as your own without examining them.</td><td>Assuming a strength is fixed or that a weakness cannot improve.</td></tr></tbody></table>
+    <p>Peterson and Seligman (2004) catalogued 24 character strengths across six broad virtues as a shared vocabulary. You do not need to memorize the list. Find evidence of your own strengths in what you have actually done.</p>
+    <h3>Self-determination theory</h3>
+    <p>Ryan and Deci (2000) argue that people thrive when three needs are met: <strong>autonomy</strong> (acting from your own choices), <strong>competence</strong> (feeling effective), and <strong>relatedness</strong> (feeling connected and cared for).</p>
+    <table class="matrix"><thead><tr><th>Need</th><th>A relationship that supports it</th><th>A relationship that undermines it</th></tr></thead><tbody><tr><td>Autonomy</td><td>A teacher explains the reason behind a task.</td><td>A parent or friend decides everything for you.</td></tr><tr><td>Competence</td><td>A mentor gives specific, usable feedback.</td><td>Constant criticism with no direction.</td></tr><tr><td>Relatedness</td><td>A friend has your back.</td><td>Exclusion or being ignored.</td></tr></tbody></table>
+    <p class="char-note">Sources: Peterson &amp; Seligman (2004); Ryan &amp; Deci (2000).</p>
+  </section>
+
+  <section id="s3" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Goals, feedback, mindset, and adaptability</h2>
+
+    <ul>
+      <li><strong>Goals.</strong> Specific, appropriately challenging goals with feedback on progress produce better performance than vague goals such as "do my best" (Locke &amp; Latham, 2002).</li>
+      <li><strong>If-then plans.</strong> Linking a goal to a situation ("If it is 7 PM, then I open my notes at my desk") helps people follow through (Gollwitzer, 1999).</li>
+      <li><strong>Growth mindset.</strong> Dweck (2006) proposed that believing abilities can develop leads people to seek challenge and learn from setbacks. A large meta-analysis found that mindset interventions have small average effects on academic achievement, with somewhat larger effects for students at risk or from lower-income backgrounds (Sisk et al., 2018). Treat it as a useful habit of thought, not a cure for every learning problem.</li>
+    </ul>
+    <h3>Three habits for school and future work</h3>
+    <table class="matrix"><thead><tr><th>Habit</th><th>What it looks like</th><th>Relationship link</th></tr></thead><tbody><tr><td>Ask for specific feedback</td><td>"What is one thing I could change in this report to make the argument clearer?"</td><td>Needs a person you trust to be honest.</td></tr><tr><td>Review and adjust</td><td>After each exam or project, note what worked, what did not, and one change.</td><td>Compare notes with a study partner or mentor.</td></tr><tr><td>Build a small network</td><td>Know two or three people who can advise on a field you are exploring.</td><td>Networks open information and opportunities (SDG 8).</td></tr></tbody></table>
+    <h3>Filipino context</h3>
+    <p>Many Filipino students form values within family and community: pakikipagkapwa, malasakit, respeto, utang na loob. These can support growth by providing belonging and motivation. They can also create tension when a family's expectations for a course or career differ from a student's interests. A healthy relationship leaves room for both: honoring what family has given and still having a voice about your own path.</p>
+    <p class="char-note">Sources: Locke &amp; Latham (2002); Gollwitzer (1999); Dweck (2006); Sisk et al. (2018); Enriquez (1992).</p>
+  </section>
+
+  <section id="s4" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Values and strengths mapping workshop</h2>
+
+    <div class="facilitated-note"><strong>Facilitator note</strong>Individual work for 10 minutes, then pairs. Remind students to share only what they are comfortable sharing. Offer a fictional-character option for anyone who prefers it.</div>
+    <p>Use real evidence from your life, not wishes. Fill each row, then open the example.</p>
+    <table class="matrix fill"><thead><tr><th>Row</th><th>My value</th><th>Evidence from my life</th><th>Strength I used</th><th>Who supports it</th><th>One growth edge</th></tr></thead><tbody><tr><td>Value 1</td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Value 2</td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Value 3</td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td><td><input type="text" placeholder="Type here"></td></tr></tbody></table><p class="tally" data-fill-counter>0 of 15 cells completed</p>
+    <details><summary>See a worked example</summary>
+      <table class="matrix"><thead><tr><th>My value</th><th>Evidence</th><th>Strength used</th><th>Who supports it</th><th>Growth edge</th></tr></thead><tbody><tr><td>Fairness</td><td>I spoke up when a groupmate was being left out.</td><td>Courage, kindness</td><td>My adviser noticed and thanked me.</td><td>Say it earlier, and more calmly.</td></tr></tbody></table>
+    </details>
+  </section>
+
+  <section id="s5" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Practice 1: values, strengths, and needs</h2>
+
+    <div class="rating-row"><span>A. "I care about honesty." Which does this describe?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. A skill</option><option value="b">B. A mood</option><option value="c">C. A strength</option><option value="d">D. A value</option></select></div>
+    <div class="rating-row"><span>B. "I am good at explaining ideas so others understand." Which does this describe?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. A value</option><option value="b">B. A strength</option><option value="c">C. A need</option><option value="d">D. A goal</option></select></div>
+    <div class="rating-row"><span>C. A mentor gives you specific feedback on your report. Which need is mostly supported?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Competence</option><option value="b">B. Autonomy</option><option value="c">C. Relatedness</option><option value="d">D. None</option></select></div>
+    <div class="rating-row"><span>D. A friend group excludes you after a disagreement. Which need is mostly undermined?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Autonomy</option><option value="b">B. Competence</option><option value="c">C. Relatedness</option><option value="d">D. All three equally</option></select></div>
+    <div class="rating-row"><span>E. A teacher explains why a task matters and offers two ways to complete it. Which need is mostly supported?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. None</option><option value="b">B. Autonomy</option><option value="c">C. Competence</option><option value="d">D. Relatedness</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>A. D:</strong> values describe what matters.</p><p><strong>B. B:</strong> strengths describe what you do well.</p><p><strong>C. A:</strong> specific feedback builds a sense of effectiveness.</p><p><strong>D. C:</strong> exclusion undermines connection.</p><p><strong>E. B:</strong> reasons and choice support autonomy.</p></details>
+  </section>
+
+  <section id="s6" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Reflection A1: art or science?</h2>
+
+    <div class="scenario"><strong>Scenario.</strong> You are good at drawing and enjoy it, but your family expects you to take a science-related track. Your art teacher has told you your portfolio is strong. You do not want to disappoint your family.</div>
+    <ol class="steps"><li>Which values and strengths are in play?</li><li>Which relationships support your growth and which create pressure? Are they always opposed?</li><li>Write one sentence you could say to your family that honors them and shares your interest.</li></ol>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <details><summary>See a possible response</summary><p><strong>Values and strengths:</strong> family and respect are values, and so is the chance to do work you care about. Creativity and persistence are strengths you can point to with evidence (the portfolio).</p><p><strong>Relationships:</strong> the art teacher supports competence. The family supports relatedness and may pressure autonomy. They are not always opposed: family concern often comes from care.</p><p><strong>One possible sentence:</strong> "I appreciate how much you want me to be secure. Can I show you my portfolio and explain what I hope to do with it?"</p></details>
+  </section>
+
+  <section id="s7" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Groups, process loss, and what goes wrong</h2>
+
+    <p>Groups do not automatically outperform individuals. Steiner (1972) described <strong>process loss</strong>: the gap between what a group could achieve given its members' abilities and what it actually achieves, caused by coordination problems and lowered motivation. Healthy relationships reduce process loss.</p>
+    <table class="matrix"><thead><tr><th>Problem</th><th>What it is</th><th>What helps</th></tr></thead><tbody><tr><td>Social loafing</td><td>Putting in less effort on collective tasks (Karau &amp; Williams, 1993). Found across many tasks and settings, and somewhat weaker in collectivistic cultures.</td><td>Identifiable contributions, a meaningful task, small and cohesive groups, expecting teammates to contribute.</td></tr><tr><td>Groupthink</td><td>Highly cohesive groups suppress dissent to keep agreement (Janis, 1972). Later research debated the model, but the warning is sound.</td><td>Invite disagreement. A group where nobody disagrees is not necessarily right.</td></tr><tr><td>Unequal voice</td><td>Dominant members talk most while others stay quiet, so the group loses information.</td><td>Round-robin first, rotate roles.</td></tr></tbody></table>
+    <h3>How groups develop (Tuckman)</h3>
+    <p>Many groups pass through <strong>forming</strong> (polite, unclear), <strong>storming</strong> (disagreement over roles and methods), <strong>norming</strong> (agreements settle), <strong>performing</strong> (productive work), and <strong>adjourning</strong> (wrap-up). Not every group follows the sequence neatly, but storming is common, and it is where conflict skills matter (Tuckman, 1965; Tuckman &amp; Jensen, 1977).</p>
+    <p class="char-note">Sources: Steiner (1972); Karau &amp; Williams (1993); Janis (1972); Tuckman (1965); Tuckman &amp; Jensen (1977).</p>
+  </section>
+
+  <section id="s8" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Communication, respect, collaboration, and psychological safety</h2>
+
+    <table class="matrix"><thead><tr><th>Behavior</th><th>What it looks like in practice</th><th>What it prevents</th></tr></thead><tbody><tr><td>Effective communication</td><td>Clear requests with who, what, and by when. Confirming understanding ("So I'm doing the slides by Wednesday, right?"). Sharing bad news early.</td><td>Duplicated work, missed deadlines, assumptions.</td></tr><tr><td>Mutual respect</td><td>Taking turns, crediting ideas to their owners, disagreeing with ideas and not people, respecting time.</td><td>Withdrawal, resentment, sabotage.</td></tr><tr><td>Collaboration</td><td>Shared goals, defined roles, joint decisions on major questions, helping when someone is stuck.</td><td>Social loafing, one-person-does-everything.</td></tr></tbody></table>
+    <h3>Psychological safety</h3>
+    <p>Edmondson (1999) found that teams whose members felt safe to take interpersonal risks (asking questions, admitting mistakes, offering a different idea) learned and improved more. A meta-analysis found that psychological safety is associated with better team performance, learning behavior, information sharing, and engagement (Frazier et al., 2017). It is not about being nice or avoiding disagreement. It is confidence that disagreement will be met with curiosity, not punishment.</p>
+    <p>Ways to build it: invite quieter members first, thank people for pointing out problems, respond to mistakes with "What can we do about it?", and avoid sarcasm.</p>
+    <h3>Listening as a productivity tool</h3>
+    <p>A review of research on listening at work finds that being listened to is associated with feeling understood, lower defensiveness, more open thinking, and better relationships (Kluger &amp; Itzchakov, 2022). People who feel heard are more willing to share what they know.</p>
+    <h3>Productive meeting habits</h3>
+    <table class="matrix"><thead><tr><th>Habit</th><th>How</th></tr></thead><tbody><tr><td>Start with the goal</td><td>State what the meeting must produce, in one sentence.</td></tr><tr><td>Name roles</td><td>Facilitator, note-taker, time-keeper. Rotate.</td></tr><tr><td>Round-robin first</td><td>Everyone gives one idea before debate begins.</td></tr><tr><td>Record decisions</td><td>Who does what by when, written where everyone can see it.</td></tr><tr><td>Check in at the end</td><td>Two minutes: what worked, what to change (group processing).</td></tr></tbody></table>
+    <p class="char-note">Sources: Edmondson (1999); Frazier et al. (2017); Kluger &amp; Itzchakov (2022).</p>
+  </section>
+
+  <section id="s9" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Practice 2: group productivity</h2>
+
+    <div class="rating-row"><span>A. Three members do the work while the fourth "supports morally". Which concept fits best?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Psychological safety</option><option value="b">B. Social loafing</option><option value="c">C. Groupthink</option><option value="d">D. Norming</option></select></div>
+    <div class="rating-row"><span>B. A group agrees quickly on a plan because nobody wants to disturb harmony, though two members have doubts they do not share.</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Groupthink</option><option value="b">B. Process loss caused by loafing</option><option value="c">C. Performing stage</option><option value="d">D. Mutual respect</option></select></div>
+    <div class="rating-row"><span>C. A member says, "I disagree with the order of the slides, here is why." Others thank the member. What does this show?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Forming stage</option><option value="b">B. Groupthink</option><option value="c">C. Social loafing</option><option value="d">D. Psychological safety</option></select></div>
+    <div class="rating-row"><span>D. A group is arguing about roles and methods at the start of the project. Which Tuckman stage is this?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Norming</option><option value="b">B. Adjourning</option><option value="c">C. Storming</option><option value="d">D. Forming</option></select></div>
+    <div class="rating-row"><span>E. Which meeting habit would help a group where two people do all the talking?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Letting the most confident person decide</option><option value="b">B. Skipping the end-of-meeting check-in</option><option value="c">C. Avoiding roles</option><option value="d">D. Round-robin: everyone gives one idea before debate</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>A. B:</strong> reduced individual effort when contributions are pooled.</p><p><strong>B. A:</strong> suppressing dissent to keep agreement is the core of groupthink.</p><p><strong>C. D:</strong> disagreement met with thanks, not punishment, signals safety.</p><p><strong>D. C:</strong> disagreement over roles and methods marks storming.</p><p><strong>E. D:</strong> a round-robin gives quieter members a voice before debate begins.</p></details>
+  </section>
+
+  <section id="s10" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Pause A2: five members, three problems</h2>
+
+    <div class="facilitated-note"><strong>Facilitator note</strong>Run the Listening Relay first (groups of four or five). The first person shares a short, non-sensitive story. The next paraphrases it to the first person's satisfaction before sharing their own. Debrief: what made you feel heard? What happened to your attention when you were planning your own story?</div>
+    <div class="scenario"><strong>Scenario.</strong> Your Social Collaboration Task group has five members. Two do most of the talking, one never speaks, and one keeps missing meetings. You are the one who notices.</div>
+    <ol class="steps"><li>Which of these problems are about communication, which about respect, and which about collaboration?</li><li>Which concept (social loafing, psychological safety, unequal voice) best explains each?</li><li>Choose one habit from the meeting-habits table and write how you would introduce it without blaming anyone.</li></ol>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <div class="branch"><p><strong>Try it: which opening would you use at the next meeting?</strong></p><button type="button" class="branch-btn" data-i="0">"Some of you are not pulling your weight. We need to fix that."</button><button type="button" class="branch-btn" data-i="1">"Let's start with a round-robin so everyone gives one idea, and then agree on who does what by when."</button><button type="button" class="branch-btn" data-i="2">(Say nothing and do the extra work yourself.)</button><div class="branch-out" aria-live="polite"><p data-out="0" hidden>This blames individuals and invites defensiveness. It makes the quieter and absent members less likely to speak up.</p><p data-out="1" hidden>This introduces two habits without naming anyone. It addresses unequal voice and unclear commitments together.</p><p data-out="2" hidden>This hides the problem and builds resentment. It also removes the other members' chance to contribute.</p></div></div>
+    <details><summary>See feedback</summary><p><strong>Likely mapping:</strong> two dominating voices and one silent member point to unequal voice and low psychological safety (communication and respect). Repeated absence points to collaboration and possible social loafing, but ask about the reason before judging.</p><p><strong>A possible introduction:</strong> "Can we try a round-robin at the start, so everyone shares one idea? Then we will write down who does what by when."</p></details>
+  </section>
+
+  <section id="s11" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Retrieval check: Part A</h2>
+
+    <p>Answer without looking back, then open the key.</p>
+    <div class="rating-row"><span>1. Which statement best distinguishes values from strengths?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Values are inherited; strengths are learned</option><option value="b">B. They are two words for the same thing</option><option value="c">C. Values describe what matters to you; strengths describe what you do well</option><option value="d">D. Values describe what you do well; strengths describe what matters</option></select></div>
+    <div class="rating-row"><span>2. According to self-determination theory, which three needs support thriving?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Autonomy, competence, and relatedness</option><option value="b">B. Autonomy, popularity, and achievement</option><option value="c">C. Competence, conformity, and obedience</option><option value="d">D. Power, status, and wealth</option></select></div>
+    <div class="rating-row"><span>3. Social loafing is most likely to decrease when:</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. The group is large and tasks are anonymous</option><option value="b">B. Each member's contribution is identifiable and the task is meaningful</option><option value="c">C. The group has no deadline</option><option value="d">D. The leader does the hardest tasks alone</option></select></div>
+    <div class="rating-row"><span>4. Which best describes psychological safety?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Every member agreeing before decisions are made</option><option value="b">B. Absence of disagreement in the group</option><option value="c">C. Physical safety of the meeting room</option><option value="d">D. Belief that one can speak up with ideas, questions, or mistakes without being punished or humiliated</option></select></div>
+    <div class="rating-row"><span>5. In the Listening Relay, the listener repeats back what they heard before sharing their own story. This skill is best called:</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Mirroring the volume of the speaker</option><option value="b">B. Interrupting</option><option value="c">C. Paraphrasing</option><option value="d">D. Arbitration</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>1. C</strong>: values answer what matters; strengths answer what you do well.</p><p><strong>2. A</strong>: autonomy, competence, and relatedness (Ryan &amp; Deci, 2000).</p><p><strong>3. B</strong>: identifiable contributions and meaningful tasks reduce loafing.</p><p><strong>4. D</strong>: safety to speak up without punishment or humiliation.</p><p><strong>5. C</strong>: paraphrasing shows you understood.</p></details>
+  </section>
+
+  <section id="s12" class="block">
+    <p class="block-kind">Recap</p>
+    <h2>Part A: what to remember</h2>
+
+    <ul>
+      <li>Values say what matters. Strengths say what you can use. Relationships supply feedback, models, and belonging.</li>
+      <li>Autonomy, competence, and relatedness are all fed by healthy relationships.</li>
+      <li>Communication, respect, and collaboration reduce process loss. Psychological safety lets groups learn.</li>
+      <li>Social loafing and groupthink are warnings, not character verdicts.</li>
+    </ul>
+    <p><strong>Looking ahead:</strong> Part B (lesson-6b) turns to mental health and well-being, including stress, burnout, and the role of relationships.</p>
+    <p>Write one habit from Part A you will try in your next group task, and with whom.</p>
+    <textarea class="reflect" placeholder="Write your habit here..."></textarea>
+  </section>
+
+</div>
+
+<footer>
+  Based on the DepEd Strengthened Senior High School Curriculum for Life and Career Skills (2025)<br>
+  Prepared by Fritzie Cristina B. Diaz, RPsy, DAAETS<br>
+  For instructional use only. &copy; 2026 F.C. Diaz. CC BY-NC-ND 4.0.
+</footer>
+
+<script>
+function setMode(mode){
+  document.body.className = 'mode-' + mode;
+  document.getElementById('btn-facilitated').classList.toggle('active', mode === 'facilitated');
+  document.getElementById('btn-selfpaced').classList.toggle('active', mode === 'selfpaced');
+}
+document.querySelectorAll('.branch').forEach(function(b){
+  b.querySelectorAll('.branch-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var i = btn.getAttribute('data-i');
+      b.querySelectorAll('.branch-btn').forEach(function(x){x.classList.toggle('on', x===btn);});
+      b.querySelectorAll('[data-out]').forEach(function(p){p.hidden = p.getAttribute('data-out') !== i;});
+    });
+  });
+});
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

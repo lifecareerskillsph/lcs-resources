@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 6b: Mental Health and Well-Being</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* Scoped additions, not in the shared stylesheet: delivery toggle and branching practice. */
+.mode-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:10px;}
+.mode-toggle{display:inline-flex; background:#EAF8FA; border:1px solid #B7DEE3; border-radius:999px; padding:3px;}
+.mode-toggle button{border:none; background:transparent; color:#167C89; padding:6px 14px; border-radius:999px; cursor:pointer; font-family:Arial, sans-serif; font-weight:600; font-size:0.82rem;}
+.mode-toggle button.active{background:#167C89; color:#fff;}
+.mode-toggle button:focus-visible{outline:2px solid #167C89; outline-offset:2px;}
+.facilitated-note{display:none; background:#FFF9D9; border-left:4px solid #FFD633; padding:12px 16px; font-size:0.88rem; margin:14px 0; border-radius:0 8px 8px 0;}
+body.mode-facilitated .facilitated-note{display:block;}
+.facilitated-note strong{display:block; margin-bottom:3px;}
+.branch{margin:14px 0;}
+.branch-btn{display:block; width:100%; text-align:left; margin:6px 0; padding:10px 14px; border:1px solid #B7DEE3; background:#fff; border-radius:10px; cursor:pointer; font:inherit; color:inherit;}
+.branch-btn:hover{background:#EAF8FA;}
+.branch-btn.on{background:#EAF8FA; border-color:#167C89;}
+.branch-btn:focus-visible{outline:2px solid #167C89; outline-offset:2px;}
+.branch-out p{background:#F6FBFC; border-left:4px solid #167C89; padding:10px 14px; border-radius:0 8px 8px 0; margin:8px 0;}
+.mini-check{display:block; margin:6px 0;}
+</style>
+</head>
+<body class="mode-selfpaced">
 
+<div class="rail">
+  <div class="rail-inner">
+    <span class="rail-label">Lesson 6b, 11 sections</span>
+    <div class="rail-track"><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div><div class="rail-dot"></div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="header">
+    <div class="mode-row">
+      <p class="eyebrow">Life and Career Skills, Grade 11, Q2, Lesson 6b</p>
+      <div class="mode-toggle" role="tablist" aria-label="Delivery mode">
+        <button type="button" id="btn-facilitated" onclick="setMode('facilitated')">Facilitated</button>
+        <button type="button" id="btn-selfpaced" class="active" onclick="setMode('selfpaced')">Self-Paced</button>
+      </div>
+    </div>
+    <h1>Mental Health and Well-Being</h1>
+    <p>Part B of Establishing Healthy Relationships. Educational only, not a screening tool. This is not graded. In Facilitated mode, notes appear before group activities; in Self-Paced mode, work through independently.</p>
+  </div>
+
+  <section id="s1" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Before you read</h2>
+
+    <div class="keybox">This part discusses stress, burnout, and mental health in general terms for learning. It is not a screening tool and it does not diagnose anyone. You are never required to share personal difficulties in class. Every activity here has a fictional-case option. See the help box in section 4 for where to go.</div>
+    <p><strong>Learning competency:</strong> recognize the importance of healthy relationships to one's mental health and well-being.</p>
+    <p><strong>Specific objective (adaptable):</strong> apply evidence-based and/or personal stress management or self-care strategies to prevent burnout and promote mental well-being in academic, personal, and future workplace settings.</p>
+  </section>
+
+  <section id="s2" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>What mental health is</h2>
+
+    <p>The World Health Organization describes mental health as a state of mental well-being that enables people to cope with the stresses of life, realize their abilities, learn well, work well, and contribute to their community (WHO, 2022). It does not say "never feeling bad." Mental health includes the capacity to feel, to cope, and to recover.</p>
+    <h3>Two continua, not one</h3>
+    <p>Keyes (2002) proposed that mental health and mental illness are related but separate dimensions. Someone with a diagnosed condition can be doing well in many areas of life. Someone with no diagnosis can be <strong>languishing</strong>: feeling empty, stuck, or disconnected. Someone who is <strong>flourishing</strong> reports positive feelings, positive functioning, and good relationships. Well-being deserves attention before a crisis, not only after one.</p>
+    <table class="matrix"><thead><tr><th>Term</th><th>Meaning</th><th>Example</th></tr></thead><tbody><tr><td>Stress</td><td>A response to demands that feel challenging or exceed resources. It can motivate or drain.</td><td>Nervous before a defense but energized to prepare.</td></tr><tr><td>Distress</td><td>Stress that is persistent, overwhelming, or interferes with functioning.</td><td>Weeks of sleeplessness and dread that make it hard to attend school.</td></tr><tr><td>Burnout</td><td>Prolonged exhaustion, cynicism or detachment, and reduced sense of effectiveness from chronic demands.</td><td>A student who used to care now feels numb and thinks nothing they do matters.</td></tr><tr><td>Mental illness</td><td>A diagnosable condition identified by a qualified professional.</td><td>Diagnosed by a clinician. Not something to guess about in yourself or others.</td></tr></tbody></table>
+    <div class="keybox">These terms are for learning. Diagnosing is the work of qualified professionals. A student who suspects a problem should consult one, not self-diagnose from a list.</div>
+    <p class="char-note">Sources: WHO (2022); Keyes (2002).</p>
+  </section>
+
+  <section id="s3" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Stress and burnout in school and at work</h2>
+
+    <h3>Appraisal and coping</h3>
+    <p>Stress depends on appraisal: whether you judge a demand as a threat or a challenge (primary appraisal) and whether you believe you have the resources to cope (secondary appraisal). The same exam can feel threatening to one student and manageable to another (Lazarus &amp; Folkman, 1984).</p>
+    <table class="matrix"><thead><tr><th>Coping</th><th>Aim</th><th>Examples</th><th>Works best when</th></tr></thead><tbody><tr><td>Problem-focused</td><td>Change the situation.</td><td>Make a study schedule. Ask the teacher for help. Divide a project into tasks.</td><td>There is something you can change.</td></tr><tr><td>Emotion-focused</td><td>Manage the feeling.</td><td>Breathing, talking to a friend, exercise, reappraising the situation.</td><td>The situation cannot be changed right now, or the feeling blocks action.</td></tr></tbody></table>
+    <p>Both are useful. Problems start when only one is used: all venting and no action, or all pushing through and no recovery.</p>
+    <h3>Burnout</h3>
+    <p>Maslach and Leiter (2016) describe three dimensions: <strong>exhaustion</strong>, <strong>cynicism</strong> (a detached or negative attitude toward work or people), and reduced <strong>efficacy</strong> (feeling that nothing you do is effective). The WHO classifies burnout as an occupational phenomenon resulting from chronic workplace stress that has not been successfully managed, not as a medical condition (WHO, 2019). Students show a similar pattern.</p>
+    <h3>Burnout is not just "weak coping"</h3>
+    <p>The Job Demands-Resources model explains burnout as an imbalance: high demands without enough resources (Bakker &amp; Demerouti, 2007). The question shifts from "What is wrong with me?" to "What is the balance of demands and resources, and what can change?" Relationships are among the most important resources. When unhealthy, they are also a source of demand.</p>
+    <table class="matrix"><thead><tr><th>Demands (drain)</th><th>Resources (protect)</th></tr></thead><tbody><tr><td>Heavy workload and short deadlines.</td><td>Clear expectations and realistic planning.</td></tr><tr><td>Conflict with teachers, peers, or family.</td><td>Supportive friends, mentors, and family.</td></tr><tr><td>Constant comparison with others.</td><td>Sense of purpose, values, and progress.</td></tr><tr><td>Little control over schedule.</td><td>Autonomy and choice where possible.</td></tr><tr><td>No time to rest.</td><td>Sleep, movement, breaks, and hobbies.</td></tr></tbody></table>
+    <h3>Early warning signs (for noticing, not diagnosing)</h3>
+    <ul><li>Persistent tiredness that sleep does not fix.</li><li>Dreading tasks you used to handle, or growing cynicism about school.</li><li>Pulling away from friends and family.</li><li>Changes in sleep, appetite, or concentration that last for weeks.</li><li>Feeling that nothing you do matters.</li></ul>
+    <p>These can have many causes. If they persist, discuss them with a trusted adult or a counselor.</p>
+    <p><strong>Workplace preview.</strong> Unclear roles, heavy workload, conflict, and low control also appear at work. Learning now to name demands and resources, ask for clarity, and set limits prepares you for internships and jobs. Not every stressor is solved by individual coping. Some require changes in the workplace or in policy (SDG 8).</p>
+    <p class="char-note">Sources: Lazarus &amp; Folkman (1984); Maslach &amp; Leiter (2016); WHO (2019); Bakker &amp; Demerouti (2007).</p>
+  </section>
+
+  <section id="s4" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Practice 1: stress and burnout</h2>
+
+    <div class="rating-row"><span>A. A student makes a study schedule and asks the teacher for help with weak topics. Which coping is this?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Emotion-focused coping</option><option value="b">B. Problem-focused coping</option><option value="c">C. Avoidance</option><option value="d">D. Burnout</option></select></div>
+    <div class="rating-row"><span>B. A student whose situation cannot change right now talks to a friend and takes slow breaths. Which coping is this?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Problem-focused coping</option><option value="b">B. Cynicism</option><option value="c">C. Groupthink</option><option value="d">D. Emotion-focused coping</option></select></div>
+    <div class="rating-row"><span>C. A student who used to care now feels numb about school and doubts that anything they do matters. Which burnout dimensions are present?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. None; this is only stress</option><option value="b">B. Exhaustion only</option><option value="c">C. Cynicism and reduced efficacy</option><option value="d">D. Appraisal only</option></select></div>
+    <div class="rating-row"><span>D. Which of these is a resource, not a demand?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. A mentor who gives clear feedback</option><option value="b">B. No time to rest</option><option value="c">C. Conflict with a teacher</option><option value="d">D. Constant comparison with classmates</option></select></div>
+    <div class="rating-row"><span>E. Keyes's two-continua idea implies that:</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Well-being is fixed at birth</option><option value="b">B. Stress and burnout are the same thing</option><option value="c">C. A person with no diagnosis is automatically flourishing</option><option value="d">D. Mental health and mental illness are related but separate, so a person can have a diagnosis and still do well, or have no diagnosis and still be languishing</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>A. B:</strong> changing the situation is problem-focused.</p><p><strong>B. D:</strong> managing the feeling is emotion-focused.</p><p><strong>C. C:</strong> cynicism (detachment) and reduced efficacy. Exhaustion may also be present, so ask more.</p><p><strong>D. A:</strong> supportive mentors and clear feedback are resources.</p><p><strong>E. D:</strong> the two dimensions are related but separate.</p></details>
+  </section>
+
+  <section id="s5" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Pause B2: Camille's week</h2>
+
+    <div class="facilitated-note"><strong>Facilitator note</strong>Use this fictional case for breakout rooms. Do not ask students to disclose their own stress. Anonymous poll option: "Which demand is heaviest for you this month?"</div>
+    <div class="scenario"><strong>Scenario.</strong> Camille is a Grade 11 student with a part-time online job, two group projects, and a family event this weekend. She used to enjoy her classes. Lately she feels numb, snaps at friends, and thinks, "Nothing I do is good enough."</div>
+    <ol class="steps"><li>Which burnout dimensions can you see?</li><li>List two demands and two resources in her situation.</li><li>What problem-focused step and what emotion-focused step could she take this week? Who could help?</li></ol>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <details><summary>See a possible response</summary><p><strong>Dimensions:</strong> cynicism or detachment (numb, snapping) and reduced efficacy ("nothing is good enough"). Exhaustion is likely but not stated.</p><p><strong>Demands:</strong> job, two group projects, family event. <strong>Resources:</strong> friends (if repaired), classmates, family, her own interest in classes.</p><p><strong>Steps:</strong> problem-focused, list the deadlines and ask one teacher or groupmate for an adjusted timeline. Emotion-focused, a short walk or a talk with a trusted friend. Helpers: a trusted adult or school counselor. Consider whether the job hours can be reduced.</p></details>
+  </section>
+
+  <section id="s6" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>How relationships shape mental health</h2>
+
+    <h3>Relationships as protection</h3>
+    <ul>
+      <li><strong>Buffering.</strong> In a classic review, Cohen and Wills (1985) found two ways social support helps: a general benefit of being connected, and a buffering effect that protects people when they face stress.</li>
+      <li><strong>Survival and health.</strong> A meta-analysis of 148 studies found that people with stronger social relationships had a 50% greater likelihood of survival over follow-up (Holt-Lunstad et al., 2010). This is an association.</li>
+      <li><strong>Quality over quantity.</strong> Close friendship strength predicted rising self-worth and lower anxiety and depression from age 15 to 25, while broad popularity predicted more social anxiety (Narr et al., 2019). Peer support quality, not quantity, uniquely predicted depression (Letkiewicz et al., 2023).</li>
+    </ul>
+    <h3>Relationships as risk</h3>
+    <p>Bullying, rejection, chronic conflict, controlling relationships, and online harassment are risk factors for distress. A relationship that leaves you constantly anxious, ashamed, or afraid is not protecting your mental health, even if it is long or familiar.</p>
+    <h3>Filipino context: asking for help</h3>
+    <p>A systematic review of Filipino help-seeking found that stigma, shame, concern about what others will think, and a preference for relying on oneself, family, or faith can act as barriers, while family and social support and trust in the helper can act as facilitators (Martinez et al., 2020). Hiya and pakikisama can make it hard to say "I am struggling." The same relational culture, pakikipagkapwa and kapamilya, can make support easy to reach when a person feels safe to ask. A healthy relationship is one where you can ask.</p>
+    <p>The Philippine Mental Health Act (RA 11036, 2018) affirms the rights of persons with mental health needs and promotes mental health services and education, including in schools and workplaces.</p>
+    <div class="keybox"><strong>Where to get help.</strong> Start with someone you trust: a parent or guardian, teacher, adviser, or counselor. School support: UST CCC and school guidance and referral services. For urgent mental health support: NCMH Crisis Hotline 1553 (Smart/TNT: 0919-057-1553). If you or someone else may be in immediate danger, tell a trusted adult immediately and seek emergency assistance.</div>
+    <div class="keybox"><strong>When a friend tells you they are struggling.</strong> Listen without rushing to fix. Thank them for trusting you. Do not promise secrecy if their safety is at risk. Encourage them to talk with a trusted adult or counselor and offer to go with them. Tell a trusted adult yourself if you are worried about their safety. You are a friend, not their therapist.</div>
+    <p class="char-note">Sources: Cohen &amp; Wills (1985); Holt-Lunstad et al. (2010); Narr et al. (2019); Letkiewicz et al. (2023); Martinez et al. (2020); RA 11036.</p>
+  </section>
+
+  <section id="s7" class="block">
+    <p class="block-kind">Learn</p>
+    <h2>Self-care: what helps and what the evidence says</h2>
+
+    <p>Self-care is a set of practices that protect your health. It is not selfishness, and it is not a substitute for professional help or for fixing an unreasonable workload. It is what you do on ordinary days to keep your resources up.</p>
+    <table class="matrix"><thead><tr><th>Area</th><th>Examples</th><th>Notes on evidence</th></tr></thead><tbody><tr><td>Sleep and routine</td><td>Consistent bedtime, screens down before sleep.</td><td>Better sleep is associated with better mental health in adolescents (Lesson 2).</td></tr><tr><td>Movement</td><td>Walking, sports, dance, arnis.</td><td>Physical activity interventions are associated with lower depressive symptoms in children and adolescents (Lesson 2).</td></tr><tr><td>Social connection</td><td>Regular time with people who leave you feeling accepted.</td><td>Support quality matters more than numbers.</td></tr><tr><td>Thinking and feeling skills</td><td>Naming emotions, reappraising a situation, problem-solving.</td><td>Reappraisal is a well-studied emotion regulation strategy (Gross, 1998).</td></tr><tr><td>Workload planning</td><td>Breaking tasks down, protecting rest, saying no to extra tasks.</td><td>Addresses demands directly.</td></tr><tr><td>Mindfulness and relaxation</td><td>Paced breathing, body scan, prayer or reflection if meaningful to you.</td><td>Mixed evidence. See the note below.</td></tr><tr><td>Seeking help</td><td>Telling a trusted adult, using school guidance.</td><td>A skill, not a failure.</td></tr></tbody></table>
+    <div class="keybox"><strong>An honest note on mindfulness.</strong> Some studies show small benefits. But in the large MYRIAD trial of school-based mindfulness training in UK secondary schools, which included more than 8,000 students, students who received the program did not show better mental health outcomes at one year than students receiving usual school provision (Kuyken et al., 2022). This does not mean mindfulness is useless for everyone. It means it is one option among many, that fit and choice matter, and that a program delivered to everyone is not guaranteed to help everyone.</div>
+    <p><strong>Limits of self-care.</strong> If distress is persistent, overwhelming, or unsafe, or if the cause is a situation you cannot change alone (bullying, abuse, severe overload), the next step is not more self-care. It is help from a trusted adult or a professional.</p>
+    <p class="char-note">Sources: Gross (1998); Bakker &amp; Demerouti (2007); Kuyken et al. (2022).</p>
+  </section>
+
+  <section id="s8" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Build your self-care action plan</h2>
+
+    <div class="facilitated-note"><strong>Facilitator note</strong>This is the ICLEx task for the lesson. Students complete the plan during the session and reflect after one to two weeks of trying it. Assess the quality of planning and reasoning. Do not grade a student's level of distress or require disclosure of private difficulties.</div>
+    <p>Use a real or fictional area. Specific plans with if-then triggers are more likely to be followed than good intentions (Gollwitzer, 1999).</p>
+    <table class="matrix fill"><thead><tr><th>Plan element</th><th>My plan</th></tr></thead><tbody><tr><td>Area: which area do I most need to protect?</td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Action: what exactly will I do?</td><td><input type="text" placeholder="Type here"></td></tr><tr><td>If-then trigger: when and where?</td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Support: who can help or keep me honest?</td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Barrier and backup: what will get in the way, and what is plan B?</td><td><input type="text" placeholder="Type here"></td></tr><tr><td>Check: how will I know it is working?</td><td><input type="text" placeholder="Type here"></td></tr></tbody></table><p class="tally" data-fill-counter>0 of 6 cells completed</p>
+    <details><summary>See an example plan</summary>
+      <table class="matrix"><thead><tr><th>Plan element</th><th>Example</th></tr></thead><tbody><tr><td>Area</td><td>Sleep.</td></tr><tr><td>Action</td><td>Phone charges outside my bed. Lights out by 11 PM.</td></tr><tr><td>If-then trigger</td><td>If it is 10:30 PM, then I plug in my phone across the room.</td></tr><tr><td>Support</td><td>My brother, who has the same bedtime.</td></tr><tr><td>Barrier and backup</td><td>Late group chats. Plan B: mute the chat after 10:30.</td></tr><tr><td>Check</td><td>I wake before my alarm on 4 of 7 days.</td></tr><tr><td>Reflection (after trying)</td><td>What did I learn about myself and the support I need?</td></tr></tbody></table>
+    </details>
+  </section>
+
+  <section id="s9" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Pause B4: Joaquin</h2>
+
+    <div class="scenario"><strong>Scenario (fictional).</strong> Your friend Joaquin has been sleeping less, skipping lunch, and joking that "I'm just done with everything." He says he is fine and asks you not to tell anyone.</div>
+    <ol class="steps"><li>Which signs concern you, and why?</li><li>What is the difference between respecting his privacy and ignoring a risk to his safety?</li><li>Write what you would say to him, and name the trusted adult you would involve.</li></ol>
+    <textarea class="reflect" placeholder="Write your answer here..."></textarea>
+    <div class="branch"><p><strong>Try it: what would you do first?</strong></p><button type="button" class="branch-btn" data-i="0">Promise to keep it secret and check on him next week.</button><button type="button" class="branch-btn" data-i="1">Tell him you are worried, ask how he is really doing, and say you will go with him to talk to a counselor. Then tell a trusted adult yourself.</button><button type="button" class="branch-btn" data-i="2">Post a vague message about it online so others will reach out.</button><div class="branch-out" aria-live="polite"><p data-out="0" hidden>A promise of secrecy can trap you. If his safety may be at risk, you cannot keep it. Check in with him now, and involve a trusted adult.</p><p data-out="1" hidden>This listens, shows care, offers company, and does not carry the worry alone. Telling an adult is not a betrayal when safety is a concern.</p><p data-out="2" hidden>This exposes him without consent and does not connect him with help. Speak to him and a trusted adult directly.</p></div></div>
+    <details><summary>See a possible response</summary><p><strong>Signs:</strong> less sleep, skipped meals, and "done with everything" together are a pattern worth taking seriously, especially when he asks you to keep it secret.</p><p><strong>Privacy and safety:</strong> privacy matters for ordinary things. When safety may be at risk, tell a trusted adult. You are a friend, not his therapist.</p><p><strong>Possible words:</strong> "I am worried about you. I care about you too much to keep this just between us. Can we talk to the counselor together?" Trusted adults: a parent, adviser, or school counselor. If there is immediate danger, seek emergency help (NCMH 1553).</p></details>
+  </section>
+
+  <section id="s10" class="block practice">
+    <p class="block-kind">Practice</p>
+    <h2>Retrieval check: Part B</h2>
+
+    <div class="rating-row"><span>1. Which set describes the three dimensions of burnout?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Insomnia, appetite change, and fatigue</option><option value="b">B. Exhaustion, cynicism or detachment, and reduced efficacy</option><option value="c">C. Competition, conflict, and accommodation</option><option value="d">D. Anger, sadness, and fear</option></select></div>
+    <div class="rating-row"><span>2. The MYRIAD trial of school-based mindfulness training found that, at one year:</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Students did better than those in exercise programs</option><option value="b">B. Students showed large mental health benefits compared with usual school provision</option><option value="c">C. Students did not show better mental health outcomes than students receiving usual school provision</option><option value="d">D. Students were harmed compared with usual school provision</option></select></div>
+    <div class="rating-row"><span>3. Which statement about self-care is most accurate?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Self-care supports well-being, but it does not replace professional help when distress is persistent or unsafe</option><option value="b">B. Self-care works identically for everyone</option><option value="c">C. Self-care means avoiding all stress</option><option value="d">D. Self-care replaces the need for professional help</option></select></div>
+    <div class="rating-row"><span>4. According to the lesson, which matters more for mental health?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Staying busy</option><option value="b">B. The number of friends</option><option value="c">C. Popularity</option><option value="d">D. The quality of close support</option></select></div>
+    <div class="rating-row"><span>5. A friend asks you to keep a safety concern secret. What is the best response?</span>
+  <select class="rating" data-rating><option value="">Choose</option><option value="a">A. Keep the promise no matter what</option><option value="b">B. Listen, encourage help, and tell a trusted adult if safety may be at risk</option><option value="c">C. Confront the friend publicly</option><option value="d">D. Ignore it and wait</option></select></div>
+    <details><summary>See the answer key</summary><p><strong>1. B</strong>: exhaustion, cynicism, and reduced efficacy (Maslach &amp; Leiter, 2016).</p><p><strong>2. C</strong>: no better outcomes than usual school provision (Kuyken et al., 2022).</p><p><strong>3. A</strong>: self-care is one part of a wider system of support.</p><p><strong>4. D</strong>: quality of close support, not size of the circle.</p><p><strong>5. B</strong>: safety outranks secrecy.</p></details>
+  </section>
+
+  <section id="s11" class="block">
+    <p class="block-kind">Recap</p>
+    <h2>Part B: what to remember</h2>
+
+    <ul>
+      <li>Mental health is more than the absence of illness. Pay attention before a crisis.</li>
+      <li>Think in demands and resources. Burnout is exhaustion, cynicism, and reduced efficacy.</li>
+      <li>Quality of relationships matters more than quantity. Harmful relationships are a risk.</li>
+      <li>Self-care works best as a specific plan, and it has limits. Persistent or unsafe distress calls for a trusted adult or professional. NCMH 1553.</li>
+    </ul>
+    <p><strong>Looking ahead:</strong> Part C (lesson-6c) teaches the skills for handling disagreement while protecting the relationship.</p>
+  </section>
+
+</div>
+
+<footer>
+  Based on the DepEd Strengthened Senior High School Curriculum for Life and Career Skills (2025)<br>
+  Prepared by Fritzie Cristina B. Diaz, RPsy, DAAETS<br>
+  For instructional use only. &copy; 2026 F.C. Diaz. CC BY-NC-ND 4.0.
+</footer>
+
+<script>
+function setMode(mode){
+  document.body.className = 'mode-' + mode;
+  document.getElementById('btn-facilitated').classList.toggle('active', mode === 'facilitated');
+  document.getElementById('btn-selfpaced').classList.toggle('active', mode === 'selfpaced');
+}
+document.querySelectorAll('.branch').forEach(function(b){
+  b.querySelectorAll('.branch-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var i = btn.getAttribute('data-i');
+      b.querySelectorAll('.branch-btn').forEach(function(x){x.classList.toggle('on', x===btn);});
+      b.querySelectorAll('[data-out]').forEach(function(p){p.hidden = p.getAttribute('data-out') !== i;});
+    });
+  });
+});
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
